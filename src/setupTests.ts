@@ -59,6 +59,9 @@ jest.mock('three', () => ({
   })),
 }));
 
+// Mock GOV.UK Frontend CSS
+jest.mock('govuk-frontend/dist/govuk/govuk-frontend.min.css', () => ({}));
+
 // Create a global mock for three.js elements
 (global as any).React = require('react');
 

@@ -4,6 +4,7 @@ import { ReferenceComponents } from './components/ReferenceComponents';
 import { AntDesignComponents } from './components/AntDesignComponents';
 import { MaterialUIComponents } from './components/MaterialUIComponents';
 import { USWDSComponents } from './components/USWDSComponents';
+import { GOVUKComponents } from './components/GOVUKComponents';
 // import { MantineComponents } from './components/MantineComponents';
 // import { ChakraUIComponents } from './components/ChakraUIComponents';
 import './App.css';
@@ -23,6 +24,7 @@ function App() {
           <Link to="/material-ui">Material UI</Link>
           <Link to="/ant-design">Ant Design</Link>
           <Link to="/uswds">USWDS</Link>
+          <Link to="/govuk">GOV.UK</Link>
           {/* <Link to="/chakra-ui">Chakra UI</Link> */}
           {/* <Link to="/mantine">Mantine</Link> */}
         </nav>
@@ -33,6 +35,7 @@ function App() {
           <Route path="/material-ui" element={<MaterialUIPage />} />
           <Route path="/ant-design" element={<AntDesignPage />} />
           <Route path="/uswds" element={<USWDSPage />} />
+          <Route path="/govuk" element={<GOVUKPage />} />
           {/* <Route path="/chakra-ui" element={<ChakraUIPage />} /> */}
           {/* <Route path="/mantine" element={<MantinePage />} /> */}
         </Routes>
@@ -51,7 +54,8 @@ function Home() {
         <p>✅ Vanilla CSS - Fonctionnel</p>
         <p>✅ Material UI - Fonctionnel</p>
         <p>✅ Ant Design - Fonctionnel</p>
-        <p>✅ USWDS - Fonctionnel (Government Design System)</p>
+        <p>✅ USWDS - Fonctionnel (U.S. Government Design System)</p>
+        <p>✅ GOV.UK - Fonctionnel (UK Government Design System)</p>
         <p>🚧 Chakra UI v3 - En cours de développement</p>
         <p>🚧 Mantine v7 - En cours de développement</p>
       </div>
@@ -73,6 +77,10 @@ function AntDesignPage() {
 
 function USWDSPage() {
   return <USWDSComponents />;
+}
+
+function GOVUKPage() {
+  return <GOVUKComponents />;
 }
 
 // function ChakraUIPage() {
