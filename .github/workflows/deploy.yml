@@ -39,7 +39,7 @@ jobs:
         run: cp -r node_modules/govuk-frontend/dist/govuk/assets public/
         
       - name: Build project
-        run: npm run build
+        run: GENERATE_SOURCEMAP=false npm run build
         env:
           CI: false
           

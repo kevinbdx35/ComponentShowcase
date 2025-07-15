@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import {
   MantineProvider,
   AppShell,
-  Header,
-  Navbar,
   Text,
   Button,
   Card,
