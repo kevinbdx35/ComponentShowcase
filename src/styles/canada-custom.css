@@ -1,0 +1,987 @@
+/* Canada.ca Design System Custom Styles */
+
+/* Variables */
+:root {
+  --canada-red: #ff0000;
+  --canada-blue: #26374a;
+  --canada-blue-light: #335075;
+  --canada-blue-dark: #1e2a37;
+  --canada-white: #ffffff;
+  --canada-black: #000000;
+  --canada-grey-50: #f8f9fa;
+  --canada-grey-100: #f1f2f3;
+  --canada-grey-200: #e1e4e7;
+  --canada-grey-300: #cfd1d5;
+  --canada-grey-400: #b7bac0;
+  --canada-grey-500: #9ca0a6;
+  --canada-grey-600: #6f7378;
+  --canada-grey-700: #4d5258;
+  --canada-grey-800: #31363b;
+  --canada-grey-900: #1a1e23;
+  
+  --canada-green: #00823b;
+  --canada-yellow: #ff9900;
+  --canada-orange: #f90000;
+  
+  --canada-focus-blue: #0535d2;
+  --canada-link-blue: #284162;
+  --canada-visited-purple: #7834bc;
+  
+  --canada-spacing-xs: 0.25rem;
+  --canada-spacing-sm: 0.5rem;
+  --canada-spacing-md: 1rem;
+  --canada-spacing-lg: 1.5rem;
+  --canada-spacing-xl: 2rem;
+  --canada-spacing-2xl: 3rem;
+  --canada-spacing-3xl: 4rem;
+  
+  --canada-border-radius: 0.25rem;
+  --canada-border-radius-lg: 0.5rem;
+  
+  --canada-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --canada-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+  --canada-shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.15);
+  
+  --canada-font-family: "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+  --canada-font-size-xs: 0.75rem;
+  --canada-font-size-sm: 0.875rem;
+  --canada-font-size-base: 1rem;
+  --canada-font-size-lg: 1.125rem;
+  --canada-font-size-xl: 1.25rem;
+  --canada-font-size-2xl: 1.5rem;
+  --canada-font-size-3xl: 1.875rem;
+  --canada-font-size-4xl: 2.25rem;
+  --canada-font-size-5xl: 3rem;
+}
+
+/* Reset and base */
+.canada-container {
+  font-family: var(--canada-font-family);
+  color: var(--canada-grey-900);
+  background-color: var(--canada-white);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Header */
+.canada-header {
+  background-color: var(--canada-white);
+  border-bottom: 4px solid var(--canada-red);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.canada-header-top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--canada-spacing-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--canada-spacing-xl);
+}
+
+.canada-header-brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--canada-spacing-md);
+}
+
+.canada-signature {
+  display: flex;
+  align-items: center;
+  gap: var(--canada-spacing-md);
+}
+
+.canada-flag {
+  width: 40px;
+  height: 20px;
+}
+
+.canada-signature-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.canada-title {
+  font-size: var(--canada-font-size-sm);
+  font-weight: 700;
+  color: var(--canada-blue);
+  line-height: 1.2;
+}
+
+.canada-subtitle {
+  font-size: var(--canada-font-size-xs);
+  color: var(--canada-grey-600);
+  line-height: 1.2;
+}
+
+.canada-service-title h1 {
+  font-size: var(--canada-font-size-2xl);
+  font-weight: 700;
+  color: var(--canada-blue);
+  margin: 0 0 var(--canada-spacing-sm) 0;
+  line-height: 1.3;
+}
+
+.canada-service-title p {
+  font-size: var(--canada-font-size-base);
+  color: var(--canada-grey-700);
+  margin: 0;
+}
+
+.canada-header-tools {
+  display: flex;
+  align-items: center;
+  gap: var(--canada-spacing-md);
+}
+
+.canada-language-toggle {
+  background: none;
+  border: 1px solid var(--canada-blue);
+  color: var(--canada-blue);
+  padding: var(--canada-spacing-sm) var(--canada-spacing-md);
+  border-radius: var(--canada-border-radius);
+  font-size: var(--canada-font-size-sm);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.canada-language-toggle:hover {
+  background-color: var(--canada-blue);
+  color: var(--canada-white);
+}
+
+/* Breadcrumb */
+.canada-breadcrumb {
+  background-color: var(--canada-grey-100);
+  padding: var(--canada-spacing-sm) 0;
+  font-size: var(--canada-font-size-sm);
+}
+
+.canada-breadcrumb-list {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--canada-spacing-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--canada-spacing-sm);
+}
+
+.canada-breadcrumb-link {
+  color: var(--canada-link-blue);
+  text-decoration: underline;
+}
+
+.canada-breadcrumb-link:hover {
+  color: var(--canada-focus-blue);
+}
+
+.canada-breadcrumb-link::after {
+  content: " > ";
+  margin-left: var(--canada-spacing-sm);
+  color: var(--canada-grey-600);
+  text-decoration: none;
+}
+
+.canada-breadcrumb-current {
+  color: var(--canada-grey-700);
+  font-weight: 600;
+}
+
+/* Hero Section */
+.canada-hero {
+  background: linear-gradient(135deg, var(--canada-blue) 0%, var(--canada-blue-light) 100%);
+  color: var(--canada-white);
+  padding: var(--canada-spacing-3xl) var(--canada-spacing-lg);
+  text-align: center;
+}
+
+.canada-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.canada-hero-title {
+  font-size: var(--canada-font-size-4xl);
+  font-weight: 700;
+  margin: 0 0 var(--canada-spacing-xl) 0;
+  line-height: 1.2;
+}
+
+.canada-hero-description {
+  font-size: var(--canada-font-size-lg);
+  margin: 0 0 var(--canada-spacing-2xl) 0;
+  opacity: 0.95;
+  line-height: 1.6;
+}
+
+.canada-hero-actions {
+  display: flex;
+  gap: var(--canada-spacing-lg);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Main Content */
+.canada-main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--canada-spacing-2xl) var(--canada-spacing-lg);
+}
+
+/* Section Titles */
+.canada-section-title {
+  font-size: var(--canada-font-size-3xl);
+  font-weight: 700;
+  color: var(--canada-blue);
+  margin: 0 0 var(--canada-spacing-2xl) 0;
+  text-align: center;
+}
+
+.canada-services-section,
+.canada-form-section,
+.canada-team-section,
+.canada-charts-section,
+.canada-alerts-section,
+.canada-modal-section {
+  margin-bottom: var(--canada-spacing-3xl);
+}
+
+/* Buttons */
+.canada-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--canada-spacing-sm);
+  padding: var(--canada-spacing-md) var(--canada-spacing-xl);
+  border: 2px solid transparent;
+  border-radius: var(--canada-border-radius);
+  font-size: var(--canada-font-size-base);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-height: 44px;
+  position: relative;
+}
+
+.canada-btn:focus {
+  outline: 3px solid var(--canada-focus-blue);
+  outline-offset: 2px;
+}
+
+.canada-btn--super {
+  background-color: var(--canada-green);
+  color: var(--canada-white);
+  border-color: var(--canada-green);
+  font-size: var(--canada-font-size-lg);
+  padding: var(--canada-spacing-lg) var(--canada-spacing-2xl);
+}
+
+.canada-btn--super:hover {
+  background-color: #006729;
+  border-color: #006729;
+}
+
+.canada-btn--primary {
+  background-color: var(--canada-blue);
+  color: var(--canada-white);
+  border-color: var(--canada-blue);
+}
+
+.canada-btn--primary:hover {
+  background-color: var(--canada-blue-dark);
+  border-color: var(--canada-blue-dark);
+}
+
+.canada-btn--secondary {
+  background-color: transparent;
+  color: var(--canada-blue);
+  border-color: var(--canada-blue);
+}
+
+.canada-btn--secondary:hover {
+  background-color: var(--canada-blue);
+  color: var(--canada-white);
+}
+
+.canada-btn--link {
+  background: none;
+  border: none;
+  color: var(--canada-link-blue);
+  text-decoration: underline;
+  padding: var(--canada-spacing-sm);
+  min-height: auto;
+}
+
+.canada-btn--link:hover {
+  color: var(--canada-focus-blue);
+}
+
+.canada-btn--danger {
+  background-color: var(--canada-orange);
+  color: var(--canada-white);
+  border-color: var(--canada-orange);
+}
+
+.canada-btn--danger:hover {
+  background-color: #d10000;
+  border-color: #d10000;
+}
+
+/* Tabs */
+.canada-tabs {
+  background-color: var(--canada-white);
+  border-radius: var(--canada-border-radius-lg);
+  box-shadow: var(--canada-shadow);
+  margin-bottom: var(--canada-spacing-2xl);
+  border: 1px solid var(--canada-grey-200);
+}
+
+.canada-tabs-list {
+  display: flex;
+  border-bottom: 1px solid var(--canada-grey-200);
+  overflow-x: auto;
+}
+
+.canada-tab {
+  flex: 1;
+  padding: var(--canada-spacing-lg);
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: var(--canada-font-size-base);
+  color: var(--canada-grey-700);
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.canada-tab:hover {
+  background-color: var(--canada-grey-50);
+}
+
+.canada-tab--active {
+  color: var(--canada-blue);
+  font-weight: 600;
+  border-bottom: 3px solid var(--canada-blue);
+  background-color: var(--canada-grey-50);
+}
+
+.canada-tab-content {
+  padding: var(--canada-spacing-xl);
+}
+
+.canada-tab-panel h2 {
+  font-size: var(--canada-font-size-xl);
+  color: var(--canada-blue);
+  margin: 0 0 var(--canada-spacing-md) 0;
+}
+
+.canada-tab-panel p {
+  color: var(--canada-grey-700);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Grid and Cards */
+.canada-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--canada-spacing-xl);
+}
+
+.canada-card {
+  background-color: var(--canada-white);
+  border-radius: var(--canada-border-radius-lg);
+  box-shadow: var(--canada-shadow);
+  border: 1px solid var(--canada-grey-200);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.canada-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--canada-shadow-lg);
+}
+
+.canada-card-header {
+  padding: var(--canada-spacing-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--canada-grey-200);
+}
+
+.canada-card-icon {
+  font-size: var(--canada-font-size-2xl);
+}
+
+.canada-card-body {
+  padding: var(--canada-spacing-lg);
+}
+
+.canada-card-title {
+  font-size: var(--canada-font-size-xl);
+  font-weight: 600;
+  margin: 0 0 var(--canada-spacing-md) 0;
+  color: var(--canada-blue);
+}
+
+.canada-card-description {
+  color: var(--canada-grey-700);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.canada-card-footer {
+  padding: var(--canada-spacing-lg);
+  border-top: 1px solid var(--canada-grey-200);
+}
+
+/* Badges */
+.canada-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--canada-spacing-xs) var(--canada-spacing-sm);
+  border-radius: var(--canada-border-radius);
+  font-size: var(--canada-font-size-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.canada-badge--success {
+  background-color: var(--canada-green);
+  color: var(--canada-white);
+}
+
+.canada-badge--info {
+  background-color: var(--canada-blue);
+  color: var(--canada-white);
+}
+
+.canada-badge--featured {
+  background-color: var(--canada-yellow);
+  color: var(--canada-grey-900);
+}
+
+.canada-badge--warning {
+  background-color: var(--canada-yellow);
+  color: var(--canada-grey-900);
+}
+
+.canada-badge--danger {
+  background-color: var(--canada-orange);
+  color: var(--canada-white);
+}
+
+/* Forms */
+.canada-form {
+  background-color: var(--canada-white);
+  padding: var(--canada-spacing-2xl);
+  border-radius: var(--canada-border-radius-lg);
+  box-shadow: var(--canada-shadow);
+  border: 1px solid var(--canada-grey-200);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.canada-form-group {
+  margin-bottom: var(--canada-spacing-lg);
+}
+
+.canada-label {
+  display: block;
+  margin-bottom: var(--canada-spacing-sm);
+  font-weight: 600;
+  color: var(--canada-grey-900);
+}
+
+.canada-input,
+.canada-select,
+.canada-textarea {
+  width: 100%;
+  padding: var(--canada-spacing-md);
+  border: 2px solid var(--canada-grey-300);
+  border-radius: var(--canada-border-radius);
+  font-size: var(--canada-font-size-base);
+  transition: border-color 0.2s;
+  font-family: inherit;
+}
+
+.canada-input:focus,
+.canada-select:focus,
+.canada-textarea:focus {
+  outline: none;
+  border-color: var(--canada-focus-blue);
+  box-shadow: 0 0 0 3px rgba(5, 53, 210, 0.1);
+}
+
+.canada-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.canada-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--canada-spacing-sm);
+}
+
+.canada-checkbox-input {
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.canada-checkbox-label {
+  font-size: var(--canada-font-size-sm);
+  color: var(--canada-grey-700);
+  line-height: 1.6;
+  cursor: pointer;
+}
+
+.canada-form-actions {
+  display: flex;
+  gap: var(--canada-spacing-lg);
+  justify-content: center;
+  margin-top: var(--canada-spacing-2xl);
+  flex-wrap: wrap;
+}
+
+/* Tables */
+.canada-table-wrapper {
+  background-color: var(--canada-white);
+  border-radius: var(--canada-border-radius-lg);
+  box-shadow: var(--canada-shadow);
+  border: 1px solid var(--canada-grey-200);
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.canada-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.canada-table th,
+.canada-table td {
+  padding: var(--canada-spacing-lg);
+  text-align: left;
+  border-bottom: 1px solid var(--canada-grey-200);
+}
+
+.canada-table th {
+  background-color: var(--canada-grey-100);
+  font-weight: 600;
+  color: var(--canada-blue);
+}
+
+.canada-table tr:hover {
+  background-color: var(--canada-grey-50);
+}
+
+.canada-table-cell--name {
+  font-weight: 600;
+  color: var(--canada-blue);
+}
+
+.canada-link {
+  color: var(--canada-link-blue);
+  text-decoration: underline;
+}
+
+.canada-link:hover {
+  color: var(--canada-focus-blue);
+}
+
+.canada-link:visited {
+  color: var(--canada-visited-purple);
+}
+
+/* Statistics */
+.canada-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--canada-spacing-lg);
+  margin-bottom: var(--canada-spacing-2xl);
+}
+
+.canada-stat-card {
+  background-color: var(--canada-white);
+  padding: var(--canada-spacing-2xl);
+  border-radius: var(--canada-border-radius-lg);
+  box-shadow: var(--canada-shadow);
+  border: 1px solid var(--canada-grey-200);
+  text-align: center;
+}
+
+.canada-stat-number {
+  font-size: var(--canada-font-size-4xl);
+  font-weight: 700;
+  color: var(--canada-blue);
+  margin-bottom: var(--canada-spacing-sm);
+  line-height: 1;
+}
+
+.canada-stat-label {
+  font-size: var(--canada-font-size-sm);
+  color: var(--canada-grey-700);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+/* Charts */
+.canada-charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: var(--canada-spacing-xl);
+}
+
+.canada-chart-container {
+  background-color: var(--canada-white);
+  padding: var(--canada-spacing-xl);
+  border-radius: var(--canada-border-radius-lg);
+  box-shadow: var(--canada-shadow);
+  border: 1px solid var(--canada-grey-200);
+}
+
+.canada-chart-container h3 {
+  margin: 0 0 var(--canada-spacing-lg) 0;
+  font-size: var(--canada-font-size-lg);
+  color: var(--canada-blue);
+  font-weight: 600;
+}
+
+/* Alerts */
+.canada-alert {
+  padding: var(--canada-spacing-lg);
+  border-radius: var(--canada-border-radius);
+  margin-bottom: var(--canada-spacing-lg);
+  border: 1px solid;
+  border-left: 4px solid;
+}
+
+.canada-alert-title {
+  font-weight: 600;
+  margin: 0 0 var(--canada-spacing-sm) 0;
+}
+
+.canada-alert p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.canada-alert--success {
+  background-color: #f0f9f0;
+  border-color: var(--canada-green);
+  color: #0f5132;
+}
+
+.canada-alert--info {
+  background-color: #e7f1ff;
+  border-color: var(--canada-blue);
+  color: var(--canada-blue-dark);
+}
+
+.canada-alert--warning {
+  background-color: #fff3cd;
+  border-color: var(--canada-yellow);
+  color: #664d03;
+}
+
+.canada-alert--danger {
+  background-color: #f8d7da;
+  border-color: var(--canada-orange);
+  color: #721c24;
+}
+
+/* Modal */
+.canada-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: none;
+}
+
+.canada-modal--open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.canada-modal-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.canada-modal-content {
+  position: relative;
+  background-color: var(--canada-white);
+  border-radius: var(--canada-border-radius-lg);
+  box-shadow: var(--canada-shadow-lg);
+  max-width: 500px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.canada-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--canada-spacing-xl);
+  border-bottom: 1px solid var(--canada-grey-200);
+}
+
+.canada-modal-title {
+  font-size: var(--canada-font-size-xl);
+  font-weight: 600;
+  margin: 0;
+  color: var(--canada-blue);
+}
+
+.canada-modal-close {
+  background: none;
+  border: none;
+  font-size: var(--canada-font-size-2xl);
+  cursor: pointer;
+  padding: var(--canada-spacing-sm);
+  color: var(--canada-grey-600);
+  border-radius: var(--canada-border-radius);
+}
+
+.canada-modal-close:hover {
+  color: var(--canada-grey-900);
+  background-color: var(--canada-grey-100);
+}
+
+.canada-modal-body {
+  padding: var(--canada-spacing-xl);
+}
+
+.canada-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--canada-spacing-md);
+  padding: var(--canada-spacing-xl);
+  border-top: 1px solid var(--canada-grey-200);
+}
+
+/* Footer */
+.canada-footer {
+  background-color: var(--canada-grey-800);
+  color: var(--canada-white);
+  margin-top: var(--canada-spacing-3xl);
+}
+
+.canada-footer-body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--canada-spacing-2xl) var(--canada-spacing-lg);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--canada-spacing-2xl);
+}
+
+.canada-footer-brand {
+  display: flex;
+  align-items: center;
+}
+
+.canada-footer-signature {
+  display: flex;
+  align-items: center;
+  gap: var(--canada-spacing-md);
+}
+
+.canada-footer-flag {
+  width: 32px;
+  height: 16px;
+}
+
+.canada-footer-text {
+  font-size: var(--canada-font-size-base);
+  font-weight: 600;
+}
+
+.canada-footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--canada-spacing-xl);
+}
+
+.canada-footer-links h4 {
+  font-size: var(--canada-font-size-base);
+  font-weight: 600;
+  margin: 0 0 var(--canada-spacing-md) 0;
+  color: var(--canada-white);
+}
+
+.canada-footer-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.canada-footer-links li {
+  margin-bottom: var(--canada-spacing-sm);
+}
+
+.canada-footer-link {
+  color: var(--canada-grey-300);
+  text-decoration: underline;
+  font-size: var(--canada-font-size-sm);
+}
+
+.canada-footer-link:hover {
+  color: var(--canada-white);
+}
+
+.canada-footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--canada-spacing-lg);
+  border-top: 1px solid var(--canada-grey-600);
+}
+
+.canada-footer-legal {
+  display: flex;
+  gap: var(--canada-spacing-lg);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .canada-header-top {
+    flex-direction: column;
+    gap: var(--canada-spacing-lg);
+  }
+  
+  .canada-header-tools {
+    align-self: flex-start;
+  }
+  
+  .canada-hero-title {
+    font-size: var(--canada-font-size-3xl);
+  }
+  
+  .canada-hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .canada-tabs-list {
+    flex-direction: column;
+  }
+  
+  .canada-tab {
+    border-bottom: 1px solid var(--canada-grey-200);
+  }
+  
+  .canada-tab--active {
+    border-bottom: 1px solid var(--canada-grey-200);
+    border-left: 3px solid var(--canada-blue);
+  }
+  
+  .canada-form-actions {
+    flex-direction: column;
+  }
+  
+  .canada-footer-body {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .canada-footer-signature {
+    justify-content: center;
+  }
+  
+  .canada-footer-legal {
+    flex-direction: column;
+    gap: var(--canada-spacing-sm);
+  }
+  
+  .canada-charts-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .canada-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Accessibility */
+.canada-btn:focus,
+.canada-language-toggle:focus,
+.canada-input:focus,
+.canada-select:focus,
+.canada-textarea:focus,
+.canada-checkbox-input:focus,
+.canada-tab:focus,
+.canada-modal-close:focus {
+  outline: 3px solid var(--canada-focus-blue);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .canada-card {
+    border: 2px solid var(--canada-grey-400);
+  }
+  
+  .canada-btn {
+    border-width: 3px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .canada-card,
+  .canada-btn,
+  .canada-tab,
+  .canada-input,
+  .canada-select,
+  .canada-textarea {
+    transition: none;
+  }
+}
+
+/* Print styles */
+@media print {
+  .canada-header,
+  .canada-breadcrumb,
+  .canada-hero-actions,
+  .canada-form-actions,
+  .canada-modal,
+  .canada-footer {
+    display: none;
+  }
+  
+  .canada-container {
+    background: white;
+    color: black;
+  }
+  
+  .canada-card {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+  
+  .canada-link {
+    color: black;
+    text-decoration: underline;
+  }
+}

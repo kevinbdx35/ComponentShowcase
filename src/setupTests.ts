@@ -735,6 +735,18 @@ jest.mock('./components/DSFRComponents', () => ({
   }
 }));
 
+jest.mock('./components/CanadaComponents', () => ({
+  CanadaComponents: () => {
+    const React = require('react');
+    return React.createElement('div', { 'data-testid': 'canada-components' }, [
+      React.createElement('h1', { key: 'title' }, 'Digital Transformation Office'),
+      React.createElement('div', { key: 'signature' }, 'Government of Canada'),
+      React.createElement('div', { key: 'services' }, 'Our services'),
+      React.createElement('div', { key: 'footer' }, 'Government of Canada')
+    ]);
+  }
+}));
+
 jest.mock('./components/ReferenceComponents', () => ({
   ReferenceComponents: () => {
     const React = require('react');

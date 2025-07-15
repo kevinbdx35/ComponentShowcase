@@ -25,6 +25,7 @@ A comprehensive comparison platform for popular UI design systems, implementing 
 - [🏛️ USWDS Focus](#️-uswds-focus-us-web-design-system)
 - [🇬🇧 GOV.UK Design System](#-govuk-design-system)
 - [🇫🇷 DSFR (French Government Design System)](#-dsfr-french-government-design-system)
+- [🇨🇦 Canada.ca Design System](#-canadaca-design-system)
 - [📊 Visualization with visx](#-visualization-with-visx)
 - [🚀 Deployment](#-deployment)
 - [🇫🇷 Version Française](#-version-française)
@@ -46,6 +47,7 @@ src/
 │   ├── USWDSComponents.tsx        # USWDS implementation
 │   ├── GOVUKComponents.tsx        # GOV.UK Design System
 │   ├── DSFRComponents.tsx         # French Government DSFR
+│   ├── CanadaComponents.tsx       # Canada.ca Design System
 │   ├── ChakraUIComponents.tsx     # Chakra UI implementation
 │   ├── MantineComponents.tsx      # Mantine implementation
 │   ├── ThreeChart.tsx             # 3D charts with Three.js
@@ -166,6 +168,7 @@ npm run build
 ### ✨ **Latest Updates**
 - **🇬🇧 GOV.UK Design System** - UK government design system implementation
 - **🇫🇷 DSFR** - French Government Design System (Système de Design de l'État Français)
+- **🇨🇦 Canada.ca** - Canadian Government Design System with bilingual support
 - **🚀 GitHub Pages Deployment** - Automatic deployment with GitHub Actions
 - **🔧 Comprehensive Testing** - 77.6% test coverage with mocked dependencies
 - **📱 Enhanced Responsiveness** - Improved mobile experience across all systems
@@ -317,6 +320,46 @@ The Système de Design de l'État Français (DSFR) is the official design system
 - **Semantic Colors**: Standardized colors for alerts and states
 - **BEM Methodology**: Structured CSS naming convention
 - **Progressive Enhancement**: Works without JavaScript
+
+## 🇨🇦 Canada.ca Design System
+
+The Canada.ca Design System is the official design framework for Canadian government digital services:
+
+### Key Features
+- **Government of Canada Branding**: Official Government of Canada signature and visual identity
+- **Bilingual by Design**: Full English and French language support with dynamic switching
+- **Accessibility First**: WCAG 2.1 AA compliance and inclusive design principles
+- **User-Centered**: Based on extensive user research with Canadian citizens
+
+### Canada.ca Components Implemented
+- **Official Header**: Government of Canada signature with maple leaf flag
+- **Language Toggle**: Seamless English/French language switching
+- **Breadcrumb Navigation**: Canada.ca compliant navigation trails
+- **Super Task Button**: Primary call-to-action for government services
+- **Bilingual Forms**: Complete form components with official language support
+- **Service Cards**: Information display cards for government programs
+- **Team Directory**: Government staff directory with official email formats
+- **Performance Dashboard**: Metrics display for service delivery
+- **Alert System**: Success, information, warning, and danger notifications
+- **Modal Dialogs**: Accessible confirmation and information dialogs
+- **Official Footer**: Standard Government of Canada footer with required links
+
+### Canada.ca Advantages
+- ✅ **Bilingual Excellence**: Native English/French support throughout
+- ✅ **Federal Standards**: Meets Treasury Board Secretariat requirements
+- ✅ **Citizen-Focused**: Designed for Canadian government service users
+- ✅ **Accessibility Compliance**: WCAG 2.1 AA conformity built-in
+- ✅ **Responsive Design**: Mobile-first approach for all devices
+- ✅ **Open Government**: Transparency and open data integration
+- ✅ **Federal Identity**: Official Government of Canada visual standards
+
+### Canadian Government Standards
+- **Official Signature**: Government of Canada wordmark and flag
+- **Color Palette**: Federal corporate colors and approved variants
+- **Typography**: Noto Sans font family for optimal readability
+- **Bilingual Content**: Equal treatment of English and French languages
+- **Accessibility**: Federal accessibility standards compliance
+- **User Experience**: Evidence-based design from citizen research
 
 ## 📊 Visualization with visx
 
@@ -522,6 +565,7 @@ npm run build
 ### ✨ **Dernières Nouveautés**
 - **🇬🇧 GOV.UK Design System** - Système de design du gouvernement britannique
 - **🇫🇷 DSFR** - Système de Design de l'État Français (design system officiel français)
+- **🇨🇦 Canada.ca** - Système de design du gouvernement canadien avec support bilingue
 - **🚀 Déploiement GitHub Pages** - Déploiement automatique avec GitHub Actions
 - **🔧 Tests Complets** - 77.6% de couverture de tests avec dépendances mockées
 - **📱 Responsivité Améliorée** - Expérience mobile améliorée sur tous les systèmes
@@ -673,6 +717,46 @@ Le Système de Design de l'État Français (DSFR) est le système de design offi
 - **Couleurs Sémantiques** : Couleurs standardisées pour les alertes et états
 - **Méthodologie BEM** : Convention de nommage CSS structurée
 - **Amélioration Progressive** : Fonctionne sans JavaScript
+
+## 🇨🇦 Système de Design Canada.ca
+
+Le Système de Design Canada.ca est le cadre de conception officiel pour les services numériques du gouvernement canadien :
+
+### Caractéristiques principales
+- **Image de marque du Gouvernement du Canada** : Signature officielle du gouvernement du Canada et identité visuelle
+- **Bilingue par conception** : Support complet anglais et français avec commutation dynamique
+- **Accessibilité prioritaire** : Conformité WCAG 2.1 AA et principes de conception inclusive
+- **Centré sur l'utilisateur** : Basé sur des recherches approfondies avec les citoyens canadiens
+
+### Composants Canada.ca implémentés
+- **En-tête Officiel** : Signature du gouvernement du Canada avec drapeau à feuille d'érable
+- **Commutateur de Langue** : Basculement transparent anglais/français
+- **Navigation Fil d'Ariane** : Pistes de navigation conformes à Canada.ca
+- **Bouton Super Tâche** : Appel à l'action principal pour les services gouvernementaux
+- **Formulaires Bilingues** : Composants de formulaire complets avec support des langues officielles
+- **Cartes de Services** : Cartes d'affichage d'informations pour les programmes gouvernementaux
+- **Annuaire d'Équipe** : Annuaire du personnel gouvernemental avec formats de courriels officiels
+- **Tableau de Bord Performance** : Affichage des métriques de prestation de services
+- **Système d'Alertes** : Notifications de succès, information, avertissement et danger
+- **Boîtes de Dialogue Modales** : Dialogues de confirmation et d'information accessibles
+- **Pied de Page Officiel** : Pied de page standard du gouvernement du Canada avec liens requis
+
+### Avantages Canada.ca
+- ✅ **Excellence Bilingue** : Support natif anglais/français partout
+- ✅ **Standards Fédéraux** : Respecte les exigences du Secrétariat du Conseil du Trésor
+- ✅ **Centré Citoyen** : Conçu pour les utilisateurs des services gouvernementaux canadiens
+- ✅ **Conformité Accessibilité** : Conformité WCAG 2.1 AA intégrée
+- ✅ **Design Responsive** : Approche mobile-first pour tous les appareils
+- ✅ **Gouvernement Ouvert** : Intégration de la transparence et des données ouvertes
+- ✅ **Identité Fédérale** : Standards visuels officiels du gouvernement du Canada
+
+### Standards du Gouvernement Canadien
+- **Signature Officielle** : Mot-symbole et drapeau du gouvernement du Canada
+- **Palette de Couleurs** : Couleurs corporatives fédérales et variantes approuvées
+- **Typographie** : Famille de polices Noto Sans pour une lisibilité optimale
+- **Contenu Bilingue** : Traitement égal des langues anglaise et française
+- **Accessibilité** : Conformité aux standards d'accessibilité fédéraux
+- **Expérience Utilisateur** : Conception basée sur la recherche citoyenne
 
 ## 📊 Visualisation avec visx
 

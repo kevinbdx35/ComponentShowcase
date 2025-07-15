@@ -39,6 +39,13 @@ jest.mock('./components/DSFRComponents', () => ({
   }
 }));
 
+jest.mock('./components/CanadaComponents', () => ({
+  CanadaComponents: () => {
+    const React = require('react');
+    return React.createElement('div', { 'data-testid': 'canada-components' }, 'Canada.ca Components');
+  }
+}));
+
 import App from './App';
 
 test('renders navigation links', () => {
@@ -50,4 +57,5 @@ test('renders navigation links', () => {
   expect(screen.getByText('USWDS')).toBeInTheDocument();
   expect(screen.getByText('GOV.UK')).toBeInTheDocument();
   expect(screen.getByText('DSFR')).toBeInTheDocument();
+  expect(screen.getByText('Canada.ca')).toBeInTheDocument();
 });
