@@ -28,6 +28,7 @@ A comprehensive comparison platform for popular UI design systems, implementing 
 - [🇨🇦 Canada.ca Design System](#-canadaca-design-system)
 - [🇦🇺 Australian Health Design System](#-australian-health-design-system)
 - [🏛️ GOLD Design System](#️-gold-design-system)
+- [🇳🇿 New Zealand Government Design System](#-new-zealand-government-design-system)
 - [📊 Visualization with visx](#-visualization-with-visx)
 - [🚀 Deployment](#-deployment)
 - [🇫🇷 Version Française](#-version-française)
@@ -52,6 +53,7 @@ src/
 │   ├── CanadaComponents.tsx       # Canada.ca Design System
 │   ├── AustralianHealthComponents.tsx # Australian Health Design System
 │   ├── GOLDComponents.tsx         # GOLD Design System
+│   ├── NZGovtComponents.tsx       # New Zealand Government Design System
 │   ├── ChakraUIComponents.tsx     # Chakra UI implementation
 │   ├── MantineComponents.tsx      # Mantine implementation
 │   ├── ThreeChart.tsx             # 3D charts with Three.js
@@ -427,6 +429,41 @@ The GOLD Design System (formerly the Australian Government Design System) is the
 - **Government Focus**: Specialized components for government services and citizen interaction
 - **Documentation**: Comprehensive guidelines and implementation examples
 - **Support**: Active community support and government design system expertise
+
+## 🇳🇿 New Zealand Government Design System
+
+The New Zealand Government Design System is designed for building accessible, consistent government websites that put citizens first:
+
+### Key Features
+- **Kiwi Innovation**: Combines international best practices with cutting-edge New Zealand innovations
+- **Citizen-Centered Design**: Built to help all New Zealanders access government services easily
+- **Accessibility First**: Comprehensive accessibility testing ensures inclusive design for all users
+- **Evidence-Based**: Based on user research and testing with real New Zealand citizens
+
+### New Zealand Components Implemented
+- **Government Header**: New Zealand Government branding with official identity
+- **Responsive Navigation**: Mobile-first navigation designed for New Zealand users
+- **Breadcrumb Navigation**: Clear navigation paths following government web standards
+- **Hero Section**: Prominent messaging with friendly "Kia ora!" greeting
+- **Digital Service Cards**: Information display for government digital services and programs
+- **Government Forms**: Comprehensive form components with New Zealand-specific validation
+- **Team Directory**: Government department staff directory with official .govt.nz email addresses
+- **Performance Dashboard**: Metrics display for government service delivery and citizen satisfaction
+- **Page Alert System**: Four alert types (Success, Note, Warning, Error) with distinctive New Zealand styling
+- **Modal Dialogs**: Accessible confirmation dialogs for government service interactions
+
+### Design Specifications
+- **Color Palette**: Official New Zealand Government colors with primary (#003d6b) and secondary (#0066a6) blues
+- **Typography**: Noto Sans font family for clear government communication
+- **Component Library**: 12+ released components with more coming soon (File upload, Inset text)
+- **Framework Support**: Available in React, Vue, Mustache, HTML, and Twig implementations
+- **Accessibility**: WCAG compliance built into every component
+
+### New Zealand Standards
+- **Government Web Standards**: Meets New Zealand Government web usability standards
+- **Community Driven**: Open to community contribution via email, Slack, and GitHub
+- **Multi-Framework**: Supports various development environments and CMSs
+- **Alpha Phase**: Continuously improving based on user feedback and government needs
 
 ## 📊 Visualization with visx
 

@@ -60,6 +60,13 @@ jest.mock('./components/GOLDComponents', () => ({
   }
 }));
 
+jest.mock('./components/NZGovtComponents', () => ({
+  NZGovtComponents: () => {
+    const React = require('react');
+    return React.createElement('div', { 'data-testid': 'nz-govt-components' }, 'New Zealand Government Components');
+  }
+}));
+
 import App from './App';
 
 test('renders navigation links', () => {
@@ -74,4 +81,5 @@ test('renders navigation links', () => {
   expect(screen.getByText('Canada.ca')).toBeInTheDocument();
   expect(screen.getByText('Australian Health')).toBeInTheDocument();
   expect(screen.getByText('GOLD')).toBeInTheDocument();
+  expect(screen.getByText('New Zealand')).toBeInTheDocument();
 });
