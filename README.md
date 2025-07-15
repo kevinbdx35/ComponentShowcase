@@ -26,6 +26,7 @@ A comprehensive comparison platform for popular UI design systems, implementing 
 - [🇬🇧 GOV.UK Design System](#-govuk-design-system)
 - [🇫🇷 DSFR (French Government Design System)](#-dsfr-french-government-design-system)
 - [🇨🇦 Canada.ca Design System](#-canadaca-design-system)
+- [🇦🇺 Australian Health Design System](#-australian-health-design-system)
 - [📊 Visualization with visx](#-visualization-with-visx)
 - [🚀 Deployment](#-deployment)
 - [🇫🇷 Version Française](#-version-française)
@@ -48,6 +49,7 @@ src/
 │   ├── GOVUKComponents.tsx        # GOV.UK Design System
 │   ├── DSFRComponents.tsx         # French Government DSFR
 │   ├── CanadaComponents.tsx       # Canada.ca Design System
+│   ├── AustralianHealthComponents.tsx # Australian Health Design System
 │   ├── ChakraUIComponents.tsx     # Chakra UI implementation
 │   ├── MantineComponents.tsx      # Mantine implementation
 │   ├── ThreeChart.tsx             # 3D charts with Three.js
@@ -360,6 +362,34 @@ The Canada.ca Design System is the official design framework for Canadian govern
 - **Bilingual Content**: Equal treatment of English and French languages
 - **Accessibility**: Federal accessibility standards compliance
 - **User Experience**: Evidence-based design from citizen research
+
+## 🇦🇺 Australian Health Design System
+
+The Australian Health Design System is the official design framework for Australian government health and aged care digital services:
+
+### Key Features
+- **Australian Government Branding**: Official Australian Government Coat of Arms and visual identity
+- **Health-Focused Design**: Specialized components for health and medical services
+- **Quick Exit Functionality**: Safety feature for sensitive health content
+- **Accessibility Priority**: Full WCAG compliance for diverse user needs
+
+### Australian Health Components Implemented
+- **Government Header**: Australian Government Department of Health and Aged Care branding
+- **Navigation Menu**: Health-specific navigation with responsive mobile menu
+- **Breadcrumb Navigation**: Clear navigation paths for complex health information
+- **Hero Section**: Prominent messaging for health outcomes and services
+- **Health Service Cards**: Information display for Medicare, My Health Record, aged care services
+- **Comprehensive Forms**: Detailed feedback forms with health-specific fields
+- **Team Directory**: Department leadership with official government email addresses
+- **Performance Dashboard**: Health system metrics and service statistics
+- **Alert System**: Health-specific notifications and important updates
+- **Modal Dialogs**: Confirmation dialogs for sensitive health record actions
+
+### Design Specifications
+- **Color Palette**: Official Australian government blue (#014181) with health-focused secondary colors
+- **Typography**: Open Sans font family for clarity and accessibility
+- **Health Focus**: Specialized components for health information and services
+- **Government Standards**: Compliance with Australian government digital service standards
 
 ## 📊 Visualization with visx
 

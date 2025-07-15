@@ -46,6 +46,13 @@ jest.mock('./components/CanadaComponents', () => ({
   }
 }));
 
+jest.mock('./components/AustralianHealthComponents', () => ({
+  AustralianHealthComponents: () => {
+    const React = require('react');
+    return React.createElement('div', { 'data-testid': 'australian-health-components' }, 'Australian Health Components');
+  }
+}));
+
 import App from './App';
 
 test('renders navigation links', () => {
@@ -58,4 +65,5 @@ test('renders navigation links', () => {
   expect(screen.getByText('GOV.UK')).toBeInTheDocument();
   expect(screen.getByText('DSFR')).toBeInTheDocument();
   expect(screen.getByText('Canada.ca')).toBeInTheDocument();
+  expect(screen.getByText('Australian Health')).toBeInTheDocument();
 });
