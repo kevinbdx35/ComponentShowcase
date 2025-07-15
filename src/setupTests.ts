@@ -710,85 +710,27 @@ jest.mock('./components/AntDesignComponents', () => ({
   }
 }));
 
-jest.mock('./components/MaterialUIComponents', () => ({
-  MaterialUIComponents: () => {
+jest.mock('./components/GOVUKComponents', () => ({
+  GOVUKComponents: () => {
     const React = require('react');
-    return React.createElement('div', { 'data-testid': 'material-ui-components' }, [
-      // App Bar
-      React.createElement('div', { key: 'app-bar', 'data-testid': 'mui-app-bar' }, [
-        React.createElement('div', { key: 'title' }, 'TechCorp Solutions')
-      ]),
-      // Hero Section
-      React.createElement('div', { key: 'hero' }, [
-        React.createElement('h1', { key: 'title' }, 'TechCorp Solutions'),
-        React.createElement('p', { key: 'subtitle' }, 'Innovating the future with cutting-edge technology solutions for modern businesses'),
-        React.createElement('button', { key: 'get-started' }, 'Get Started'),
-        React.createElement('button', { key: 'learn-more' }, 'Learn More')
-      ]),
-      // Breadcrumb
-      React.createElement('div', { key: 'breadcrumb', 'data-testid': 'mui-breadcrumbs' }, [
-        React.createElement('span', { key: 'home' }, 'Home'),
-        React.createElement('span', { key: 'solutions' }, 'Solutions'),
-        React.createElement('span', { key: 'overview' }, 'Overview')
-      ]),
-      // Service Cards
-      React.createElement('div', { key: 'services' }, [
-        React.createElement('h2', { key: 'cloud' }, 'Cloud Solutions'),
-        React.createElement('div', { key: 'popular' }, 'Popular'),
-        React.createElement('h2', { key: 'ai' }, 'AI & Analytics'),
-        React.createElement('div', { key: 'advanced' }, 'Advanced'),
-        React.createElement('h2', { key: 'dev' }, 'Custom Development'),
-        React.createElement('div', { key: 'premium' }, 'Premium')
-      ]),
-      // Contact Form
-      React.createElement('div', { key: 'contact-form' }, [
-        React.createElement('h2', { key: 'contact-title' }, 'Contact Our Team'),
-        React.createElement('div', { key: 'contact-info' }, 'Contact Information'),
-        React.createElement('div', { key: 'project-details' }, 'Project Details'),
-        React.createElement('div', { key: 'review-submit' }, 'Review & Submit')
-      ]),
-      // Team Table
-      React.createElement('div', { key: 'team' }, [
-        React.createElement('h2', { key: 'team-title' }, 'Our Team Directory'),
-        React.createElement('div', { key: 'sarah' }, 'Sarah Chen'),
-        React.createElement('div', { key: 'engineering' }, 'Engineering'),
-        React.createElement('div', { key: 'design' }, 'Design'),
-        React.createElement('div', { key: 'marketing' }, 'Marketing')
-      ]),
-      // Performance Analytics
-      React.createElement('div', { key: 'analytics' }, [
-        React.createElement('h2', { key: 'analytics-title' }, 'Company Performance Analytics'),
-        React.createElement('div', { key: 'users-count' }, '2.4M'),
-        React.createElement('div', { key: 'users-label' }, 'Active Users'),
-        React.createElement('div', { key: 'revenue-count' }, '$1.2M'),
-        React.createElement('div', { key: 'revenue-label' }, 'Revenue')
-      ]),
-      // Alerts
-      React.createElement('div', { key: 'alerts' }, [
-        React.createElement('div', { key: 'success' }, 'Operation completed successfully!'),
-        React.createElement('div', { key: 'warning' }, 'Please check your input data.'),
-        React.createElement('div', { key: 'error' }, 'Something went wrong. Please try again.'),
-        React.createElement('div', { key: 'info' }, 'Here\'s some helpful information.')
-      ]),
-      // Modal
-      React.createElement('div', { key: 'modal' }, [
-        React.createElement('button', { key: 'modal-btn' }, 'Open Modal'),
-        React.createElement('div', { key: 'modal-title' }, 'Modal Title'),
-        React.createElement('div', { key: 'modal-content' }, 'This is a modal dialog with some content using Material Design 3 principles.')
-      ]),
-      // Gallery
-      React.createElement('div', { key: 'gallery' }, [
-        React.createElement('h2', { key: 'gallery-title' }, 'Our Work Environment'),
-        React.createElement('div', { key: 'workspace' }, 'Modern Workspace'),
-        React.createElement('div', { key: 'collaboration' }, 'Team Collaboration'),
-        React.createElement('div', { key: 'technology' }, 'Technology Development')
-      ]),
-      // Footer
-      React.createElement('div', { key: 'footer' }, [
-        React.createElement('div', { key: 'email' }, 'hello@techcorp.com'),
-        React.createElement('div', { key: 'phone' }, '+1 (555) 123-4567'),
-        React.createElement('div', { key: 'location' }, 'San Francisco, CA')
-      ])
+    return React.createElement('div', { 'data-testid': 'govuk-components' }, [
+      React.createElement('h1', { key: 'title' }, 'GOV.UK Design System Demo'),
+      React.createElement('div', { key: 'phase-banner' }, 'Beta'),
+      React.createElement('div', { key: 'breadcrumbs' }, 'Breadcrumbs'),
+      React.createElement('div', { key: 'services' }, 'Our Services'),
+      React.createElement('div', { key: 'footer' }, 'Crown copyright')
+    ]);
+  }
+}));
+
+jest.mock('./components/DSFRComponents', () => ({
+  DSFRComponents: () => {
+    const React = require('react');
+    return React.createElement('div', { 'data-testid': 'dsfr-components' }, [
+      React.createElement('h1', { key: 'title' }, 'Direction Interministérielle du Numérique'),
+      React.createElement('div', { key: 'marianne' }, 'République Française'),
+      React.createElement('div', { key: 'services' }, 'Nos services'),
+      React.createElement('div', { key: 'footer' }, 'République Française 2024')
     ]);
   }
 }));

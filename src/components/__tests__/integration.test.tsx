@@ -64,7 +64,8 @@ jest.mock('../../components/AntDesignComponents', () => ({
   }
 }));
 
-jest.mock('../../components/MaterialUIComponents', () => ({
+// MaterialUIComponents is disabled
+jest.mock('../../components/MaterialUIComponents.tsx.bak', () => ({
   MaterialUIComponents: () => {
     const React = require('react');
     return React.createElement('div', { 'data-testid': 'material-ui-components' }, [

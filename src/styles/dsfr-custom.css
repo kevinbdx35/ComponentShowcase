@@ -1,0 +1,933 @@
+/* DSFR Custom Styles - Système de Design de l'État Français */
+
+/* Variables */
+:root {
+  --dsfr-blue-france: #000091;
+  --dsfr-blue-france-hover: #1212ff;
+  --dsfr-blue-france-active: #2323ff;
+  --dsfr-red-marianne: #e1000f;
+  --dsfr-green-tilleul: #66673d;
+  --dsfr-green-bourgeon: #68a532;
+  --dsfr-green-emeraude: #00a95f;
+  --dsfr-green-menthe: #009081;
+  --dsfr-green-archipel: #009099;
+  --dsfr-blue-ecume: #465f9d;
+  --dsfr-blue-cumulus: #417dc4;
+  --dsfr-purple-glycine: #a558a0;
+  --dsfr-pink-macaron: #e18b76;
+  --dsfr-pink-tuile: #ce614a;
+  --dsfr-yellow-tournesol: #c3992a;
+  --dsfr-yellow-moutarde: #c3992a;
+  --dsfr-orange-terre-battue: #e4794a;
+  --dsfr-brown-cafe: #d1b781;
+  --dsfr-brown-caramel: #c08c65;
+  --dsfr-brown-opera: #bd987a;
+  --dsfr-beige-gris-galet: #b8b5a9;
+  
+  --dsfr-grey-1000: #161616;
+  --dsfr-grey-900: #1e1e1e;
+  --dsfr-grey-800: #2a2a2a;
+  --dsfr-grey-700: #383838;
+  --dsfr-grey-600: #6a6a6a;
+  --dsfr-grey-500: #929292;
+  --dsfr-grey-400: #cecece;
+  --dsfr-grey-300: #e5e5e5;
+  --dsfr-grey-200: #f0f0f0;
+  --dsfr-grey-100: #f6f6f6;
+  --dsfr-grey-50: #fdfdfd;
+  
+  --dsfr-spacing-1: 0.25rem;
+  --dsfr-spacing-2: 0.5rem;
+  --dsfr-spacing-3: 0.75rem;
+  --dsfr-spacing-4: 1rem;
+  --dsfr-spacing-5: 1.25rem;
+  --dsfr-spacing-6: 1.5rem;
+  --dsfr-spacing-8: 2rem;
+  --dsfr-spacing-10: 2.5rem;
+  --dsfr-spacing-12: 3rem;
+  --dsfr-spacing-16: 4rem;
+  --dsfr-spacing-20: 5rem;
+  
+  --dsfr-border-radius: 0.25rem;
+  --dsfr-border-radius-lg: 0.5rem;
+  
+  --dsfr-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --dsfr-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --dsfr-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --dsfr-shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+  
+  --dsfr-font-family: "Marianne", arial, sans-serif;
+  --dsfr-font-size-xs: 0.75rem;
+  --dsfr-font-size-sm: 0.875rem;
+  --dsfr-font-size-base: 1rem;
+  --dsfr-font-size-lg: 1.125rem;
+  --dsfr-font-size-xl: 1.25rem;
+  --dsfr-font-size-2xl: 1.5rem;
+  --dsfr-font-size-3xl: 1.875rem;
+  --dsfr-font-size-4xl: 2.25rem;
+  --dsfr-font-size-5xl: 3rem;
+  --dsfr-font-size-6xl: 3.75rem;
+}
+
+/* Reset et base */
+.dsfr-container {
+  font-family: var(--dsfr-font-family);
+  color: var(--dsfr-grey-1000);
+  background-color: var(--dsfr-grey-50);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* Header */
+.dsfr-header {
+  background-color: white;
+  border-bottom: 1px solid var(--dsfr-grey-300);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.dsfr-header-body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--dsfr-spacing-4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dsfr-header-brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--dsfr-spacing-2);
+}
+
+.dsfr-header-brand-top {
+  display: flex;
+  align-items: center;
+  gap: var(--dsfr-spacing-4);
+}
+
+.dsfr-logo {
+  display: flex;
+  align-items: center;
+}
+
+.dsfr-logo-title {
+  font-size: var(--dsfr-font-size-sm);
+  font-weight: bold;
+  color: var(--dsfr-blue-france);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.dsfr-header-operator {
+  border-left: 1px solid var(--dsfr-grey-300);
+  padding-left: var(--dsfr-spacing-4);
+}
+
+.dsfr-operator-name {
+  font-size: var(--dsfr-font-size-sm);
+  color: var(--dsfr-grey-700);
+}
+
+.dsfr-header-service-title {
+  font-size: var(--dsfr-font-size-xl);
+  font-weight: bold;
+  color: var(--dsfr-grey-1000);
+  margin: 0;
+}
+
+.dsfr-header-service-tagline {
+  font-size: var(--dsfr-font-size-sm);
+  color: var(--dsfr-grey-600);
+  margin: 0;
+}
+
+.dsfr-header-tools {
+  display: flex;
+  gap: var(--dsfr-spacing-2);
+}
+
+/* Notice/Bandeau */
+.dsfr-notice {
+  padding: var(--dsfr-spacing-2) 0;
+  text-align: center;
+  font-size: var(--dsfr-font-size-sm);
+}
+
+.dsfr-notice--info {
+  background-color: #e3f2fd;
+  border-bottom: 1px solid #bbdefb;
+}
+
+.dsfr-notice-body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--dsfr-spacing-4);
+}
+
+.dsfr-notice-title {
+  font-weight: bold;
+  margin: 0 var(--dsfr-spacing-2) 0 0;
+  display: inline;
+}
+
+/* Navigation */
+.dsfr-nav {
+  background-color: var(--dsfr-blue-france);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dsfr-nav-list {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--dsfr-spacing-4);
+  display: flex;
+  gap: var(--dsfr-spacing-2);
+}
+
+.dsfr-nav-link {
+  color: white;
+  text-decoration: none;
+  padding: var(--dsfr-spacing-3) var(--dsfr-spacing-4);
+  display: block;
+  border-radius: var(--dsfr-border-radius);
+  transition: background-color 0.2s;
+}
+
+.dsfr-nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dsfr-nav-link--active {
+  background-color: rgba(255, 255, 255, 0.15);
+  font-weight: bold;
+}
+
+/* Breadcrumb */
+.dsfr-breadcrumb {
+  background-color: var(--dsfr-grey-100);
+  padding: var(--dsfr-spacing-2) 0;
+  font-size: var(--dsfr-font-size-sm);
+}
+
+.dsfr-breadcrumb-list {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--dsfr-spacing-4);
+  display: flex;
+  align-items: center;
+  gap: var(--dsfr-spacing-2);
+}
+
+.dsfr-breadcrumb-link {
+  color: var(--dsfr-blue-france);
+  text-decoration: none;
+}
+
+.dsfr-breadcrumb-link:hover {
+  text-decoration: underline;
+}
+
+.dsfr-breadcrumb-link::after {
+  content: " › ";
+  margin-left: var(--dsfr-spacing-2);
+  color: var(--dsfr-grey-600);
+}
+
+.dsfr-breadcrumb-current {
+  color: var(--dsfr-grey-700);
+  font-weight: bold;
+}
+
+/* Hero Section */
+.dsfr-hero {
+  background: linear-gradient(135deg, var(--dsfr-blue-france) 0%, var(--dsfr-blue-cumulus) 100%);
+  color: white;
+  padding: var(--dsfr-spacing-20) var(--dsfr-spacing-4);
+  text-align: center;
+}
+
+.dsfr-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.dsfr-hero-title {
+  font-size: var(--dsfr-font-size-4xl);
+  font-weight: bold;
+  margin: 0 0 var(--dsfr-spacing-6) 0;
+  line-height: 1.2;
+}
+
+.dsfr-hero-description {
+  font-size: var(--dsfr-font-size-lg);
+  margin: 0 0 var(--dsfr-spacing-8) 0;
+  opacity: 0.9;
+}
+
+.dsfr-hero-actions {
+  display: flex;
+  gap: var(--dsfr-spacing-4);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Main Content */
+.dsfr-main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--dsfr-spacing-8) var(--dsfr-spacing-4);
+}
+
+/* Sections */
+.dsfr-section-title {
+  font-size: var(--dsfr-font-size-2xl);
+  font-weight: bold;
+  color: var(--dsfr-grey-1000);
+  margin: 0 0 var(--dsfr-spacing-6) 0;
+  text-align: center;
+}
+
+.dsfr-services-section,
+.dsfr-form-section,
+.dsfr-team-section,
+.dsfr-charts-section,
+.dsfr-alerts-section,
+.dsfr-modal-section {
+  margin-bottom: var(--dsfr-spacing-12);
+}
+
+/* Boutons */
+.dsfr-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--dsfr-spacing-2);
+  padding: var(--dsfr-spacing-3) var(--dsfr-spacing-5);
+  border: none;
+  border-radius: var(--dsfr-border-radius);
+  font-size: var(--dsfr-font-size-base);
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-height: 2.5rem;
+}
+
+.dsfr-btn--primary {
+  background-color: var(--dsfr-blue-france);
+  color: white;
+}
+
+.dsfr-btn--primary:hover {
+  background-color: var(--dsfr-blue-france-hover);
+}
+
+.dsfr-btn--secondary {
+  background-color: transparent;
+  color: var(--dsfr-blue-france);
+  border: 1px solid var(--dsfr-blue-france);
+}
+
+.dsfr-btn--secondary:hover {
+  background-color: var(--dsfr-blue-france);
+  color: white;
+}
+
+.dsfr-btn--lg {
+  padding: var(--dsfr-spacing-4) var(--dsfr-spacing-6);
+  font-size: var(--dsfr-font-size-lg);
+  min-height: 3rem;
+}
+
+.dsfr-btn--sm {
+  padding: var(--dsfr-spacing-2) var(--dsfr-spacing-3);
+  font-size: var(--dsfr-font-size-sm);
+  min-height: 2rem;
+}
+
+/* Onglets */
+.dsfr-tabs {
+  background-color: white;
+  border-radius: var(--dsfr-border-radius-lg);
+  box-shadow: var(--dsfr-shadow);
+  margin-bottom: var(--dsfr-spacing-8);
+}
+
+.dsfr-tabs-list {
+  display: flex;
+  border-bottom: 1px solid var(--dsfr-grey-300);
+}
+
+.dsfr-tab {
+  flex: 1;
+  padding: var(--dsfr-spacing-4);
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: var(--dsfr-font-size-base);
+  color: var(--dsfr-grey-700);
+  transition: all 0.2s;
+}
+
+.dsfr-tab:hover {
+  background-color: var(--dsfr-grey-100);
+}
+
+.dsfr-tab--active {
+  color: var(--dsfr-blue-france);
+  font-weight: bold;
+  border-bottom: 2px solid var(--dsfr-blue-france);
+}
+
+.dsfr-tab-content {
+  padding: var(--dsfr-spacing-6);
+}
+
+/* Grille et cartes */
+.dsfr-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--dsfr-spacing-6);
+}
+
+.dsfr-card {
+  background-color: white;
+  border-radius: var(--dsfr-border-radius-lg);
+  box-shadow: var(--dsfr-shadow);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.dsfr-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--dsfr-shadow-lg);
+}
+
+.dsfr-card-header {
+  padding: var(--dsfr-spacing-4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dsfr-card-icon {
+  font-size: var(--dsfr-font-size-2xl);
+}
+
+.dsfr-card-body {
+  padding: 0 var(--dsfr-spacing-4) var(--dsfr-spacing-4);
+}
+
+.dsfr-card-title {
+  font-size: var(--dsfr-font-size-lg);
+  font-weight: bold;
+  margin: 0 0 var(--dsfr-spacing-2) 0;
+  color: var(--dsfr-grey-1000);
+}
+
+.dsfr-card-description {
+  color: var(--dsfr-grey-700);
+  margin: 0 0 var(--dsfr-spacing-4) 0;
+}
+
+.dsfr-card-footer {
+  padding: var(--dsfr-spacing-4);
+  border-top: 1px solid var(--dsfr-grey-200);
+}
+
+/* Badges */
+.dsfr-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--dsfr-spacing-1) var(--dsfr-spacing-2);
+  border-radius: var(--dsfr-border-radius);
+  font-size: var(--dsfr-font-size-xs);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.dsfr-badge--success {
+  background-color: var(--dsfr-green-emeraude);
+  color: white;
+}
+
+.dsfr-badge--warning {
+  background-color: var(--dsfr-yellow-tournesol);
+  color: var(--dsfr-grey-1000);
+}
+
+.dsfr-badge--info {
+  background-color: var(--dsfr-blue-france);
+  color: white;
+}
+
+.dsfr-badge--error {
+  background-color: var(--dsfr-red-marianne);
+  color: white;
+}
+
+/* Formulaire */
+.dsfr-form {
+  background-color: white;
+  padding: var(--dsfr-spacing-6);
+  border-radius: var(--dsfr-border-radius-lg);
+  box-shadow: var(--dsfr-shadow);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.dsfr-form-group {
+  margin-bottom: var(--dsfr-spacing-4);
+}
+
+.dsfr-label {
+  display: block;
+  margin-bottom: var(--dsfr-spacing-2);
+  font-weight: 500;
+  color: var(--dsfr-grey-1000);
+}
+
+.dsfr-input,
+.dsfr-select,
+.dsfr-textarea {
+  width: 100%;
+  padding: var(--dsfr-spacing-3);
+  border: 2px solid var(--dsfr-grey-300);
+  border-radius: var(--dsfr-border-radius);
+  font-size: var(--dsfr-font-size-base);
+  transition: border-color 0.2s;
+}
+
+.dsfr-input:focus,
+.dsfr-select:focus,
+.dsfr-textarea:focus {
+  outline: none;
+  border-color: var(--dsfr-blue-france);
+}
+
+.dsfr-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.dsfr-checkbox {
+  display: flex;
+  align-items: center;
+  gap: var(--dsfr-spacing-2);
+}
+
+.dsfr-checkbox-input {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.dsfr-checkbox-label {
+  font-size: var(--dsfr-font-size-sm);
+  color: var(--dsfr-grey-700);
+}
+
+.dsfr-form-actions {
+  display: flex;
+  gap: var(--dsfr-spacing-4);
+  justify-content: center;
+  margin-top: var(--dsfr-spacing-6);
+  flex-wrap: wrap;
+}
+
+/* Tableau */
+.dsfr-table-wrapper {
+  background-color: white;
+  border-radius: var(--dsfr-border-radius-lg);
+  box-shadow: var(--dsfr-shadow);
+  overflow: hidden;
+}
+
+.dsfr-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dsfr-table th,
+.dsfr-table td {
+  padding: var(--dsfr-spacing-4);
+  text-align: left;
+  border-bottom: 1px solid var(--dsfr-grey-200);
+}
+
+.dsfr-table th {
+  background-color: var(--dsfr-grey-100);
+  font-weight: bold;
+  color: var(--dsfr-grey-1000);
+}
+
+.dsfr-table tr:hover {
+  background-color: var(--dsfr-grey-50);
+}
+
+.dsfr-table-cell--name {
+  font-weight: 500;
+  color: var(--dsfr-grey-1000);
+}
+
+.dsfr-link {
+  color: var(--dsfr-blue-france);
+  text-decoration: none;
+}
+
+.dsfr-link:hover {
+  text-decoration: underline;
+}
+
+/* Statistiques */
+.dsfr-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--dsfr-spacing-4);
+  margin-bottom: var(--dsfr-spacing-8);
+}
+
+.dsfr-stat-card {
+  background-color: white;
+  padding: var(--dsfr-spacing-6);
+  border-radius: var(--dsfr-border-radius-lg);
+  box-shadow: var(--dsfr-shadow);
+  text-align: center;
+}
+
+.dsfr-stat-number {
+  font-size: var(--dsfr-font-size-3xl);
+  font-weight: bold;
+  color: var(--dsfr-blue-france);
+  margin-bottom: var(--dsfr-spacing-2);
+}
+
+.dsfr-stat-label {
+  font-size: var(--dsfr-font-size-sm);
+  color: var(--dsfr-grey-700);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Graphiques */
+.dsfr-charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: var(--dsfr-spacing-6);
+}
+
+.dsfr-chart-container {
+  background-color: white;
+  padding: var(--dsfr-spacing-6);
+  border-radius: var(--dsfr-border-radius-lg);
+  box-shadow: var(--dsfr-shadow);
+}
+
+.dsfr-chart-container h3 {
+  margin: 0 0 var(--dsfr-spacing-4) 0;
+  font-size: var(--dsfr-font-size-lg);
+  color: var(--dsfr-grey-1000);
+}
+
+/* Alertes */
+.dsfr-alert {
+  padding: var(--dsfr-spacing-4);
+  border-radius: var(--dsfr-border-radius);
+  margin-bottom: var(--dsfr-spacing-4);
+  border-left: 4px solid;
+}
+
+.dsfr-alert-title {
+  font-weight: bold;
+  margin: 0 0 var(--dsfr-spacing-2) 0;
+}
+
+.dsfr-alert--success {
+  background-color: #f0f9ff;
+  border-left-color: var(--dsfr-green-emeraude);
+  color: var(--dsfr-green-emeraude);
+}
+
+.dsfr-alert--info {
+  background-color: #e3f2fd;
+  border-left-color: var(--dsfr-blue-france);
+  color: var(--dsfr-blue-france);
+}
+
+.dsfr-alert--warning {
+  background-color: #fff8e1;
+  border-left-color: var(--dsfr-yellow-tournesol);
+  color: var(--dsfr-yellow-tournesol);
+}
+
+.dsfr-alert--error {
+  background-color: #ffebee;
+  border-left-color: var(--dsfr-red-marianne);
+  color: var(--dsfr-red-marianne);
+}
+
+/* Modale */
+.dsfr-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: none;
+}
+
+.dsfr-modal--open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dsfr-modal-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dsfr-modal-content {
+  position: relative;
+  background-color: white;
+  border-radius: var(--dsfr-border-radius-lg);
+  box-shadow: var(--dsfr-shadow-xl);
+  max-width: 500px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.dsfr-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--dsfr-spacing-6);
+  border-bottom: 1px solid var(--dsfr-grey-200);
+}
+
+.dsfr-modal-title {
+  font-size: var(--dsfr-font-size-lg);
+  font-weight: bold;
+  margin: 0;
+  color: var(--dsfr-grey-1000);
+}
+
+.dsfr-modal-close {
+  background: none;
+  border: none;
+  font-size: var(--dsfr-font-size-xl);
+  cursor: pointer;
+  padding: var(--dsfr-spacing-2);
+  color: var(--dsfr-grey-600);
+}
+
+.dsfr-modal-close:hover {
+  color: var(--dsfr-grey-1000);
+}
+
+.dsfr-modal-body {
+  padding: var(--dsfr-spacing-6);
+}
+
+.dsfr-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--dsfr-spacing-4);
+  padding: var(--dsfr-spacing-6);
+  border-top: 1px solid var(--dsfr-grey-200);
+}
+
+/* Footer */
+.dsfr-footer {
+  background-color: var(--dsfr-grey-100);
+  border-top: 1px solid var(--dsfr-grey-300);
+  margin-top: var(--dsfr-spacing-16);
+}
+
+.dsfr-footer-body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--dsfr-spacing-12) var(--dsfr-spacing-4);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--dsfr-spacing-8);
+}
+
+.dsfr-footer-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--dsfr-spacing-4);
+}
+
+.dsfr-footer-logo-title {
+  font-size: var(--dsfr-font-size-sm);
+  font-weight: bold;
+  color: var(--dsfr-blue-france);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.dsfr-footer-operator {
+  border-left: 1px solid var(--dsfr-grey-300);
+  padding-left: var(--dsfr-spacing-4);
+}
+
+.dsfr-footer-operator-name {
+  font-size: var(--dsfr-font-size-sm);
+  color: var(--dsfr-grey-700);
+}
+
+.dsfr-footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--dsfr-spacing-6);
+}
+
+.dsfr-footer-links h4 {
+  font-size: var(--dsfr-font-size-base);
+  font-weight: bold;
+  margin: 0 0 var(--dsfr-spacing-3) 0;
+  color: var(--dsfr-grey-1000);
+}
+
+.dsfr-footer-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dsfr-footer-links li {
+  margin-bottom: var(--dsfr-spacing-2);
+}
+
+.dsfr-footer-link {
+  color: var(--dsfr-grey-700);
+  text-decoration: none;
+  font-size: var(--dsfr-font-size-sm);
+}
+
+.dsfr-footer-link:hover {
+  color: var(--dsfr-blue-france);
+  text-decoration: underline;
+}
+
+.dsfr-footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--dsfr-spacing-4);
+  border-top: 1px solid var(--dsfr-grey-300);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--dsfr-spacing-4);
+}
+
+.dsfr-footer-legal {
+  display: flex;
+  gap: var(--dsfr-spacing-4);
+  flex-wrap: wrap;
+}
+
+.dsfr-footer-copyright {
+  font-size: var(--dsfr-font-size-sm);
+  color: var(--dsfr-grey-600);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dsfr-header-body {
+    flex-direction: column;
+    gap: var(--dsfr-spacing-4);
+  }
+  
+  .dsfr-nav-list {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .dsfr-hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .dsfr-form-actions {
+    flex-direction: column;
+  }
+  
+  .dsfr-footer-body {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .dsfr-footer-brand {
+    justify-content: center;
+  }
+  
+  .dsfr-footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .dsfr-charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Améliorations d'accessibilité */
+.dsfr-btn:focus,
+.dsfr-nav-link:focus,
+.dsfr-input:focus,
+.dsfr-select:focus,
+.dsfr-textarea:focus {
+  outline: 2px solid var(--dsfr-blue-france);
+  outline-offset: 2px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dsfr-modal--open .dsfr-modal-content {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Impression */
+@media print {
+  .dsfr-nav,
+  .dsfr-notice,
+  .dsfr-breadcrumb,
+  .dsfr-hero-actions,
+  .dsfr-form-actions,
+  .dsfr-modal,
+  .dsfr-footer {
+    display: none;
+  }
+  
+  .dsfr-container {
+    background: white;
+    color: black;
+  }
+  
+  .dsfr-card {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+}

@@ -5,6 +5,7 @@ import { AntDesignComponents } from './components/AntDesignComponents';
 // import { MaterialUIComponents } from './components/MaterialUIComponents';
 import { USWDSComponents } from './components/USWDSComponents';
 import { GOVUKComponents } from './components/GOVUKComponents';
+import { DSFRComponents } from './components/DSFRComponents';
 // import { MantineComponents } from './components/MantineComponents';
 // import { ChakraUIComponents } from './components/ChakraUIComponents';
 import './App.css';
@@ -25,6 +26,7 @@ function App() {
           <Link to="/ant-design">Ant Design</Link>
           <Link to="/uswds">USWDS</Link>
           <Link to="/govuk">GOV.UK</Link>
+          <Link to="/dsfr">DSFR</Link>
           {/* <Link to="/chakra-ui">Chakra UI</Link> */}
           {/* <Link to="/mantine">Mantine</Link> */}
         </nav>
@@ -36,6 +38,7 @@ function App() {
           <Route path="/ant-design" element={<AntDesignPage />} />
           <Route path="/uswds" element={<USWDSPage />} />
           <Route path="/govuk" element={<GOVUKPage />} />
+          <Route path="/dsfr" element={<DSFRPage />} />
           {/* <Route path="/chakra-ui" element={<ChakraUIPage />} /> */}
           {/* <Route path="/mantine" element={<MantinePage />} /> */}
         </Routes>
@@ -56,6 +59,7 @@ function Home() {
         <p>✅ Ant Design - Fonctionnel</p>
         <p>✅ USWDS - Fonctionnel (U.S. Government Design System)</p>
         <p>✅ GOV.UK - Fonctionnel (UK Government Design System)</p>
+        <p>✅ DSFR - Fonctionnel (French Government Design System)</p>
         <p>🚧 Chakra UI v3 - En cours de développement</p>
         <p>🚧 Mantine v7 - En cours de développement</p>
       </div>
@@ -81,6 +85,10 @@ function USWDSPage() {
 
 function GOVUKPage() {
   return <GOVUKComponents />;
+}
+
+function DSFRPage() {
+  return <DSFRComponents />;
 }
 
 // function ChakraUIPage() {

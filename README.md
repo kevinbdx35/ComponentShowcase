@@ -24,6 +24,7 @@ A comprehensive comparison platform for popular UI design systems, implementing 
 - [🔍 Design Systems Comparison](#-design-systems-comparison)
 - [🏛️ USWDS Focus](#️-uswds-focus-us-web-design-system)
 - [🇬🇧 GOV.UK Design System](#-govuk-design-system)
+- [🇫🇷 DSFR (French Government Design System)](#-dsfr-french-government-design-system)
 - [📊 Visualization with visx](#-visualization-with-visx)
 - [🚀 Deployment](#-deployment)
 - [🇫🇷 Version Française](#-version-française)
@@ -41,7 +42,10 @@ src/
 ├── components/
 │   ├── ReferenceComponents.tsx    # Reference components (vanilla CSS)
 │   ├── AntDesignComponents.tsx    # Ant Design implementation
-│   ├── MaterialUIComponents.tsx   # Material UI implementation
+│   ├── MaterialUIComponents.tsx   # Material UI implementation (disabled)
+│   ├── USWDSComponents.tsx        # USWDS implementation
+│   ├── GOVUKComponents.tsx        # GOV.UK Design System
+│   ├── DSFRComponents.tsx         # French Government DSFR
 │   ├── ChakraUIComponents.tsx     # Chakra UI implementation
 │   ├── MantineComponents.tsx      # Mantine implementation
 │   ├── ThreeChart.tsx             # 3D charts with Three.js
@@ -160,7 +164,8 @@ npm run build
 ## 🎨 Implemented Features
 
 ### ✨ **Latest Updates**
-- **🇬🇧 GOV.UK Design System** - New UK government design system implementation
+- **🇬🇧 GOV.UK Design System** - UK government design system implementation
+- **🇫🇷 DSFR** - French Government Design System (Système de Design de l'État Français)
 - **🚀 GitHub Pages Deployment** - Automatic deployment with GitHub Actions
 - **🔧 Comprehensive Testing** - 77.6% test coverage with mocked dependencies
 - **📱 Enhanced Responsiveness** - Improved mobile experience across all systems
@@ -275,6 +280,43 @@ The GOV.UK Design System is specifically designed for UK government digital serv
 - ✅ **Progressive Enhancement**: Works without JavaScript
 - ✅ **Mobile First**: Responsive design for all devices
 - ✅ **Open Source**: Freely available and community-driven
+
+## 🇫🇷 DSFR (French Government Design System)
+
+The Système de Design de l'État Français (DSFR) is the official design system for French government digital services:
+
+### Key Features
+- **République Française Branding**: Official Marianne logo and French government identity
+- **Accessibility Compliance**: RGAA (French accessibility guidelines) conformity
+- **Service Public Focus**: Designed for French citizen services and administration
+- **Consistent Identity**: Unified experience across all French government platforms
+
+### DSFR Components Implemented
+- **Official Header**: Marianne logo with "République Française" branding
+- **Phase Banner**: Beta/Alpha service status notifications
+- **Navigation**: Government service navigation with breadcrumbs
+- **Service Cards**: Information display cards for government services
+- **Form Elements**: Accessible French government form components
+- **Team Directory**: Staff directory with government styling
+- **Statistics Dashboard**: Performance metrics display
+- **Alerts**: Success, information, warning, and error notifications
+- **Modal Dialogs**: Confirmation and information dialogs
+- **Official Footer**: Standard French government footer with legal links
+
+### DSFR Advantages
+- ✅ **Government Identity**: Official French state visual identity
+- ✅ **RGAA Compliance**: French accessibility standard conformity
+- ✅ **Citizen-Focused**: Designed for French public service users
+- ✅ **Responsive Design**: Mobile-first approach for all devices
+- ✅ **Typography**: Official Marianne font family
+- ✅ **Color Palette**: Official state colors and approved variants
+
+### French Government Standards
+- **Marianne Typography**: Official government font
+- **Blue France Color**: Primary government blue (#000091)
+- **Semantic Colors**: Standardized colors for alerts and states
+- **BEM Methodology**: Structured CSS naming convention
+- **Progressive Enhancement**: Works without JavaScript
 
 ## 📊 Visualization with visx
 
@@ -478,7 +520,8 @@ npm run build
 ## 🎨 Fonctionnalités implémentées
 
 ### ✨ **Dernières Nouveautés**
-- **🇬🇧 GOV.UK Design System** - Nouveau système de design du gouvernement britannique
+- **🇬🇧 GOV.UK Design System** - Système de design du gouvernement britannique
+- **🇫🇷 DSFR** - Système de Design de l'État Français (design system officiel français)
 - **🚀 Déploiement GitHub Pages** - Déploiement automatique avec GitHub Actions
 - **🔧 Tests Complets** - 77.6% de couverture de tests avec dépendances mockées
 - **📱 Responsivité Améliorée** - Expérience mobile améliorée sur tous les systèmes
@@ -593,6 +636,43 @@ Le GOV.UK Design System est spécialement conçu pour les services numériques d
 - ✅ **Amélioration Progressive** : Fonctionne sans JavaScript
 - ✅ **Mobile First** : Design responsive pour tous les appareils
 - ✅ **Open Source** : Disponible gratuitement et piloté par la communauté
+
+## 🇫🇷 DSFR (Système de Design de l'État Français)
+
+Le Système de Design de l'État Français (DSFR) est le système de design officiel pour les services numériques du gouvernement français :
+
+### Caractéristiques principales
+- **Identité République Française** : Logo Marianne officiel et identité du gouvernement français
+- **Conformité Accessibilité** : Conformité RGAA (Référentiel Général d'Amélioration de l'Accessibilité)
+- **Focus Service Public** : Conçu pour les services citoyens et l'administration française
+- **Identité Cohérente** : Expérience unifiée sur toutes les plateformes gouvernementales françaises
+
+### Composants DSFR implémentés
+- **En-tête Officiel** : Logo Marianne avec l'identité "République Française"
+- **Bannière de Phase** : Notifications de statut de service Beta/Alpha
+- **Navigation** : Navigation des services gouvernementaux avec fil d'Ariane
+- **Cartes de Services** : Cartes d'affichage d'informations pour les services gouvernementaux
+- **Éléments de Formulaire** : Composants de formulaire accessibles du gouvernement français
+- **Annuaire d'Équipe** : Annuaire du personnel avec style gouvernemental
+- **Tableau de Bord Statistiques** : Affichage des métriques de performance
+- **Alertes** : Notifications de succès, information, avertissement et erreur
+- **Boîtes de Dialogue Modales** : Dialogues de confirmation et d'information
+- **Pied de Page Officiel** : Pied de page standard du gouvernement français avec liens légaux
+
+### Avantages DSFR
+- ✅ **Identité Gouvernementale** : Identité visuelle officielle de l'État français
+- ✅ **Conformité RGAA** : Conformité aux standards d'accessibilité français
+- ✅ **Centré Citoyen** : Conçu pour les utilisateurs des services publics français
+- ✅ **Design Responsive** : Approche mobile-first pour tous les appareils
+- ✅ **Typographie** : Famille de polices Marianne officielle
+- ✅ **Palette de Couleurs** : Couleurs officielles de l'État et variantes approuvées
+
+### Standards du Gouvernement Français
+- **Typographie Marianne** : Police officielle du gouvernement
+- **Couleur Bleu France** : Bleu gouvernemental principal (#000091)
+- **Couleurs Sémantiques** : Couleurs standardisées pour les alertes et états
+- **Méthodologie BEM** : Convention de nommage CSS structurée
+- **Amélioration Progressive** : Fonctionne sans JavaScript
 
 ## 📊 Visualisation avec visx
 
