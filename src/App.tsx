@@ -8,6 +8,7 @@ import { GOVUKComponents } from './components/GOVUKComponents';
 import { DSFRComponents } from './components/DSFRComponents';
 import { CanadaComponents } from './components/CanadaComponents';
 import { AustralianHealthComponents } from './components/AustralianHealthComponents';
+import { GOLDComponents } from './components/GOLDComponents';
 // import { MantineComponents } from './components/MantineComponents';
 // import { ChakraUIComponents } from './components/ChakraUIComponents';
 import './App.css';
@@ -31,6 +32,7 @@ function App() {
           <Link to="/dsfr">DSFR</Link>
           <Link to="/canada">Canada.ca</Link>
           <Link to="/australian-health">Australian Health</Link>
+          <Link to="/gold">GOLD</Link>
           {/* <Link to="/chakra-ui">Chakra UI</Link> */}
           {/* <Link to="/mantine">Mantine</Link> */}
         </nav>
@@ -45,6 +47,7 @@ function App() {
           <Route path="/dsfr" element={<DSFRPage />} />
           <Route path="/canada" element={<CanadaPage />} />
           <Route path="/australian-health" element={<AustralianHealthPage />} />
+          <Route path="/gold" element={<GOLDPage />} />
           {/* <Route path="/chakra-ui" element={<ChakraUIPage />} /> */}
           {/* <Route path="/mantine" element={<MantinePage />} /> */}
         </Routes>
@@ -68,6 +71,7 @@ function Home() {
         <p>✅ DSFR - Fonctionnel (French Government Design System)</p>
         <p>✅ Canada.ca - Fonctionnel (Canadian Government Design System)</p>
         <p>✅ Australian Health - Fonctionnel (Australian Government Health Design System)</p>
+        <p>✅ GOLD - Fonctionnel (Australian Government Design System)</p>
         <p>🚧 Chakra UI v3 - En cours de développement</p>
         <p>🚧 Mantine v7 - En cours de développement</p>
       </div>
@@ -105,6 +109,10 @@ function CanadaPage() {
 
 function AustralianHealthPage() {
   return <AustralianHealthComponents />;
+}
+
+function GOLDPage() {
+  return <GOLDComponents />;
 }
 
 // function ChakraUIPage() {

@@ -27,6 +27,7 @@ A comprehensive comparison platform for popular UI design systems, implementing 
 - [🇫🇷 DSFR (French Government Design System)](#-dsfr-french-government-design-system)
 - [🇨🇦 Canada.ca Design System](#-canadaca-design-system)
 - [🇦🇺 Australian Health Design System](#-australian-health-design-system)
+- [🏛️ GOLD Design System](#️-gold-design-system)
 - [📊 Visualization with visx](#-visualization-with-visx)
 - [🚀 Deployment](#-deployment)
 - [🇫🇷 Version Française](#-version-française)
@@ -50,6 +51,7 @@ src/
 │   ├── DSFRComponents.tsx         # French Government DSFR
 │   ├── CanadaComponents.tsx       # Canada.ca Design System
 │   ├── AustralianHealthComponents.tsx # Australian Health Design System
+│   ├── GOLDComponents.tsx         # GOLD Design System
 │   ├── ChakraUIComponents.tsx     # Chakra UI implementation
 │   ├── MantineComponents.tsx      # Mantine implementation
 │   ├── ThreeChart.tsx             # 3D charts with Three.js
@@ -390,6 +392,41 @@ The Australian Health Design System is the official design framework for Austral
 - **Typography**: Open Sans font family for clarity and accessibility
 - **Health Focus**: Specialized components for health information and services
 - **Government Standards**: Compliance with Australian government digital service standards
+
+## 🏛️ GOLD Design System
+
+The GOLD Design System (formerly the Australian Government Design System) is the official design framework for Australian government digital services:
+
+### Key Features
+- **Australian Government Branding**: Official Australian Government identity and visual standards
+- **Component-Based Architecture**: Modular, reusable components for rapid development
+- **Accessibility First**: WCAG 2.1 AA compliance built into every component
+- **User-Centered Design**: Based on extensive user research with Australian citizens
+
+### GOLD Components Implemented
+- **Government Header**: Official Australian Government branding with GOLD logo
+- **Responsive Navigation**: Mobile-first navigation with accessibility features
+- **Breadcrumb Navigation**: Clear navigation paths following government standards
+- **Hero Section**: Prominent messaging for government services and information
+- **Service Cards**: Information display for government digital services and programs
+- **Government Forms**: Comprehensive form components with validation and accessibility
+- **Team Directory**: Government department staff directory with official email formats
+- **Performance Dashboard**: Metrics display for government service delivery and adoption
+- **Page Alert System**: Government-standard notifications for success, information, warnings, and errors
+- **Modal Dialogs**: Accessible confirmation and information dialogs for government actions
+
+### Design Specifications
+- **Color Palette**: Official GOLD Design System colors with primary (#06262d) and secondary (#00498f) government blues
+- **Typography**: Source Sans Pro font family for optimal government communication
+- **Grid System**: 12-column responsive grid system for consistent layouts
+- **Component Library**: Comprehensive set of pre-built, tested components
+- **Accessibility**: Full WCAG 2.1 AA compliance with screen reader support
+
+### GOLD Standards
+- **Open Source**: Community-driven development with MIT licensing
+- **Government Focus**: Specialized components for government services and citizen interaction
+- **Documentation**: Comprehensive guidelines and implementation examples
+- **Support**: Active community support and government design system expertise
 
 ## 📊 Visualization with visx
 
