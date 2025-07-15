@@ -35,6 +35,9 @@ jobs:
       - name: Install dependencies
         run: npm ci --legacy-peer-deps
         
+      - name: Copy GOV.UK assets
+        run: cp -r node_modules/govuk-frontend/dist/govuk/assets public/
+        
       - name: Build project
         run: npm run build
         env:

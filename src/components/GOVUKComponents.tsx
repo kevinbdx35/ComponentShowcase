@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
-import 'govuk-frontend/dist/govuk/govuk-frontend.min.css';
+// Import GOV.UK CSS with error handling
+try {
+  require('govuk-frontend/dist/govuk/govuk-frontend.min.css');
+} catch (error) {
+  console.warn('GOV.UK CSS not loaded:', error);
+}
 
 export const GOVUKComponents: React.FC = () => {
   const [formData, setFormData] = useState({
