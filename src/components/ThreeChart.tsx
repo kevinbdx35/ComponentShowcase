@@ -36,8 +36,8 @@ export const ThreeChart: React.FC = () => {
   ];
 
   return (
-    <div style={{ height: '400px', width: '100%' }}>
-      <Canvas camera={{ position: [5, 5, 5], fov: 60 }}>
+    <div style={{ height: '400px', width: '100%' }} data-testid="three-container">
+      <Canvas camera={{ position: [5, 5, 5], fov: 60 }} data-testid="three-canvas">
         <ambientLight intensity={0.5} />
         <pointLight position={[10, 10, 10]} />
         

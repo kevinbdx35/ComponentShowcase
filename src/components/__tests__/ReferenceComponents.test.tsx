@@ -2,11 +2,6 @@ import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { ReferenceComponents } from '../ReferenceComponents';
 
-// Mock ThreeChart to avoid 3D rendering issues in tests
-jest.mock('../ThreeChart', () => ({
-  ThreeChart: () => <div data-testid="three-chart">3D Chart Mock</div>
-}));
-
 describe('ReferenceComponents', () => {
   test('renders company name and hero section', () => {
     render(<ReferenceComponents />);

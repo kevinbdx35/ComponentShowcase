@@ -2,11 +2,6 @@ import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { MaterialUIComponents } from '../MaterialUIComponents';
 
-// Mock ThreeChart
-jest.mock('../ThreeChart', () => ({
-  ThreeChart: () => <div data-testid="three-chart">3D Chart Mock</div>
-}));
-
 describe('MaterialUIComponents', () => {
   test('renders app bar with navigation', () => {
     render(<MaterialUIComponents />);

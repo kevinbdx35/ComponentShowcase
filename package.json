@@ -35,6 +35,7 @@
     "@visx/visx": "^3.12.0",
     "antd": "^5.26.5",
     "framer-motion": "^12.23.5",
+    "govuk-frontend": "^5.11.0",
     "jest-environment-jsdom": "^30.0.4",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",

@@ -1,6 +1,227 @@
 # UI Design System Comparison
 
-Ce projet permet de comparer visuellement différents design systems populaires en implémentant les mêmes composants avec chaque système.
+A comprehensive comparison platform for popular UI design systems, implementing the same components across different systems to facilitate informed design decisions.
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W61I0YBJ)
+
+---
+
+## 🎯 Objective
+
+Test and compare multiple design systems (Material UI, Ant Design, Chakra UI, Mantine, etc.) to facilitate choosing the most suitable system for a project.
+
+## 🏗️ Project Structure
+
+```
+src/
+├── components/
+│   ├── ReferenceComponents.tsx    # Reference components (vanilla CSS)
+│   ├── AntDesignComponents.tsx    # Ant Design implementation
+│   ├── MaterialUIComponents.tsx   # Material UI implementation
+│   ├── ChakraUIComponents.tsx     # Chakra UI implementation
+│   ├── MantineComponents.tsx      # Mantine implementation
+│   ├── ThreeChart.tsx             # 3D charts with Three.js
+│   └── __tests__/                 # Unit tests
+└── App.tsx                        # Navigation between systems
+```
+
+## 🧩 Components Tested
+
+- **Typography**: Headers, paragraphs, links
+- **Buttons**: Primary, secondary, disabled, different sizes
+- **Forms**: Inputs, selects, textareas, checkboxes, radios, sliders, ratings
+- **Display**: Cards, tables, badges, avatars, images
+- **Feedback**: Alerts, modals, toasts, progress bars
+- **Navigation**: Tabs, breadcrumbs, main navigation
+- **Charts**: Interactive 3D charts with Three.js
+- **Data**: Employee tables, statistics, metrics
+- **Layout**: Grids, containers, spacing
+
+## 🚀 Getting Started
+
+### Installation
+```bash
+npm install
+```
+
+### Development
+```bash
+npm start
+```
+Opens [http://localhost:3000](http://localhost:3000) to view the application.
+
+### Testing
+```bash
+npm test
+```
+
+### Build
+```bash
+npm run build
+```
+
+## 📊 Comparison Criteria
+
+- **Performance**: Bundle size, render time
+- **DX**: Implementation ease, documentation
+- **Customization**: Theming, flexibility
+- **Accessibility**: WCAG compliance
+- **Aesthetics**: Visual consistency, modernity
+
+## 🔧 Implemented Design Systems
+
+- [x] **Vanilla CSS** (reference) - Pure CSS implementation
+- [x] **Material UI** - Material Design 3 with custom theme
+- [x] **Ant Design** - Enterprise design with complete configuration
+- [x] **USWDS** - U.S. Web Design System for government applications
+- [x] **visx** - Modular data visualization library
+- [🚧] **Chakra UI** - Modular design system with extended theme (v3 in progress)
+- [🚧] **Mantine** - Modern design system with AppShell and hooks (v7 in progress)
+
+## 📝 Usage
+
+1. Navigate between different design systems via the navigation bar
+2. Visually compare the same components implemented with each system
+3. Test interactions and animations
+4. Evaluate consistency and ergonomics
+5. Observe performance and accessibility differences
+
+## 🛠️ Technologies
+
+- **React 18** - Main framework
+- **TypeScript** - Static typing
+- **React Router** - SPA navigation
+- **Three.js** - 3D graphics (@react-three/fiber, @react-three/drei)
+- **Unsplash API** - High-quality images
+- **Jest & React Testing Library** - Unit testing
+
+## 📦 Design Systems & Dependencies
+
+### Material UI
+- `@mui/material` - Material Design components
+- `@emotion/react` & `@emotion/styled` - CSS-in-JS
+- `@mui/icons-material` - Material icons
+
+### Ant Design
+- `antd` - Enterprise components
+- `@ant-design/icons` - Ant Design icons
+
+### Chakra UI
+- `@chakra-ui/react` - Modular components
+- `@chakra-ui/icons` - Chakra icons
+- `@emotion/react` & `@emotion/styled` - Styling
+
+### USWDS (U.S. Web Design System)
+- `@uswds/uswds` - American government design system
+- Accessible components compliant with federal standards
+- Official U.S. government theme
+
+### visx (Data Visualization)
+- `@visx/visx` - Complete data visualization package
+- Modular components based on D3.js and React
+- Customizable and performant charts
+
+### Mantine (In Progress)
+- `@mantine/core` - Core components
+- `@mantine/hooks` - Utility hooks
+- `@mantine/notifications` - Notification system
+- `@tabler/icons-react` - Tabler icons
+
+## 🎨 Implemented Features
+
+### Reference Page (TechCorp Solutions)
+- **Hero Section** with Call-to-Action
+- **Navigation** with tabs and breadcrumbs
+- **Services** with cards and icons
+- **Contact Form** complete with validation
+- **Employee Tables** with avatars and badges
+- **Image Gallery** Unsplash
+- **Dashboard** with metrics and 3D charts
+- **Alerts** multi-types (success, warning, error, info)
+- **Modals** and interactions
+- **Footer** with links and information
+
+### Responsive Design
+- Mobile/desktop adaptations for all design systems
+- Navigation drawer for mobile
+- Responsive grids
+- Optimized breakpoints
+
+## 🧪 Tests
+
+Unit tests covering:
+- Main component rendering
+- Navigation between design systems
+- User interactions
+- External dependency mocks (Three.js, Unsplash)
+
+## 🔍 Design Systems Comparison
+
+| Aspect | Material UI | Ant Design | USWDS | visx |
+|--------|-------------|------------|-------|------|
+| **Bundle Size** | Medium | Large | Medium | Small |
+| **Customization** | High | Medium | Low | Very High |
+| **Performance** | Good | Good | Excellent | Excellent |
+| **Documentation** | Excellent | Very Good | Excellent | Very Good |
+| **Accessibility** | Excellent | Good | Excellent | Medium |
+| **Ecosystem** | Very Rich | Rich | Specialized | Specialized |
+| **Use Cases** | Versatile | Enterprise | Government | Visualization |
+
+## 🏛️ USWDS Focus (U.S. Web Design System)
+
+USWDS is a design system specifically designed for American government applications:
+
+### Key Features
+- **Federal Compliance**: Meets Section 508 and WCAG 2.1 AA standards
+- **Security**: Designed for high-security environments
+- **Accessibility**: Absolute priority on accessibility
+- **Consistency**: Unified user experience across all government sites
+
+### USWDS Components Implemented
+- **Banner**: Official government banner
+- **Header**: Standardized government navigation
+- **Hero**: Welcome section with call-to-action
+- **Cards**: Structured information cards
+- **Forms**: Forms with validation and required labels
+- **Tables**: Data tables with sorting and filtering
+- **Alerts**: Critical system notifications
+- **Progress bars**: Progress indicators
+- **Footer**: Standard government footer
+
+### USWDS Advantages
+- ✅ **Compliance**: Automatic compliance with federal standards
+- ✅ **Accessibility**: Built-in accessibility testing
+- ✅ **Performance**: Optimized for slow connections
+- ✅ **Responsive**: Mobile-first compatible
+- ✅ **Security**: Designed for secure environments
+
+## 📊 Visualization with visx
+
+visx brings advanced data visualization capabilities:
+
+### visx Advantages
+- **Modular**: Reusable and composable components
+- **Performance**: Optimized for large datasets
+- **Flexibility**: Full control over appearance and behavior
+- **React-friendly**: Native React integration
+- **TypeScript**: Complete TypeScript support
+
+### Implemented Charts
+- **Bar charts**: Bar charts with gradients
+- **Line charts**: Line charts with curves
+- **Grids**: Customizable background grids
+- **Axes**: Configurable X and Y axes
+- **Interactions**: Hover effects and animations
+
+---
+
+# Comparaison des Design Systems UI
+
+Une plateforme de comparaison complète pour les design systems UI populaires, implémentant les mêmes composants à travers différents systèmes pour faciliter les décisions de design éclairées.
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W61I0YBJ)
+
+---
 
 ## 🎯 Objectif
 

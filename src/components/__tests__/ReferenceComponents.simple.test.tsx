@@ -1,9 +1,12 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 
-// Mock ThreeChart to avoid 3D rendering issues in tests
+// Mock the ThreeChart component
 jest.mock('../ThreeChart', () => ({
-  ThreeChart: () => <div data-testid="three-chart">3D Chart Mock</div>
+  ThreeChart: () => {
+    const React = require('react');
+    return React.createElement('div', { 'data-testid': 'three-container' }, 'ThreeChart Mock');
+  }
 }));
 
 // Simple test that doesn't require full component
@@ -12,7 +15,6 @@ describe('ReferenceComponents Simple Tests', () => {
     const { ThreeChart } = require('../ThreeChart');
     render(<ThreeChart />);
     
-    expect(screen.getByTestId('three-chart')).toBeInTheDocument();
-    expect(screen.getByText('3D Chart Mock')).toBeInTheDocument();
+    expect(screen.getByTestId('three-container')).toBeInTheDocument();
   });
 });

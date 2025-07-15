@@ -2,11 +2,6 @@ import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { AntDesignComponents } from '../AntDesignComponents';
 
-// Mock ThreeChart
-jest.mock('../ThreeChart', () => ({
-  ThreeChart: () => <div data-testid="three-chart">3D Chart Mock</div>
-}));
-
 describe('AntDesignComponents', () => {
   test('renders app header with navigation', () => {
     render(<AntDesignComponents />);
