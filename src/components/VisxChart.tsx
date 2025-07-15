@@ -107,10 +107,10 @@ export const VisxChart: React.FC<VisxChartProps> = ({
                   cursor: 'pointer'
                 }}
                 onMouseEnter={(e) => {
-                  e.target.style.opacity = '0.8';
+                  (e.target as HTMLElement).style.opacity = '0.8';
                 }}
                 onMouseLeave={(e) => {
-                  e.target.style.opacity = '1';
+                  (e.target as HTMLElement).style.opacity = '1';
                 }}
               />
             );

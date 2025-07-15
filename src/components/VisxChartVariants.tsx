@@ -286,10 +286,10 @@ export const AntDesignVisxChart: React.FC<ChartProps> = ({
                   cursor: 'pointer'
                 }}
                 onMouseEnter={(e) => {
-                  e.target.style.fill = '#40a9ff';
+                  (e.target as SVGElement).style.fill = '#40a9ff';
                 }}
                 onMouseLeave={(e) => {
-                  e.target.style.fill = '#1890ff';
+                  (e.target as SVGElement).style.fill = '#1890ff';
                 }}
               />
             );

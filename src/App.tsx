@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { ReferenceComponents } from './components/ReferenceComponents';
 import { AntDesignComponents } from './components/AntDesignComponents';
-import { MaterialUIComponents } from './components/MaterialUIComponents';
+// import { MaterialUIComponents } from './components/MaterialUIComponents';
 import { USWDSComponents } from './components/USWDSComponents';
 import { GOVUKComponents } from './components/GOVUKComponents';
 // import { MantineComponents } from './components/MantineComponents';
@@ -21,7 +21,7 @@ function App() {
         }}>
           <Link to="/">Home</Link>
           <Link to="/vanilla">Vanilla CSS</Link>
-          <Link to="/material-ui">Material UI</Link>
+          {/* <Link to="/material-ui">Material UI</Link> */}
           <Link to="/ant-design">Ant Design</Link>
           <Link to="/uswds">USWDS</Link>
           <Link to="/govuk">GOV.UK</Link>
@@ -32,7 +32,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/vanilla" element={<VanillaPage />} />
-          <Route path="/material-ui" element={<MaterialUIPage />} />
+          {/* <Route path="/material-ui" element={<MaterialUIPage />} /> */}
           <Route path="/ant-design" element={<AntDesignPage />} />
           <Route path="/uswds" element={<USWDSPage />} />
           <Route path="/govuk" element={<GOVUKPage />} />
@@ -52,7 +52,7 @@ function Home() {
       <div style={{ marginTop: '2rem', padding: '1rem', backgroundColor: '#fff3cd', borderRadius: '8px' }}>
         <h3>🚧 Statut des Design Systems</h3>
         <p>✅ Vanilla CSS - Fonctionnel</p>
-        <p>✅ Material UI - Fonctionnel</p>
+        <p>🚧 Material UI - Mise à jour en cours (v7)</p>
         <p>✅ Ant Design - Fonctionnel</p>
         <p>✅ USWDS - Fonctionnel (U.S. Government Design System)</p>
         <p>✅ GOV.UK - Fonctionnel (UK Government Design System)</p>
@@ -67,9 +67,9 @@ function VanillaPage() {
   return <ReferenceComponents />;
 }
 
-function MaterialUIPage() {
-  return <MaterialUIComponents />;
-}
+// function MaterialUIPage() {
+//   return <MaterialUIComponents />;
+// }
 
 function AntDesignPage() {
   return <AntDesignComponents />;
