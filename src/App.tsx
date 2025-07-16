@@ -23,7 +23,7 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/vanilla" element={<VanillaPage />} />
+          <Route path="/reference" element={<ReferencePage />} />
           {/* <Route path="/material-ui" element={<MaterialUIPage />} /> */}
           <Route path="/ant-design" element={<AntDesignPage />} />
           <Route path="/uswds" element={<USWDSPage />} />
@@ -92,7 +92,7 @@ function Home() {
             🎨 UI Libraries & Frameworks
           </h2>
           <ul className="home-category-list">
-            <li><span className="status-indicator active"></span><a href="/vanilla" className="home-category-link">Vanilla CSS</a></li>
+            <li><span className="status-indicator active"></span><a href="/reference" className="home-category-link">Reference Implementation</a></li>
             <li><span className="status-indicator active"></span><a href="/ant-design" className="home-category-link">Ant Design</a></li>
             <li><span className="status-indicator active"></span><a href="/semiotic" className="home-category-link">Semiotic (Data Visualization)</a></li>
           </ul>
@@ -102,7 +102,7 @@ function Home() {
   );
 }
 
-function VanillaPage() {
+function ReferencePage() {
   return <ReferenceComponents />;
 }
 

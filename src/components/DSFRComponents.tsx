@@ -461,6 +461,230 @@ export const DSFRComponents: React.FC = () => {
           </div>
         </section>
 
+        {/* Simple Cards */}
+        <section className="dsfr-cards-section">
+          <h2 className="dsfr-section-title">Cartes simples</h2>
+          <div className="dsfr-grid">
+            <div className="dsfr-card">
+              <div className="dsfr-card-body">
+                <h3 className="dsfr-card-title">Démarche administrative</h3>
+                <p className="dsfr-card-description">
+                  Consultez les différentes démarches administratives disponibles en ligne.
+                </p>
+                <button className="dsfr-btn dsfr-btn--primary">Consulter</button>
+              </div>
+            </div>
+            <div className="dsfr-card">
+              <div className="dsfr-card-body">
+                <h3 className="dsfr-card-title">Aide et support</h3>
+                <p className="dsfr-card-description">
+                  Trouvez de l'aide et des ressources pour vos questions administratives.
+                </p>
+                <button className="dsfr-btn dsfr-btn--secondary">En savoir plus</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Badges & Avatars */}
+        <section className="dsfr-badges-section">
+          <h2 className="dsfr-section-title">Badges et avatars</h2>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--dsfr-spacing-4)', flexWrap: 'wrap', marginBottom: 'var(--dsfr-spacing-6)' }}>
+            <span className="dsfr-badge dsfr-badge--success">En ligne</span>
+            <span className="dsfr-badge dsfr-badge--info">Nouveau</span>
+            <span className="dsfr-badge dsfr-badge--warning">Maintenance</span>
+            <span className="dsfr-badge dsfr-badge--error">Indisponible</span>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--dsfr-spacing-4)', flexWrap: 'wrap' }}>
+            <div style={{ 
+              width: '40px', 
+              height: '40px', 
+              borderRadius: '50%', 
+              backgroundColor: 'var(--dsfr-blue-france)', 
+              display: 'flex', 
+              alignItems: 'center', 
+              justifyContent: 'center', 
+              color: 'white',
+              fontWeight: 'bold'
+            }}>JD</div>
+            <div style={{ 
+              width: '40px', 
+              height: '40px', 
+              borderRadius: '50%', 
+              backgroundColor: 'var(--dsfr-green-emeraude)', 
+              display: 'flex', 
+              alignItems: 'center', 
+              justifyContent: 'center', 
+              color: 'white',
+              fontWeight: 'bold'
+            }}>ML</div>
+            <div style={{ 
+              width: '40px', 
+              height: '40px', 
+              borderRadius: '50%', 
+              backgroundColor: 'var(--dsfr-red-marianne)', 
+              display: 'flex', 
+              alignItems: 'center', 
+              justifyContent: 'center', 
+              color: 'white',
+              fontWeight: 'bold'
+            }}>AD</div>
+          </div>
+        </section>
+
+        {/* Progress Bar */}
+        <section className="dsfr-progress-section">
+          <h2 className="dsfr-section-title">Barres de progression</h2>
+          <div style={{ maxWidth: '600px', margin: '0 auto' }}>
+            <div style={{ marginBottom: 'var(--dsfr-spacing-6)' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 'var(--dsfr-spacing-2)' }}>
+                <span>Dématérialisation des services</span>
+                <span>75%</span>
+              </div>
+              <div style={{ 
+                width: '100%', 
+                height: '8px', 
+                backgroundColor: 'var(--dsfr-grey-200)', 
+                borderRadius: 'var(--dsfr-border-radius)',
+                overflow: 'hidden'
+              }}>
+                <div style={{ 
+                  width: '75%', 
+                  height: '100%', 
+                  backgroundColor: 'var(--dsfr-blue-france)', 
+                  transition: 'width 0.3s ease'
+                }}></div>
+              </div>
+            </div>
+            <div style={{ marginBottom: 'var(--dsfr-spacing-6)' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 'var(--dsfr-spacing-2)' }}>
+                <span>Accessibilité numérique</span>
+                <span>92%</span>
+              </div>
+              <div style={{ 
+                width: '100%', 
+                height: '8px', 
+                backgroundColor: 'var(--dsfr-grey-200)', 
+                borderRadius: 'var(--dsfr-border-radius)',
+                overflow: 'hidden'
+              }}>
+                <div style={{ 
+                  width: '92%', 
+                  height: '100%', 
+                  backgroundColor: 'var(--dsfr-green-emeraude)', 
+                  transition: 'width 0.3s ease'
+                }}></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Tabs simples */}
+        <section className="dsfr-tabs-simple-section">
+          <h2 className="dsfr-section-title">Onglets simples</h2>
+          <div style={{ maxWidth: '600px', margin: '0 auto' }}>
+            <div style={{ borderBottom: '1px solid var(--dsfr-grey-300)', marginBottom: 'var(--dsfr-spacing-4)' }}>
+              <div style={{ display: 'flex', gap: '0' }}>
+                <button style={{ 
+                  padding: 'var(--dsfr-spacing-3) var(--dsfr-spacing-4)', 
+                  border: 'none', 
+                  borderBottom: '2px solid var(--dsfr-blue-france)', 
+                  backgroundColor: 'transparent',
+                  color: 'var(--dsfr-blue-france)',
+                  fontWeight: 'bold'
+                }}>
+                  Services
+                </button>
+                <button style={{ 
+                  padding: 'var(--dsfr-spacing-3) var(--dsfr-spacing-4)', 
+                  border: 'none', 
+                  backgroundColor: 'transparent',
+                  color: 'var(--dsfr-grey-600)'
+                }}>
+                  Documentation
+                </button>
+                <button style={{ 
+                  padding: 'var(--dsfr-spacing-3) var(--dsfr-spacing-4)', 
+                  border: 'none', 
+                  backgroundColor: 'transparent',
+                  color: 'var(--dsfr-grey-600)'
+                }}>
+                  Support
+                </button>
+              </div>
+            </div>
+            <div style={{ padding: 'var(--dsfr-spacing-4) 0' }}>
+              <p>Contenu de l'onglet Services. Découvrez tous les services numériques disponibles.</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Company Gallery */}
+        <section className="dsfr-gallery-section">
+          <h2 className="dsfr-section-title">Notre environnement de travail</h2>
+          <div className="dsfr-grid">
+            <div style={{ position: 'relative', overflow: 'hidden', borderRadius: 'var(--dsfr-border-radius-lg)' }}>
+              <img 
+                src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=400&h=250&fit=crop" 
+                alt="Bureaux modernes" 
+                style={{ width: '100%', height: '250px', objectFit: 'cover' }}
+              />
+              <div style={{ 
+                position: 'absolute', 
+                bottom: '0', 
+                left: '0', 
+                right: '0', 
+                background: 'linear-gradient(transparent, rgba(0,0,0,0.7))',
+                padding: '2rem 1rem 1rem',
+                color: 'white'
+              }}>
+                <h4 style={{ margin: '0 0 0.5rem 0', fontWeight: 'bold' }}>Espaces de travail</h4>
+                <p style={{ margin: '0', fontSize: '0.9rem', opacity: '0.9' }}>Bureaux modernes et collaboratifs</p>
+              </div>
+            </div>
+            
+            <div style={{ position: 'relative', overflow: 'hidden', borderRadius: 'var(--dsfr-border-radius-lg)' }}>
+              <img 
+                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=250&fit=crop" 
+                alt="Collaboration équipe" 
+                style={{ width: '100%', height: '250px', objectFit: 'cover' }}
+              />
+              <div style={{ 
+                position: 'absolute', 
+                bottom: '0', 
+                left: '0', 
+                right: '0', 
+                background: 'linear-gradient(transparent, rgba(0,0,0,0.7))',
+                padding: '2rem 1rem 1rem',
+                color: 'white'
+              }}>
+                <h4 style={{ margin: '0 0 0.5rem 0', fontWeight: 'bold' }}>Collaboration</h4>
+                <p style={{ margin: '0', fontSize: '0.9rem', opacity: '0.9' }}>Innovation par l'équipe</p>
+              </div>
+            </div>
+            
+            <div style={{ position: 'relative', overflow: 'hidden', borderRadius: 'var(--dsfr-border-radius-lg)' }}>
+              <img 
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=250&fit=crop" 
+                alt="Développement technologique" 
+                style={{ width: '100%', height: '250px', objectFit: 'cover' }}
+              />
+              <div style={{ 
+                position: 'absolute', 
+                bottom: '0', 
+                left: '0', 
+                right: '0', 
+                background: 'linear-gradient(transparent, rgba(0,0,0,0.7))',
+                padding: '2rem 1rem 1rem',
+                color: 'white'
+              }}>
+                <h4 style={{ margin: '0 0 0.5rem 0', fontWeight: 'bold' }}>Développement</h4>
+                <p style={{ margin: '0', fontSize: '0.9rem', opacity: '0.9' }}>Outils de pointe</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Alertes */}
         <section className="dsfr-alerts-section">
           <div className="dsfr-alert dsfr-alert--success">

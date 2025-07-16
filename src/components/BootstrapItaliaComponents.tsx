@@ -475,6 +475,230 @@ export const BootstrapItaliaComponents: React.FC = () => {
           </div>
         </div>
 
+        {/* Simple Cards */}
+        <div className="it-simple-cards-section">
+          <h2 className="it-section-title">Schede Semplici</h2>
+          <div className="it-grid">
+            <div className="it-card">
+              <div className="it-card-body">
+                <h3 className="it-card-title">Servizi Online</h3>
+                <p className="it-card-description">
+                  Accedi ai servizi digitali della Pubblica Amministrazione italiana.
+                </p>
+                <button className="it-btn it-btn--primary">Accedi</button>
+              </div>
+            </div>
+            <div className="it-card">
+              <div className="it-card-body">
+                <h3 className="it-card-title">Documenti</h3>
+                <p className="it-card-description">
+                  Scarica e gestisci i tuoi documenti amministrativi.
+                </p>
+                <button className="it-btn it-btn--secondary">Gestisci</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Badges & Avatars */}
+        <div className="it-badges-section">
+          <h2 className="it-section-title">Badge e Avatar</h2>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap', marginBottom: '2rem' }}>
+            <span className="it-badge it-badge--success">Attivo</span>
+            <span className="it-badge it-badge--info">Nuovo</span>
+            <span className="it-badge it-badge--warning">Manutenzione</span>
+            <span className="it-badge it-badge--error">Offline</span>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
+            <div style={{ 
+              width: '40px', 
+              height: '40px', 
+              borderRadius: '50%', 
+              backgroundColor: 'var(--it-primary)', 
+              display: 'flex', 
+              alignItems: 'center', 
+              justifyContent: 'center', 
+              color: 'white',
+              fontWeight: 'bold'
+            }}>GM</div>
+            <div style={{ 
+              width: '40px', 
+              height: '40px', 
+              borderRadius: '50%', 
+              backgroundColor: 'var(--it-success)', 
+              display: 'flex', 
+              alignItems: 'center', 
+              justifyContent: 'center', 
+              color: 'white',
+              fontWeight: 'bold'
+            }}>LB</div>
+            <div style={{ 
+              width: '40px', 
+              height: '40px', 
+              borderRadius: '50%', 
+              backgroundColor: 'var(--it-error)', 
+              display: 'flex', 
+              alignItems: 'center', 
+              justifyContent: 'center', 
+              color: 'white',
+              fontWeight: 'bold'
+            }}>AF</div>
+          </div>
+        </div>
+
+        {/* Progress Bar */}
+        <div className="it-progress-section">
+          <h2 className="it-section-title">Barre di Avanzamento</h2>
+          <div style={{ maxWidth: '600px', margin: '0 auto' }}>
+            <div style={{ marginBottom: '2rem' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
+                <span>Digitalizzazione servizi</span>
+                <span>78%</span>
+              </div>
+              <div style={{ 
+                width: '100%', 
+                height: '8px', 
+                backgroundColor: 'var(--it-grey-200)', 
+                borderRadius: 'var(--it-border-radius)',
+                overflow: 'hidden'
+              }}>
+                <div style={{ 
+                  width: '78%', 
+                  height: '100%', 
+                  backgroundColor: 'var(--it-primary)', 
+                  transition: 'width 0.3s ease'
+                }}></div>
+              </div>
+            </div>
+            <div style={{ marginBottom: '2rem' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
+                <span>Accessibilità WCAG</span>
+                <span>94%</span>
+              </div>
+              <div style={{ 
+                width: '100%', 
+                height: '8px', 
+                backgroundColor: 'var(--it-grey-200)', 
+                borderRadius: 'var(--it-border-radius)',
+                overflow: 'hidden'
+              }}>
+                <div style={{ 
+                  width: '94%', 
+                  height: '100%', 
+                  backgroundColor: 'var(--it-success)', 
+                  transition: 'width 0.3s ease'
+                }}></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Tabs simples */}
+        <div className="it-tabs-simple-section">
+          <h2 className="it-section-title">Schede Semplici</h2>
+          <div style={{ maxWidth: '600px', margin: '0 auto' }}>
+            <div style={{ borderBottom: '1px solid var(--it-border)', marginBottom: '1rem' }}>
+              <div style={{ display: 'flex', gap: '0' }}>
+                <button style={{ 
+                  padding: '0.75rem 1.5rem', 
+                  border: 'none', 
+                  borderBottom: '2px solid var(--it-primary)', 
+                  backgroundColor: 'transparent',
+                  color: 'var(--it-primary)',
+                  fontWeight: 'bold'
+                }}>
+                  Servizi
+                </button>
+                <button style={{ 
+                  padding: '0.75rem 1.5rem', 
+                  border: 'none', 
+                  backgroundColor: 'transparent',
+                  color: 'var(--it-text-light)'
+                }}>
+                  Documenti
+                </button>
+                <button style={{ 
+                  padding: '0.75rem 1.5rem', 
+                  border: 'none', 
+                  backgroundColor: 'transparent',
+                  color: 'var(--it-text-light)'
+                }}>
+                  Supporto
+                </button>
+              </div>
+            </div>
+            <div style={{ padding: '1rem 0' }}>
+              <p>Contenuto della scheda Servizi. Esplora tutti i servizi digitali disponibili.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Company Gallery */}
+        <div className="it-gallery-section">
+          <h2 className="it-section-title">Il Nostro Ambiente di Lavoro</h2>
+          <div className="it-grid">
+            <div style={{ position: 'relative', overflow: 'hidden', borderRadius: 'var(--it-border-radius)' }}>
+              <img 
+                src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=400&h=250&fit=crop" 
+                alt="Uffici moderni" 
+                style={{ width: '100%', height: '250px', objectFit: 'cover' }}
+              />
+              <div style={{ 
+                position: 'absolute', 
+                bottom: '0', 
+                left: '0', 
+                right: '0', 
+                background: 'linear-gradient(transparent, rgba(0,0,0,0.7))',
+                padding: '2rem 1rem 1rem',
+                color: 'white'
+              }}>
+                <h4 style={{ margin: '0 0 0.5rem 0', fontWeight: 'bold' }}>Spazi di Lavoro</h4>
+                <p style={{ margin: '0', fontSize: '0.9rem', opacity: '0.9' }}>Uffici moderni e collaborativi</p>
+              </div>
+            </div>
+            
+            <div style={{ position: 'relative', overflow: 'hidden', borderRadius: 'var(--it-border-radius)' }}>
+              <img 
+                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=250&fit=crop" 
+                alt="Collaborazione team" 
+                style={{ width: '100%', height: '250px', objectFit: 'cover' }}
+              />
+              <div style={{ 
+                position: 'absolute', 
+                bottom: '0', 
+                left: '0', 
+                right: '0', 
+                background: 'linear-gradient(transparent, rgba(0,0,0,0.7))',
+                padding: '2rem 1rem 1rem',
+                color: 'white'
+              }}>
+                <h4 style={{ margin: '0 0 0.5rem 0', fontWeight: 'bold' }}>Collaborazione</h4>
+                <p style={{ margin: '0', fontSize: '0.9rem', opacity: '0.9' }}>Innovazione attraverso il team</p>
+              </div>
+            </div>
+            
+            <div style={{ position: 'relative', overflow: 'hidden', borderRadius: 'var(--it-border-radius)' }}>
+              <img 
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=250&fit=crop" 
+                alt="Sviluppo tecnologico" 
+                style={{ width: '100%', height: '250px', objectFit: 'cover' }}
+              />
+              <div style={{ 
+                position: 'absolute', 
+                bottom: '0', 
+                left: '0', 
+                right: '0', 
+                background: 'linear-gradient(transparent, rgba(0,0,0,0.7))',
+                padding: '2rem 1rem 1rem',
+                color: 'white'
+              }}>
+                <h4 style={{ margin: '0 0 0.5rem 0', fontWeight: 'bold' }}>Sviluppo</h4>
+                <p style={{ margin: '0', fontSize: '0.9rem', opacity: '0.9' }}>Strumenti all'avanguardia</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Alerts Section */}
         <div className="it-alerts-section">
           <h2 className="it-section-title">Avvisi di Sistema</h2>

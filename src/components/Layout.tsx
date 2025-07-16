@@ -10,7 +10,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
   const location = useLocation();
 
   const designSystems = [
-    { path: '/vanilla', name: 'Vanilla CSS', status: 'active' },
+    { path: '/reference', name: 'Reference', status: 'active' },
     { path: '/ant-design', name: 'Ant Design', status: 'active' },
     { path: '/uswds', name: 'USWDS', status: 'active', category: 'Government' },
     { path: '/govuk', name: 'GOV.UK', status: 'active', category: 'Government' },
