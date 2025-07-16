@@ -48,7 +48,7 @@ src/
 ├── components/
 │   ├── ReferenceComponents.tsx    # Reference components (vanilla CSS)
 │   ├── AntDesignComponents.tsx    # Ant Design implementation
-│   ├── MaterialUIComponents.tsx   # Material UI implementation (disabled)
+│   ├── MaterialUIComponents.tsx   # Material UI implementation
 │   ├── USWDSComponents.tsx        # USWDS implementation
 │   ├── GOVUKComponents.tsx        # GOV.UK Design System
 │   ├── DSFRComponents.tsx         # French Government DSFR
@@ -57,9 +57,10 @@ src/
 │   ├── GOLDComponents.tsx         # GOLD Design System
 │   ├── NZGovtComponents.tsx       # New Zealand Government Design System
 │   ├── BootstrapItaliaComponents.tsx # Bootstrap Italia (Italian Government)
-│   ├── SemioticComponents.tsx    # Semiotic Data Visualization Framework
-│   ├── ChakraUIComponents.tsx     # Chakra UI implementation
-│   ├── MantineComponents.tsx      # Mantine implementation
+│   ├── EvergreenComponents.tsx    # Evergreen UI (Segment)
+│   ├── SemioticComponents.tsx     # Semiotic Data Visualization Framework
+│   ├── ChakraUIComponents.tsx     # Chakra UI implementation (in progress)
+│   ├── MantineComponents.tsx      # Mantine implementation (in progress)
 │   ├── ThreeChart.tsx             # 3D charts with Three.js
 │   └── __tests__/                 # Unit tests
 └── App.tsx                        # Navigation between systems
@@ -111,10 +112,18 @@ npm run build
 ## 🔧 Implemented Design Systems
 
 - [x] **Vanilla CSS** (reference) - Pure CSS implementation
-- [x] **Material UI** - Material Design 3 with custom theme
+- [x] **Material UI** - Material Design 3 (Material You) with custom theme
 - [x] **Ant Design** - Enterprise design with complete configuration
+- [x] **Evergreen UI** - Segment's design system for customer data platforms
 - [x] **USWDS** - U.S. Web Design System for government applications
 - [x] **GOV.UK** - UK Government Design System for public services
+- [x] **DSFR** - French Government Design System (Système de Design de l'État)
+- [x] **Canada.ca** - Canadian Government Design System with bilingual support
+- [x] **Australian Health** - Australian Government Health Design System
+- [x] **GOLD** - Australian Government Design System (formerly AGDS)
+- [x] **New Zealand Government** - New Zealand Government Design System
+- [x] **Bootstrap Italia** - Italian Government Design System
+- [x] **Semiotic** - React Data Visualization Framework
 - [x] **visx** - Modular data visualization library
 - [🚧] **Chakra UI** - Modular design system with extended theme (v3 in progress)
 - [🚧] **Mantine** - Modern design system with AppShell and hooks (v7 in progress)
@@ -162,6 +171,11 @@ npm run build
 - Accessible components for public services
 - Official UK government styling and patterns
 
+### Evergreen UI (Segment)
+- `evergreen-ui` - Segment's design system components
+- Focused on customer data platforms and analytics
+- Modern React patterns with hooks
+
 ### visx (Data Visualization)
 - `@visx/visx` - Complete data visualization package
 - Modular components based on D3.js and React
@@ -176,11 +190,13 @@ npm run build
 ## 🎨 Implemented Features
 
 ### ✨ **Latest Updates**
+- **🎨 Material UI v3** - Material Design 3 (Material You) with enhanced theming
+- **🌿 Evergreen UI** - Segment's design system for customer data platforms
 - **🇬🇧 GOV.UK Design System** - UK government design system implementation
 - **🇫🇷 DSFR** - French Government Design System (Système de Design de l'État Français)
 - **🇨🇦 Canada.ca** - Canadian Government Design System with bilingual support
 - **🚀 GitHub Pages Deployment** - Automatic deployment with GitHub Actions
-- **🔧 Comprehensive Testing** - 77.6% test coverage with mocked dependencies
+- **🔧 Comprehensive Testing** - Enhanced test coverage with security vulnerability fixes
 - **📱 Enhanced Responsiveness** - Improved mobile experience across all systems
 
 ### Reference Page (TechCorp Solutions)

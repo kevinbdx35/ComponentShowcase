@@ -65,7 +65,7 @@
   },
   "jest": {
     "transformIgnorePatterns": [
-      "node_modules/(?!(d3-.*|semiotic|@visx|internmap)/)"
+      "node_modules/(?!(d3-.*|semiotic|@visx|internmap|delaunator|robust-predicates)/)"
     ]
   },
   "browserslist": {

@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Layout } from './components/Layout';
 import { ReferenceComponents } from './components/ReferenceComponents';
 import { AntDesignComponents } from './components/AntDesignComponents';
-// import { MaterialUIComponents } from './components/MaterialUIComponents';
+import { MaterialUIComponents } from './components/MaterialUIComponents';
 import { USWDSComponents } from './components/USWDSComponents';
 import { GOVUKComponents } from './components/GOVUKComponents';
 import { DSFRComponents } from './components/DSFRComponents';
@@ -25,7 +25,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/reference" element={<ReferencePage />} />
-          {/* <Route path="/material-ui" element={<MaterialUIPage />} /> */}
+          <Route path="/material-ui" element={<MaterialUIPage />} />
           <Route path="/ant-design" element={<AntDesignPage />} />
           <Route path="/uswds" element={<USWDSPage />} />
           <Route path="/govuk" element={<GOVUKPage />} />
@@ -95,6 +95,7 @@ function Home() {
           </h2>
           <ul className="home-category-list">
             <li><span className="status-indicator active"></span><a href="/reference" className="home-category-link">Reference Implementation</a></li>
+            <li><span className="status-indicator active"></span><a href="/material-ui" className="home-category-link">Material UI v3</a></li>
             <li><span className="status-indicator active"></span><a href="/ant-design" className="home-category-link">Ant Design</a></li>
             <li><span className="status-indicator active"></span><a href="/evergreen" className="home-category-link">Evergreen (Segment)</a></li>
             <li><span className="status-indicator active"></span><a href="/semiotic" className="home-category-link">Semiotic (Data Visualization)</a></li>
@@ -109,9 +110,9 @@ function ReferencePage() {
   return <ReferenceComponents />;
 }
 
-// function MaterialUIPage() {
-//   return <MaterialUIComponents />;
-// }
+function MaterialUIPage() {
+  return <MaterialUIComponents />;
+}
 
 function AntDesignPage() {
   return <AntDesignComponents />;

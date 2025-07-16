@@ -86,7 +86,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { ThreeChart } from './ThreeChart';
 import { MaterialUIVisxChart } from './VisxChartVariants';
 
-// Material Design 3 Theme
+// Material Design 3 Theme (Material You)
 const theme = createTheme({
   palette: {
     primary: {
@@ -100,6 +100,11 @@ const theme = createTheme({
       light: '#908a9e',
       dark: '#463f4f',
       contrastText: '#ffffff'
+    },
+    tertiary: {
+      main: '#7d5260',
+      light: '#a87c89',
+      dark: '#5a3644'
     },
     success: {
       main: '#006e26',
@@ -119,6 +124,11 @@ const theme = createTheme({
     background: {
       default: '#fef7ff',
       paper: '#ffffff'
+    },
+    surface: {
+      main: '#fef7ff',
+      light: '#f7f2fa',
+      dark: '#f0ebf4'
     },
     text: {
       primary: '#1c1b1f',
@@ -174,8 +184,16 @@ const theme = createTheme({
         root: {
           textTransform: 'none',
           borderRadius: 20,
-          padding: '8px 24px',
-          fontWeight: 500
+          padding: '10px 24px',
+          fontWeight: 500,
+          fontSize: '0.875rem',
+          letterSpacing: '0.0125em'
+        },
+        contained: {
+          boxShadow: '0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.15)',
+          '&:hover': {
+            boxShadow: '0 1px 2px rgba(0, 0, 0, 0.3), 0 2px 6px 2px rgba(0, 0, 0, 0.15)'
+          }
         }
       }
     },
@@ -183,7 +201,10 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           borderRadius: 16,
-          boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)'
+          boxShadow: '0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.15)',
+          '&:hover': {
+            boxShadow: '0 1px 2px rgba(0, 0, 0, 0.3), 0 2px 6px 2px rgba(0, 0, 0, 0.15)'
+          }
         }
       }
     },
@@ -191,8 +212,23 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           '& .MuiOutlinedInput-root': {
-            borderRadius: 16
+            borderRadius: 4
           }
+        }
+      }
+    },
+    MuiChip: {
+      styleOverrides: {
+        root: {
+          borderRadius: 8,
+          fontWeight: 500
+        }
+      }
+    },
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          boxShadow: '0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.15)'
         }
       }
     }
@@ -319,7 +355,7 @@ export const MaterialUIComponents: React.FC = () => {
     <ThemeProvider theme={theme}>
       <Box sx={{ flexGrow: 1, backgroundColor: 'background.default', minHeight: '100vh' }}>
         {/* App Bar */}
-        <AppBar position="fixed" elevation={0} sx={{ backgroundColor: 'primary.main' }}>
+        <AppBar position="fixed" elevation={0} sx={{ backgroundColor: 'primary.main' }} data-testid="mui-header">
           <Toolbar>
             <IconButton
               edge="start"
@@ -334,6 +370,10 @@ export const MaterialUIComponents: React.FC = () => {
               TechCorp Solutions
             </Typography>
             <Stack direction="row" spacing={2} alignItems="center">
+              <Typography variant="body2" color="inherit">Home</Typography>
+              <Typography variant="body2" color="inherit">Solutions</Typography>
+              <Typography variant="body2" color="inherit">About</Typography>
+              <Typography variant="body2" color="inherit">Contact</Typography>
               <Badge badgeContent={4} color="error">
                 <IconButton color="inherit">
                   <NotificationsIcon />
@@ -404,7 +444,7 @@ export const MaterialUIComponents: React.FC = () => {
 
         <Container maxWidth="lg" sx={{ py: 4 }}>
           {/* Breadcrumb */}
-          <Breadcrumbs aria-label="breadcrumb" sx={{ mb: 3 }}>
+          <Breadcrumbs aria-label="breadcrumb" sx={{ mb: 3 }} data-testid="mui-breadcrumb">
             <Link underline="hover" color="inherit" href="/">
               <HomeIcon sx={{ mr: 0.5, fontSize: '1rem' }} />
               Home
