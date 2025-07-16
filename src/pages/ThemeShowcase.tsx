@@ -7,6 +7,8 @@ import { AntDesignThemeExport } from '../themes/AntDesignTheme';
 import { EvergreenThemeExport } from '../themes/EvergreenTheme';
 import { USWDSThemeExport } from '../themes/USWDSTheme';
 import { GOVUKThemeExport } from '../themes/GOVUKTheme';
+import { DSFRThemeExport } from '../themes/DSFRTheme';
+import { BootstrapItaliaThemeExport } from '../themes/BootstrapItaliaTheme';
 
 const availableThemes = [
   VanillaThemeExport,
@@ -14,7 +16,9 @@ const availableThemes = [
   AntDesignThemeExport,
   EvergreenThemeExport,
   USWDSThemeExport,
-  GOVUKThemeExport
+  GOVUKThemeExport,
+  DSFRThemeExport,
+  BootstrapItaliaThemeExport
 ];
 
 export const ThemeShowcase: React.FC = () => {
