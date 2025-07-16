@@ -10,6 +10,7 @@ import { CanadaComponents } from './components/CanadaComponents';
 import { AustralianHealthComponents } from './components/AustralianHealthComponents';
 import { GOLDComponents } from './components/GOLDComponents';
 import { NZGovtComponents } from './components/NZGovtComponents';
+import { BootstrapItaliaComponents } from './components/BootstrapItaliaComponents';
 // import { MantineComponents } from './components/MantineComponents';
 // import { ChakraUIComponents } from './components/ChakraUIComponents';
 import './App.css';
@@ -35,6 +36,7 @@ function App() {
           <Link to="/australian-health">Australian Health</Link>
           <Link to="/gold">GOLD</Link>
           <Link to="/nz-govt">New Zealand</Link>
+          <Link to="/bootstrap-italia">Bootstrap Italia</Link>
           {/* <Link to="/chakra-ui">Chakra UI</Link> */}
           {/* <Link to="/mantine">Mantine</Link> */}
         </nav>
@@ -51,6 +53,7 @@ function App() {
           <Route path="/australian-health" element={<AustralianHealthPage />} />
           <Route path="/gold" element={<GOLDPage />} />
           <Route path="/nz-govt" element={<NZGovtPage />} />
+          <Route path="/bootstrap-italia" element={<BootstrapItaliaPage />} />
           {/* <Route path="/chakra-ui" element={<ChakraUIPage />} /> */}
           {/* <Route path="/mantine" element={<MantinePage />} /> */}
         </Routes>
@@ -76,6 +79,7 @@ function Home() {
         <p>✅ Australian Health - Fonctionnel (Australian Government Health Design System)</p>
         <p>✅ GOLD - Fonctionnel (Australian Government Design System)</p>
         <p>✅ New Zealand - Fonctionnel (New Zealand Government Design System)</p>
+        <p>✅ Bootstrap Italia - Fonctionnel (Italian Government Design System)</p>
         <p>🚧 Chakra UI v3 - En cours de développement</p>
         <p>🚧 Mantine v7 - En cours de développement</p>
       </div>
@@ -121,6 +125,10 @@ function GOLDPage() {
 
 function NZGovtPage() {
   return <NZGovtComponents />;
+}
+
+function BootstrapItaliaPage() {
+  return <BootstrapItaliaComponents />;
 }
 
 // function ChakraUIPage() {

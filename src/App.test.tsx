@@ -67,6 +67,13 @@ jest.mock('./components/NZGovtComponents', () => ({
   }
 }));
 
+jest.mock('./components/BootstrapItaliaComponents', () => ({
+  BootstrapItaliaComponents: () => {
+    const React = require('react');
+    return React.createElement('div', { 'data-testid': 'bootstrap-italia-components' }, 'Bootstrap Italia Components');
+  }
+}));
+
 import App from './App';
 
 test('renders navigation links', () => {
@@ -82,4 +89,5 @@ test('renders navigation links', () => {
   expect(screen.getByText('Australian Health')).toBeInTheDocument();
   expect(screen.getByText('GOLD')).toBeInTheDocument();
   expect(screen.getByText('New Zealand')).toBeInTheDocument();
+  expect(screen.getByText('Bootstrap Italia')).toBeInTheDocument();
 });
