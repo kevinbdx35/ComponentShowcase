@@ -88,7 +88,7 @@ export interface CardProps extends ComponentProps {
   title?: string;
   subtitle?: string;
   image?: string;
-  actions?: React.ReactNode;
+  actions?: React.ReactNode | React.ReactNode[];
 }
 
 export interface InputProps extends ComponentProps {

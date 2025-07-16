@@ -100,13 +100,19 @@ const AntDesignCard: React.FC<CardProps> = ({
   title, 
   subtitle, 
   style, 
+  actions,
   ...props 
 }) => {
+  // Filter out problematic props
+  const cleanProps = { ...props };
+  delete cleanProps.actions;
+  
   return (
     <AntCard 
       title={title}
       style={style}
-      {...props}
+      actions={actions ? (Array.isArray(actions) ? actions : [actions]) : undefined}
+      {...cleanProps}
     >
       {subtitle && <AntText type="secondary" style={{ display: 'block', marginBottom: '1rem' }}>{subtitle}</AntText>}
       {children}

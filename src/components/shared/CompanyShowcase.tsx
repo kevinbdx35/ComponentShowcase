@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { DesignSystemTheme } from '../../types/theme';
 import { FormData } from '../../types/shared';
 import { companyData, formCategories, budgetRanges, breadcrumbItems } from '../../data/companyData';
+import { useTheme } from '../../context/ThemeContext';
 import { HeroSection } from './HeroSection';
 import { NavigationTabs } from './NavigationTabs';
 import { ServiceCards } from './ServiceCards';
@@ -14,14 +14,13 @@ import { ModalDemo } from './ModalDemo';
 import { CompanyFooter } from './CompanyFooter';
 
 interface CompanyShowcaseProps {
-  theme: DesignSystemTheme;
   designSystemName?: string;
 }
 
 export const CompanyShowcase: React.FC<CompanyShowcaseProps> = ({ 
-  theme, 
   designSystemName = "Design System" 
 }) => {
+  const { theme, config } = useTheme();
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',

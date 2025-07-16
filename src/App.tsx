@@ -1,21 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Layout } from './components/Layout';
-import { ReferenceComponents } from './components/ReferenceComponents';
-import { AntDesignComponents } from './components/AntDesignComponents';
-import { MaterialUIComponents } from './components/MaterialUIComponents';
-import { USWDSComponents } from './components/USWDSComponents';
-import { GOVUKComponents } from './components/GOVUKComponents';
-import { DSFRComponents } from './components/DSFRComponents';
-import { CanadaComponents } from './components/CanadaComponents';
-import { AustralianHealthComponents } from './components/AustralianHealthComponents';
-import { GOLDComponents } from './components/GOLDComponents';
-import { NZGovtComponents } from './components/NZGovtComponents';
-import { BootstrapItaliaComponents } from './components/BootstrapItaliaComponents';
-import { SemioticComponents } from './components/SemioticComponents';
-import { EvergreenComponents } from './components/EvergreenComponents';
-// import { MantineComponents } from './components/MantineComponents';
-// import { ChakraUIComponents } from './components/ChakraUIComponents';
+import { ThemeShowcase } from './pages/ThemeShowcase';
 import './App.css';
 
 function App() {
@@ -24,21 +10,8 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/reference" element={<ReferencePage />} />
-          <Route path="/material-ui" element={<MaterialUIPage />} />
-          <Route path="/ant-design" element={<AntDesignPage />} />
-          <Route path="/uswds" element={<USWDSPage />} />
-          <Route path="/govuk" element={<GOVUKPage />} />
-          <Route path="/dsfr" element={<DSFRPage />} />
-          <Route path="/canada" element={<CanadaPage />} />
-          <Route path="/australian-health" element={<AustralianHealthPage />} />
-          <Route path="/gold" element={<GOLDPage />} />
-          <Route path="/nz-govt" element={<NZGovtPage />} />
-          <Route path="/bootstrap-italia" element={<BootstrapItaliaPage />} />
-          <Route path="/evergreen" element={<EvergreenPage />} />
-          <Route path="/semiotic" element={<SemioticPage />} />
-          {/* <Route path="/chakra-ui" element={<ChakraUIPage />} /> */}
-          {/* <Route path="/mantine" element={<MantinePage />} /> */}
+          <Route path="/themes" element={<ThemeShowcase />} />
+          <Route path="*" element={<ThemeShowcase />} />
         </Routes>
       </Layout>
     </Router>
@@ -50,21 +23,21 @@ function Home() {
     <div className="home-container">
       <div className="home-hero">
         <h1>UI Design System Comparison</h1>
-        <p>Explore and compare different design systems and their component implementations</p>
+        <p>Explore and compare different design systems with the new unified architecture</p>
       </div>
 
       <div className="home-stats">
         <div className="home-stat-card">
-          <div className="home-stat-number">12</div>
+          <div className="home-stat-number">8</div>
           <div className="home-stat-label">Design Systems</div>
         </div>
         <div className="home-stat-card">
-          <div className="home-stat-number">8</div>
+          <div className="home-stat-number">4</div>
           <div className="home-stat-label">Government Systems</div>
         </div>
         <div className="home-stat-card">
-          <div className="home-stat-number">100%</div>
-          <div className="home-stat-label">Accessible</div>
+          <div className="home-stat-number">1</div>
+          <div className="home-stat-label">Generic Component</div>
         </div>
         <div className="home-stat-card">
           <div className="home-stat-number">React</div>
@@ -78,14 +51,10 @@ function Home() {
             🏛️ Government Design Systems
           </h2>
           <ul className="home-category-list">
-            <li><span className="status-indicator active"></span><a href="/uswds" className="home-category-link">U.S. Web Design System</a></li>
-            <li><span className="status-indicator active"></span><a href="/govuk" className="home-category-link">GOV.UK Design System</a></li>
-            <li><span className="status-indicator active"></span><a href="/dsfr" className="home-category-link">French Government (DSFR)</a></li>
-            <li><span className="status-indicator active"></span><a href="/canada" className="home-category-link">Canada.ca Design System</a></li>
-            <li><span className="status-indicator active"></span><a href="/australian-health" className="home-category-link">Australian Health Design System</a></li>
-            <li><span className="status-indicator active"></span><a href="/gold" className="home-category-link">Australian Government (GOLD)</a></li>
-            <li><span className="status-indicator active"></span><a href="/nz-govt" className="home-category-link">New Zealand Government</a></li>
-            <li><span className="status-indicator active"></span><a href="/bootstrap-italia" className="home-category-link">Bootstrap Italia</a></li>
+            <li><span className="status-indicator active"></span><span className="home-category-link">U.S. Web Design System (USWDS)</span></li>
+            <li><span className="status-indicator active"></span><span className="home-category-link">GOV.UK Design System</span></li>
+            <li><span className="status-indicator active"></span><span className="home-category-link">French Government (DSFR)</span></li>
+            <li><span className="status-indicator active"></span><span className="home-category-link">Bootstrap Italia</span></li>
           </ul>
         </div>
 
@@ -94,76 +63,29 @@ function Home() {
             🎨 UI Libraries & Frameworks
           </h2>
           <ul className="home-category-list">
-            <li><span className="status-indicator active"></span><a href="/reference" className="home-category-link">Reference Implementation</a></li>
-            <li><span className="status-indicator active"></span><a href="/material-ui" className="home-category-link">Material UI v3</a></li>
-            <li><span className="status-indicator active"></span><a href="/ant-design" className="home-category-link">Ant Design</a></li>
-            <li><span className="status-indicator active"></span><a href="/evergreen" className="home-category-link">Evergreen (Segment)</a></li>
-            <li><span className="status-indicator active"></span><a href="/semiotic" className="home-category-link">Semiotic (Data Visualization)</a></li>
+            <li><span className="status-indicator active"></span><span className="home-category-link">Vanilla CSS (Reference)</span></li>
+            <li><span className="status-indicator active"></span><span className="home-category-link">Material UI (Material Design 3)</span></li>
+            <li><span className="status-indicator active"></span><span className="home-category-link">Ant Design</span></li>
+            <li><span className="status-indicator active"></span><span className="home-category-link">Evergreen UI</span></li>
           </ul>
         </div>
+      </div>
+
+      <div className="home-cta">
+        <h2>New Architecture</h2>
+        <p>The project now uses a unified architecture with:</p>
+        <ul>
+          <li>✅ <strong>One generic component</strong> that works with all design systems</li>
+          <li>✅ <strong>Theme-specific implementations</strong> for each design system</li>
+          <li>✅ <strong>TypeScript interfaces</strong> for type safety</li>
+          <li>✅ <strong>Real-time theme switching</strong> capabilities</li>
+        </ul>
+        <a href="/themes" className="home-cta-button">
+          View Theme Showcase
+        </a>
       </div>
     </div>
   );
 }
-
-function ReferencePage() {
-  return <ReferenceComponents />;
-}
-
-function MaterialUIPage() {
-  return <MaterialUIComponents />;
-}
-
-function AntDesignPage() {
-  return <AntDesignComponents />;
-}
-
-function USWDSPage() {
-  return <USWDSComponents />;
-}
-
-function GOVUKPage() {
-  return <GOVUKComponents />;
-}
-
-function DSFRPage() {
-  return <DSFRComponents />;
-}
-
-function CanadaPage() {
-  return <CanadaComponents />;
-}
-
-function AustralianHealthPage() {
-  return <AustralianHealthComponents />;
-}
-
-function GOLDPage() {
-  return <GOLDComponents />;
-}
-
-function NZGovtPage() {
-  return <NZGovtComponents />;
-}
-
-function BootstrapItaliaPage() {
-  return <BootstrapItaliaComponents />;
-}
-
-function EvergreenPage() {
-  return <EvergreenComponents />;
-}
-
-function SemioticPage() {
-  return <SemioticComponents />;
-}
-
-// function ChakraUIPage() {
-//   return <ChakraUIComponents />;
-// }
-
-// function MantinePage() {
-//   return <MantineComponents />;
-// }
 
 export default App;

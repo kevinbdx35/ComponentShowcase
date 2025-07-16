@@ -15,9 +15,7 @@ import {
   Pane,
   Avatar as EvergreenAvatar,
   Badge as EvergreenBadge,
-  ProgressBar,
   StarIcon,
-  Slider as EvergreenSlider,
   majorScale,
   Text as EvergreenText,
   Heading as EvergreenHeading,
@@ -341,7 +339,7 @@ const EvergreenBreadcrumbComponent: React.FC<BreadcrumbProps> = ({ items, ...pro
         ) : (
           <EvergreenText>{item.label}</EvergreenText>
         )}
-        {index < items.length - 1 && <EvergreenText marginX={majorScale(1)}>></EvergreenText>}
+        {index < items.length - 1 && <EvergreenText marginX={majorScale(1)}>{'>'}</EvergreenText>}
       </React.Fragment>
     ))}
   </Pane>
@@ -404,7 +402,20 @@ const EvergreenProgressComponent: React.FC<ProgressProps> = ({
   return (
     <Pane style={style} {...props}>
       {label && <EvergreenText marginBottom={majorScale(1)}>{label}</EvergreenText>}
-      <ProgressBar value={percentage} />
+      <div style={{ 
+        width: '100%', 
+        height: '8px', 
+        backgroundColor: '#e4e7eb', 
+        borderRadius: '4px',
+        overflow: 'hidden'
+      }}>
+        <div style={{ 
+          width: `${percentage}%`, 
+          height: '100%', 
+          backgroundColor: '#1070CA',
+          transition: 'width 0.3s ease'
+        }} />
+      </div>
     </Pane>
   );
 };
@@ -442,15 +453,24 @@ const EvergreenSliderComponent: React.FC<SliderProps> = ({
   ...props 
 }) => {
   return (
-    <EvergreenSlider
-      min={min}
-      max={max}
-      step={step}
-      value={value}
-      onChange={onChange}
-      style={style}
-      {...props}
-    />
+    <Pane style={style} {...props}>
+      <input
+        type="range"
+        min={min}
+        max={max}
+        step={step}
+        value={value}
+        onChange={(e) => onChange?.(parseInt(e.target.value))}
+        style={{
+          width: '100%',
+          height: '8px',
+          borderRadius: '4px',
+          background: '#e4e7eb',
+          outline: 'none',
+          cursor: 'pointer'
+        }}
+      />
+    </Pane>
   );
 };
 

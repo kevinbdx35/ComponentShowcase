@@ -36,6 +36,7 @@
     "@types/three": "^0.178.1",
     "@uswds/uswds": "^3.13.0",
     "@visx/visx": "^3.12.0",
+    "ajv": "^8.17.1",
     "antd": "^5.26.5",
     "evergreen-ui": "^7.1.9",
     "framer-motion": "^12.23.5",
