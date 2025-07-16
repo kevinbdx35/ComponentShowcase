@@ -474,7 +474,7 @@ const USWDSBadge: React.FC<BadgeProps> = ({
   style, 
   ...props 
 }) => {
-  const colorMap = {
+  const colorMap: Record<string, string> = {
     primary: '#005ea2',
     secondary: '#54278f',
     success: '#00a91c',
@@ -590,11 +590,11 @@ const uswdsTheme: DesignSystemTheme = {
   ),
   Heading: ({ children, level = 1, style, ...props }) => {
     const Tag = `h${level}` as keyof JSX.IntrinsicElements;
-    return (
-      <Tag className={`usa-${Tag}`} style={style} {...props}>
-        {children}
-      </Tag>
-    );
+    return React.createElement(Tag, {
+      className: `usa-${Tag}`,
+      style,
+      ...props
+    }, children);
   },
   Text: ({ children, variant = 'body', style, ...props }) => {
     const className = variant === 'caption' ? 'usa-hint' : 

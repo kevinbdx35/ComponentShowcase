@@ -894,20 +894,16 @@ const fluentUITheme: DesignSystemTheme = {
       6: { fontSize: '14px', fontWeight: 600, lineHeight: '20px' }
     };
     
-    return (
-      <Tag 
-        style={{ 
-          fontFamily: 'Segoe UI, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif',
-          color: '#323130', 
-          margin: '0 0 12px 0',
-          ...sizes[level],
-          ...style 
-        }} 
-        {...props}
-      >
-        {children}
-      </Tag>
-    );
+    return React.createElement(Tag, {
+      style: {
+        fontFamily: 'Segoe UI, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif',
+        color: '#323130', 
+        margin: '0 0 12px 0',
+        ...sizes[level],
+        ...style 
+      },
+      ...props
+    }, children);
   },
   Text: ({ children, variant = 'body', style, ...props }) => {
     const variantStyles = {

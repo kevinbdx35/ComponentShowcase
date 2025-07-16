@@ -839,23 +839,19 @@ const govukTheme: DesignSystemTheme = {
       6: '16px'
     };
     
-    return (
-      <Tag 
-        className={`govuk-heading-${level === 1 ? 'xl' : level === 2 ? 'l' : level === 3 ? 'm' : 's'}`}
-        style={{ 
-          fontFamily: 'GDS Transport, arial, sans-serif',
-          fontSize: sizes[level], 
-          fontWeight: 700, 
-          color: '#0b0c0c', 
-          margin: '0 0 15px 0',
-          lineHeight: 1.04,
-          ...style 
-        }} 
-        {...props}
-      >
-        {children}
-      </Tag>
-    );
+    return React.createElement(Tag, {
+      className: `govuk-heading-${level === 1 ? 'xl' : level === 2 ? 'l' : level === 3 ? 'm' : 's'}`,
+      style: {
+        fontFamily: 'GDS Transport, arial, sans-serif',
+        fontSize: sizes[level], 
+        fontWeight: 700, 
+        color: '#0b0c0c', 
+        margin: '0 0 15px 0',
+        lineHeight: 1.04,
+        ...style 
+      },
+      ...props
+    }, children);
   },
   Text: ({ children, variant = 'body', style, ...props }) => {
     const variantStyles = {

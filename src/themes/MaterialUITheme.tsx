@@ -535,13 +535,9 @@ const materialTheme: DesignSystemTheme = {
     <Container maxWidth="lg" style={style} {...props}>{children}</Container>
   ),
   Grid: ({ children, columns = 1, style, ...props }) => (
-    <Grid container spacing={3} style={style} {...props}>
-      {React.Children.map(children, (child, index) => (
-        <Grid item xs={12} md={12 / columns} key={index}>
-          {child}
-        </Grid>
-      ))}
-    </Grid>
+    <div style={{ display: 'grid', gridTemplateColumns: `repeat(${columns}, 1fr)`, gap: '24px', ...style }} {...props}>
+      {children}
+    </div>
   ),
   Stack: ({ children, direction = 'column', spacing = 1, style, ...props }) => (
     <MuiStack direction={direction} spacing={spacing} style={style} {...props}>

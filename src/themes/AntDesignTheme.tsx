@@ -104,7 +104,7 @@ const AntDesignCard: React.FC<CardProps> = ({
   ...props 
 }) => {
   // Filter out problematic props
-  const cleanProps = { ...props };
+  const cleanProps = { ...props } as any;
   delete cleanProps.actions;
   
   return (
@@ -456,6 +456,12 @@ const AntDesignSlider: React.FC<SliderProps> = ({
   style, 
   ...props 
 }) => {
+  // Convert marks array to Ant Design format
+  const antMarks = marks ? marks.reduce((acc, mark) => {
+    acc[mark.value] = mark.label;
+    return acc;
+  }, {} as Record<number, string>) : undefined;
+
   return (
     <AntSlider
       min={min}
@@ -463,7 +469,7 @@ const AntDesignSlider: React.FC<SliderProps> = ({
       step={step}
       value={value}
       onChange={onChange}
-      marks={marks}
+      marks={antMarks}
       style={style}
       {...props}
     />

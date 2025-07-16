@@ -705,23 +705,19 @@ const dsfrTheme: DesignSystemTheme = {
       6: '16px'
     };
     
-    return (
-      <Tag 
-        className={`fr-h${level}`}
-        style={{ 
-          fontFamily: 'Marianne, arial, sans-serif',
-          fontSize: sizes[level], 
-          fontWeight: 700, 
-          color: '#161616', 
-          margin: '0 0 16px 0',
-          lineHeight: 1.2,
-          ...style 
-        }} 
-        {...props}
-      >
-        {children}
-      </Tag>
-    );
+    return React.createElement(Tag, {
+      className: `fr-h${level}`,
+      style: {
+        fontFamily: 'Marianne, arial, sans-serif',
+        fontSize: sizes[level], 
+        fontWeight: 700, 
+        color: '#161616', 
+        margin: '0 0 16px 0',
+        lineHeight: 1.2,
+        ...style 
+      },
+      ...props
+    }, children);
   },
   Text: ({ children, variant = 'body', style, ...props }) => {
     const variantStyles = {

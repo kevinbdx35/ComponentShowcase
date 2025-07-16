@@ -793,22 +793,18 @@ const bootstrapItaliaTheme: DesignSystemTheme = {
       6: '1rem'
     };
     
-    return (
-      <Tag 
-        style={{ 
-          fontFamily: 'Titillium Web, sans-serif',
-          fontSize: sizes[level], 
-          fontWeight: 600, 
-          color: '#17324d', 
-          marginBottom: '0.5rem',
-          lineHeight: 1.2,
-          ...style 
-        }} 
-        {...props}
-      >
-        {children}
-      </Tag>
-    );
+    return React.createElement(Tag, {
+      style: {
+        fontFamily: 'Titillium Web, sans-serif',
+        fontSize: sizes[level], 
+        fontWeight: 600, 
+        color: '#17324d', 
+        marginBottom: '0.5rem',
+        lineHeight: 1.2,
+        ...style 
+      },
+      ...props
+    }, children);
   },
   Text: ({ children, variant = 'body', style, ...props }) => {
     const variantStyles = {

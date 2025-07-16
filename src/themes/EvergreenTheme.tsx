@@ -225,7 +225,7 @@ const EvergreenRadioGroupComponent: React.FC<RadioGroupProps> = ({
       name={name}
       value={value}
       options={options}
-      onChange={onChange}
+      onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange?.(e.target.value)}
       style={style}
       {...props}
     />

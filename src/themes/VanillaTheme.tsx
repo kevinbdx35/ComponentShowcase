@@ -341,11 +341,10 @@ const VanillaHeading: React.FC<ComponentProps & { level?: 1 | 2 | 3 | 4 | 5 | 6 
     6: '1rem'
   };
   
-  return (
-    <Tag style={{ fontSize: sizes[level], fontWeight: 'bold', color: '#333', margin: 0, ...style }} {...props}>
-      {children}
-    </Tag>
-  );
+  return React.createElement(Tag, {
+    style: { fontSize: sizes[level], fontWeight: 'bold', color: '#333', margin: 0, ...style },
+    ...props
+  }, children);
 };
 
 const VanillaText: React.FC<ComponentProps & { variant?: 'body' | 'caption' | 'subtitle' }> = ({ 
