@@ -9,6 +9,7 @@ import { USWDSThemeExport } from '../themes/USWDSTheme';
 import { GOVUKThemeExport } from '../themes/GOVUKTheme';
 import { DSFRThemeExport } from '../themes/DSFRTheme';
 import { BootstrapItaliaThemeExport } from '../themes/BootstrapItaliaTheme';
+import { FluentUIThemeExport } from '../themes/FluentUITheme';
 
 const availableThemes = [
   VanillaThemeExport,
@@ -18,7 +19,8 @@ const availableThemes = [
   USWDSThemeExport,
   GOVUKThemeExport,
   DSFRThemeExport,
-  BootstrapItaliaThemeExport
+  BootstrapItaliaThemeExport,
+  FluentUIThemeExport
 ];
 
 export const ThemeShowcase: React.FC = () => {
