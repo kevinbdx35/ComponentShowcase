@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { XYFrame, OrdinalFrame, NetworkFrame } from 'semiotic';
+import { VisxChart } from './VisxChart';
 import { ThreeChart } from './ThreeChart';
 import { VanillaVisxChart } from './VisxChartVariants';
 import '../styles/semiotic-custom.css';
@@ -801,8 +802,7 @@ export const SemioticComponents: React.FC = () => {
               <div className="semiotic-stat-label">Uptime</div>
             </div>
           </div>
-        </div>
-
+          
           <div className="semiotic-charts-grid">
             <div className="semiotic-chart-container">
               <h3>Performance Analytics</h3>
