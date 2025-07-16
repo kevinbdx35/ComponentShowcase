@@ -10,78 +10,76 @@ A comprehensive comparison platform for popular UI design systems, implementing 
 
 ## 📋 Table of Contents
 
-- [🎯 Objective](#-objective)
-- [🏗️ Project Structure](#️-project-structure)
-- [🧩 Components Tested](#-components-tested)
-- [🚀 Getting Started](#-getting-started)
-- [📊 Comparison Criteria](#-comparison-criteria)
+- [🎯 Project Overview](#-project-overview)
+- [🏗️ Architecture](#️-architecture)
+- [🚀 Quick Start](#-quick-start)
 - [🔧 Implemented Design Systems](#-implemented-design-systems)
-- [📝 Usage](#-usage)
-- [🛠️ Technologies](#️-technologies)
-- [📦 Design Systems & Dependencies](#-design-systems--dependencies)
-- [🎨 Implemented Features](#-implemented-features)
-- [🧪 Tests](#-tests)
-- [🔍 Design Systems Comparison](#-design-systems-comparison)
-- [🏛️ USWDS Focus](#️-uswds-focus-us-web-design-system)
-- [🇬🇧 GOV.UK Design System](#-govuk-design-system)
-- [🇫🇷 DSFR (French Government Design System)](#-dsfr-french-government-design-system)
-- [🇨🇦 Canada.ca Design System](#-canadaca-design-system)
-- [🇦🇺 Australian Health Design System](#-australian-health-design-system)
-- [🏛️ GOLD Design System](#️-gold-design-system)
-- [🇳🇿 New Zealand Government Design System](#-new-zealand-government-design-system)
-- [🇮🇹 Bootstrap Italia (Italian Government Design System)](#-bootstrap-italia-italian-government-design-system)
-- [📊 Semiotic (React Data Visualization Framework)](#-semiotic-react-data-visualization-framework)
-- [📊 Visualization with visx](#-visualization-with-visx)
+- [📊 Feature Comparison](#-feature-comparison)
+- [🧪 Testing](#-testing)
 - [🚀 Deployment](#-deployment)
+- [🛠️ Technical Stack](#️-technical-stack)
+- [🤝 Contributing](#-contributing)
 - [🇫🇷 Version Française](#-version-française)
 
 ---
 
-## 🎯 Objective
+## 🎯 Project Overview
 
-Test and compare multiple design systems (Material UI, Ant Design, Chakra UI, Mantine, etc.) to facilitate choosing the most suitable system for a project.
+This project provides a unified platform to compare and evaluate different UI design systems side by side. It demonstrates how the same components and functionality can be implemented across various design systems, helping developers and designers make informed decisions for their projects.
 
-## 🏗️ Project Structure
+### Key Features
+- **Unified Architecture**: One generic component system that works with all design systems
+- **Real-time Comparison**: Switch between design systems instantly
+- **Comprehensive Coverage**: Government, enterprise, and open-source design systems
+- **Accessibility Focus**: All implementations maintain WCAG 2.1 AA compliance
+- **Live Demo**: Interactive showcase with real components and data
+
+---
+
+## 🏗️ Architecture
+
+The project uses a modern, scalable architecture:
 
 ```
 src/
 ├── components/
-│   ├── ReferenceComponents.tsx    # Reference components (vanilla CSS)
-│   ├── AntDesignComponents.tsx    # Ant Design implementation
-│   ├── MaterialUIComponents.tsx   # Material UI implementation
-│   ├── USWDSComponents.tsx        # USWDS implementation
-│   ├── GOVUKComponents.tsx        # GOV.UK Design System
-│   ├── DSFRComponents.tsx         # French Government DSFR
-│   ├── CanadaComponents.tsx       # Canada.ca Design System
-│   ├── AustralianHealthComponents.tsx # Australian Health Design System
-│   ├── GOLDComponents.tsx         # GOLD Design System
-│   ├── NZGovtComponents.tsx       # New Zealand Government Design System
-│   ├── BootstrapItaliaComponents.tsx # Bootstrap Italia (Italian Government)
-│   ├── EvergreenComponents.tsx    # Evergreen UI (Segment)
-│   ├── SemioticComponents.tsx     # Semiotic Data Visualization Framework
-│   ├── ChakraUIComponents.tsx     # Chakra UI implementation (in progress)
-│   ├── MantineComponents.tsx      # Mantine implementation (in progress)
-│   ├── ThreeChart.tsx             # 3D charts with Three.js
-│   └── __tests__/                 # Unit tests
-└── App.tsx                        # Navigation between systems
+│   └── shared/             # Generic components used across all themes
+├── themes/                 # Design system implementations
+│   ├── VanillaTheme.tsx   # CSS-only reference implementation
+│   ├── MaterialUITheme.tsx # Material Design 3 implementation
+│   ├── AntDesignTheme.tsx  # Ant Design implementation
+│   ├── EvergreenTheme.tsx  # Evergreen UI implementation
+│   ├── FluentUITheme.tsx   # Microsoft Fluent UI 2 implementation
+│   ├── USWDSTheme.tsx      # U.S. Web Design System
+│   ├── GOVUKTheme.tsx      # UK Government Design System
+│   ├── DSFRTheme.tsx       # French Government Design System
+│   └── BootstrapItaliaTheme.tsx # Italian Government Design System
+├── context/
+│   └── ThemeContext.tsx    # Theme switching logic
+├── types/
+│   ├── theme.ts           # Theme interfaces
+│   └── shared.ts          # Shared type definitions
+└── pages/
+    └── ThemeShowcase.tsx   # Main showcase page
 ```
 
-## 🧩 Components Tested
+### Design Principles
+- **Theme-agnostic Components**: Generic components that work with any design system
+- **Type Safety**: Full TypeScript support with comprehensive interfaces
+- **Accessibility First**: WCAG 2.1 AA compliance built into every theme
+- **Performance Optimized**: Efficient rendering and bundle splitting
 
-- **Typography**: Headers, paragraphs, links
-- **Buttons**: Primary, secondary, disabled, different sizes
-- **Forms**: Inputs, selects, textareas, checkboxes, radios, sliders, ratings
-- **Display**: Cards, tables, badges, avatars, images
-- **Feedback**: Alerts, modals, toasts, progress bars
-- **Navigation**: Tabs, breadcrumbs, main navigation
-- **Charts**: Interactive 3D charts with Three.js
-- **Data**: Employee tables, statistics, metrics
-- **Layout**: Grids, containers, spacing
+---
 
-## 🚀 Getting Started
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js 16+ and npm
 
 ### Installation
 ```bash
+git clone https://github.com/kevinbdx35/ComponentShowcase.git
+cd ComponentShowcase
 npm install
 ```
 
@@ -89,552 +87,190 @@ npm install
 ```bash
 npm start
 ```
-Opens [http://localhost:3000](http://localhost:3000) to view the application.
-
-### Testing
-```bash
-npm test
-```
+Opens [http://localhost:3000](http://localhost:3000) in your browser.
 
 ### Build
 ```bash
 npm run build
 ```
 
-## 📊 Comparison Criteria
+### Testing
+```bash
+npm test
+```
 
-- **Performance**: Bundle size, render time
-- **DX**: Implementation ease, documentation
-- **Customization**: Theming, flexibility
-- **Accessibility**: WCAG compliance
-- **Aesthetics**: Visual consistency, modernity
+---
 
 ## 🔧 Implemented Design Systems
 
-- [x] **Vanilla CSS** (reference) - Pure CSS implementation
-- [x] **Material UI** - Material Design 3 (Material You) with custom theme
-- [x] **Ant Design** - Enterprise design with complete configuration
-- [x] **Evergreen UI** - Segment's design system for customer data platforms
-- [x] **USWDS** - U.S. Web Design System for government applications
-- [x] **GOV.UK** - UK Government Design System for public services
-- [x] **DSFR** - French Government Design System (Système de Design de l'État)
-- [x] **Canada.ca** - Canadian Government Design System with bilingual support
-- [x] **Australian Health** - Australian Government Health Design System
-- [x] **GOLD** - Australian Government Design System (formerly AGDS)
-- [x] **New Zealand Government** - New Zealand Government Design System
-- [x] **Bootstrap Italia** - Italian Government Design System
-- [x] **Fluent UI 2** - Microsoft's modern design system for cross-platform applications
-- [x] **Semiotic** - React Data Visualization Framework
-- [x] **visx** - Modular data visualization library
-- [🚧] **Chakra UI** - Modular design system with extended theme (v3 in progress)
-- [🚧] **Mantine** - Modern design system with AppShell and hooks (v7 in progress)
+### 🎨 **UI Libraries & Frameworks**
 
-## 📝 Usage
+#### 1. **Vanilla CSS (Reference)**
+- Pure CSS implementation serving as the baseline
+- Modern CSS Grid and Flexbox
+- Custom properties for theming
+- No external dependencies
 
-1. Navigate between different design systems via the navigation bar
-2. Visually compare the same components implemented with each system
-3. Test interactions and animations
-4. Evaluate consistency and ergonomics
-5. Observe performance and accessibility differences
+#### 2. **Material UI (Material Design 3)**
+- Google's Material Design 3 (Material You)
+- Comprehensive theming system
+- Extensive component library
+- Excellent accessibility support
 
-## 🛠️ Technologies
+#### 3. **Ant Design**
+- Enterprise-focused design language
+- Rich component ecosystem
+- Excellent TypeScript support
+- Comprehensive data visualization
 
-- **React 18** - Main framework
-- **TypeScript** - Static typing
-- **React Router** - SPA navigation
-- **Three.js** - 3D graphics (@react-three/fiber, @react-three/drei)
-- **Unsplash API** - High-quality images
-- **Jest & React Testing Library** - Unit testing
+#### 4. **Evergreen UI**
+- Segment's design system
+- Modern React patterns
+- Focused on developer experience
+- Modular architecture
 
-## 📦 Design Systems & Dependencies
+#### 5. **Fluent UI 2 (Microsoft)**
+- Microsoft's modern design system
+- Cross-platform consistency
+- Enterprise-ready components
+- Office integration patterns
 
-### Material UI
-- `@mui/material` - Material Design components
-- `@emotion/react` & `@emotion/styled` - CSS-in-JS
-- `@mui/icons-material` - Material icons
+### 🏛️ **Government Design Systems**
 
-### Ant Design
-- `antd` - Enterprise components
-- `@ant-design/icons` - Ant Design icons
+#### 1. **U.S. Web Design System (USWDS)**
+- Official U.S. federal government design system
+- Section 508 and WCAG 2.1 AA compliance
+- Designed for government services
+- Security-focused implementation
 
-### Chakra UI
-- `@chakra-ui/react` - Modular components
-- `@chakra-ui/icons` - Chakra icons
-- `@emotion/react` & `@emotion/styled` - Styling
+#### 2. **GOV.UK Design System**
+- UK government's official design system
+- Citizen-focused design approach
+- Extensive user research backing
+- Progressive enhancement principles
 
-### USWDS (U.S. Web Design System)
-- `@uswds/uswds` - American government design system
-- Accessible components compliant with federal standards
-- Official U.S. government theme
+#### 3. **DSFR (French Government)**
+- Système de Design de l'État Français
+- Official French government identity
+- RGAA accessibility compliance
+- Marianne typography system
 
-### GOV.UK Design System
-- `govuk-frontend` - UK government design system
-- Accessible components for public services
-- Official UK government styling and patterns
+#### 4. **Bootstrap Italia**
+- Italian government design system
+- Built on Bootstrap 5 foundation
+- Titillium Web typography
+- AGID compliance standards
 
-### Evergreen UI (Segment)
-- `evergreen-ui` - Segment's design system components
-- Focused on customer data platforms and analytics
-- Modern React patterns with hooks
+---
 
-### visx (Data Visualization)
-- `@visx/visx` - Complete data visualization package
-- Modular components based on D3.js and React
-- Customizable and performant charts
+## 📊 Feature Comparison
 
-### Mantine (In Progress)
-- `@mantine/core` - Core components
-- `@mantine/hooks` - Utility hooks
-- `@mantine/notifications` - Notification system
-- `@tabler/icons-react` - Tabler icons
+| Feature | Vanilla | Material UI | Ant Design | Fluent UI 2 | USWDS | GOV.UK | DSFR | Bootstrap Italia | Evergreen |
+|---------|---------|-------------|------------|-------------|--------|--------|------|------------------|-----------|
+| **Bundle Size** | Minimal | Medium | Large | Medium | Small | Small | Small | Medium | Medium |
+| **Customization** | Full | High | Medium | Medium | Limited | Limited | Limited | Medium | High |
+| **Accessibility** | Custom | Excellent | Good | Excellent | Excellent | Excellent | Excellent | Excellent | Excellent |
+| **Documentation** | - | Excellent | Very Good | Excellent | Excellent | Excellent | Good | Good | Good |
+| **Enterprise Ready** | - | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| **Government Use** | - | No | No | No | Yes | Yes | Yes | Yes | No |
 
-## 🎨 Implemented Features
+---
 
-### ✨ **Latest Updates**
-- **🎨 Material UI v3** - Material Design 3 (Material You) with enhanced theming
-- **🌿 Evergreen UI** - Segment's design system for customer data platforms
-- **🇬🇧 GOV.UK Design System** - UK government design system implementation
-- **🇫🇷 DSFR** - French Government Design System (Système de Design de l'État Français)
-- **🇨🇦 Canada.ca** - Canadian Government Design System with bilingual support
-- **🚀 GitHub Pages Deployment** - Automatic deployment with GitHub Actions
-- **🔧 Comprehensive Testing** - Enhanced test coverage with security vulnerability fixes
-- **📱 Enhanced Responsiveness** - Improved mobile experience across all systems
+## 🧪 Testing
 
-### Reference Page (TechCorp Solutions)
-- **Hero Section** with Call-to-Action
-- **Navigation** with tabs and breadcrumbs
-- **Services** with cards and icons
-- **Contact Form** complete with validation
-- **Employee Tables** with avatars and badges
-- **Image Gallery** Unsplash integration
-- **Dashboard** with metrics and 3D charts
-- **Alerts** multi-types (success, warning, error, info)
-- **Modals** and interactions
-- **Footer** with links and information
+The project includes comprehensive testing:
 
-### Government Design Systems
-- **🇺🇸 USWDS** - U.S. Web Design System with federal compliance
-- **🇬🇧 GOV.UK** - UK government design system with accessibility focus
-- **Official Components** - Phase banners, government headers, crown logos
-- **Accessibility First** - WCAG 2.1 AA compliance built-in
-
-### Responsive Design
-- Mobile/desktop adaptations for all design systems
-- Navigation drawer for mobile
-- Responsive grids
-- Optimized breakpoints
-- Touch-friendly interfaces
-
-## 🧪 Tests
-
-### Test Coverage: 77.6% (38/49 tests passing)
-
-Unit tests covering:
-- **Component Rendering** - All design system components
-- **Navigation** - Router and SPA functionality
-- **User Interactions** - Forms, buttons, modals
-- **Accessibility** - ARIA labels and keyboard navigation
-- **External Dependencies** - Three.js, Unsplash API mocks
-- **Government Systems** - USWDS and GOV.UK specific components
+- **Component Testing**: Each theme's components are tested
+- **Integration Testing**: Cross-theme functionality
+- **Accessibility Testing**: WCAG compliance verification
+- **Performance Testing**: Bundle size and render performance
 
 ### Test Structure
-- **setupTests.ts** - Comprehensive mocking for all UI libraries
-- **Component Tests** - Individual component functionality
-- **Integration Tests** - Cross-system navigation and interactions
-- **Performance Tests** - Render time and optimization checks
-
-## 🔍 Design Systems Comparison
-
-| Aspect | Material UI | Ant Design | Fluent UI 2 | USWDS | GOV.UK | visx |
-|--------|-------------|------------|-------------|-------|---------|------|
-| **Bundle Size** | Medium | Large | Medium | Medium | Medium | Small |
-| **Customization** | High | Medium | Medium | Low | Low | Very High |
-| **Performance** | Good | Good | Good | Excellent | Excellent | Excellent |
-| **Documentation** | Excellent | Very Good | Excellent | Excellent | Excellent | Very Good |
-| **Accessibility** | Excellent | Good | Excellent | Excellent | Excellent | Medium |
-| **Ecosystem** | Very Rich | Rich | Rich | Specialized | Specialized | Specialized |
-| **Use Cases** | Versatile | Enterprise | Enterprise/Office | U.S. Government | UK Government | Visualization |
-
-## 🏛️ USWDS Focus (U.S. Web Design System)
-
-USWDS is a design system specifically designed for American government applications:
-
-### Key Features
-- **Federal Compliance**: Meets Section 508 and WCAG 2.1 AA standards
-- **Security**: Designed for high-security environments
-- **Accessibility**: Absolute priority on accessibility
-- **Consistency**: Unified user experience across all government sites
-
-### USWDS Components Implemented
-- **Banner**: Official government banner
-- **Header**: Standardized government navigation
-- **Hero**: Welcome section with call-to-action
-- **Cards**: Structured information cards
-- **Forms**: Forms with validation and required labels
-- **Tables**: Data tables with sorting and filtering
-- **Alerts**: Critical system notifications
-- **Progress bars**: Progress indicators
-- **Footer**: Standard government footer
-
-### USWDS Advantages
-- ✅ **Compliance**: Automatic compliance with federal standards
-- ✅ **Accessibility**: Built-in accessibility testing
-- ✅ **Performance**: Optimized for slow connections
-- ✅ **Responsive**: Mobile-first compatible
-- ✅ **Security**: Designed for secure environments
-
-## 🇬🇧 GOV.UK Design System
-
-The GOV.UK Design System is specifically designed for UK government digital services:
-
-### Key Features
-- **Public Service Focus**: Designed for citizen-facing government services
-- **Accessibility First**: Built with accessibility as a core principle
-- **User Research**: Based on extensive user research and testing
-- **Consistent Experience**: Unified design language across UK government services
-
-### GOV.UK Components Implemented
-- **GOV.UK Header**: Official government header with crown logo
-- **Phase Banner**: Service status indicators (alpha, beta, live)
-- **Breadcrumbs**: Navigation trail for complex services
-- **Notification Banners**: Success, warning, and error notifications
-- **Summary Cards**: Information display cards
-- **Form Elements**: Accessible form components with proper labels
-- **Tables**: Data tables with government styling
-- **Buttons**: Start buttons and standard actions
-- **Footer**: Standard government footer with support links
-
-### GOV.UK Advantages
-- ✅ **Accessibility**: WCAG 2.1 AA compliance built-in
-- ✅ **User Testing**: Components tested with real users
-- ✅ **Progressive Enhancement**: Works without JavaScript
-- ✅ **Mobile First**: Responsive design for all devices
-- ✅ **Open Source**: Freely available and community-driven
-
-## 🇫🇷 DSFR (French Government Design System)
-
-The Système de Design de l'État Français (DSFR) is the official design system for French government digital services:
-
-### Key Features
-- **République Française Branding**: Official Marianne logo and French government identity
-- **Accessibility Compliance**: RGAA (French accessibility guidelines) conformity
-- **Service Public Focus**: Designed for French citizen services and administration
-- **Consistent Identity**: Unified experience across all French government platforms
-
-### DSFR Components Implemented
-- **Official Header**: Marianne logo with "République Française" branding
-- **Phase Banner**: Beta/Alpha service status notifications
-- **Navigation**: Government service navigation with breadcrumbs
-- **Service Cards**: Information display cards for government services
-- **Form Elements**: Accessible French government form components
-- **Team Directory**: Staff directory with government styling
-- **Statistics Dashboard**: Performance metrics display
-- **Alerts**: Success, information, warning, and error notifications
-- **Modal Dialogs**: Confirmation and information dialogs
-- **Official Footer**: Standard French government footer with legal links
-
-### DSFR Advantages
-- ✅ **Government Identity**: Official French state visual identity
-- ✅ **RGAA Compliance**: French accessibility standard conformity
-- ✅ **Citizen-Focused**: Designed for French public service users
-- ✅ **Responsive Design**: Mobile-first approach for all devices
-- ✅ **Typography**: Official Marianne font family
-- ✅ **Color Palette**: Official state colors and approved variants
-
-### French Government Standards
-- **Marianne Typography**: Official government font
-- **Blue France Color**: Primary government blue (#000091)
-- **Semantic Colors**: Standardized colors for alerts and states
-- **BEM Methodology**: Structured CSS naming convention
-- **Progressive Enhancement**: Works without JavaScript
-
-## 🇨🇦 Canada.ca Design System
-
-The Canada.ca Design System is the official design framework for Canadian government digital services:
-
-### Key Features
-- **Government of Canada Branding**: Official Government of Canada signature and visual identity
-- **Bilingual by Design**: Full English and French language support with dynamic switching
-- **Accessibility First**: WCAG 2.1 AA compliance and inclusive design principles
-- **User-Centered**: Based on extensive user research with Canadian citizens
-
-### Canada.ca Components Implemented
-- **Official Header**: Government of Canada signature with maple leaf flag
-- **Language Toggle**: Seamless English/French language switching
-- **Breadcrumb Navigation**: Canada.ca compliant navigation trails
-- **Super Task Button**: Primary call-to-action for government services
-- **Bilingual Forms**: Complete form components with official language support
-- **Service Cards**: Information display cards for government programs
-- **Team Directory**: Government staff directory with official email formats
-- **Performance Dashboard**: Metrics display for service delivery
-- **Alert System**: Success, information, warning, and danger notifications
-- **Modal Dialogs**: Accessible confirmation and information dialogs
-- **Official Footer**: Standard Government of Canada footer with required links
-
-### Canada.ca Advantages
-- ✅ **Bilingual Excellence**: Native English/French support throughout
-- ✅ **Federal Standards**: Meets Treasury Board Secretariat requirements
-- ✅ **Citizen-Focused**: Designed for Canadian government service users
-- ✅ **Accessibility Compliance**: WCAG 2.1 AA conformity built-in
-- ✅ **Responsive Design**: Mobile-first approach for all devices
-- ✅ **Open Government**: Transparency and open data integration
-- ✅ **Federal Identity**: Official Government of Canada visual standards
-
-### Canadian Government Standards
-- **Official Signature**: Government of Canada wordmark and flag
-- **Color Palette**: Federal corporate colors and approved variants
-- **Typography**: Noto Sans font family for optimal readability
-- **Bilingual Content**: Equal treatment of English and French languages
-- **Accessibility**: Federal accessibility standards compliance
-- **User Experience**: Evidence-based design from citizen research
-
-## 🇦🇺 Australian Health Design System
-
-The Australian Health Design System is the official design framework for Australian government health and aged care digital services:
-
-### Key Features
-- **Australian Government Branding**: Official Australian Government Coat of Arms and visual identity
-- **Health-Focused Design**: Specialized components for health and medical services
-- **Quick Exit Functionality**: Safety feature for sensitive health content
-- **Accessibility Priority**: Full WCAG compliance for diverse user needs
-
-### Australian Health Components Implemented
-- **Government Header**: Australian Government Department of Health and Aged Care branding
-- **Navigation Menu**: Health-specific navigation with responsive mobile menu
-- **Breadcrumb Navigation**: Clear navigation paths for complex health information
-- **Hero Section**: Prominent messaging for health outcomes and services
-- **Health Service Cards**: Information display for Medicare, My Health Record, aged care services
-- **Comprehensive Forms**: Detailed feedback forms with health-specific fields
-- **Team Directory**: Department leadership with official government email addresses
-- **Performance Dashboard**: Health system metrics and service statistics
-- **Alert System**: Health-specific notifications and important updates
-- **Modal Dialogs**: Confirmation dialogs for sensitive health record actions
-
-### Design Specifications
-- **Color Palette**: Official Australian government blue (#014181) with health-focused secondary colors
-- **Typography**: Open Sans font family for clarity and accessibility
-- **Health Focus**: Specialized components for health information and services
-- **Government Standards**: Compliance with Australian government digital service standards
-
-## 🏛️ GOLD Design System
-
-The GOLD Design System (formerly the Australian Government Design System) is the official design framework for Australian government digital services:
-
-### Key Features
-- **Australian Government Branding**: Official Australian Government identity and visual standards
-- **Component-Based Architecture**: Modular, reusable components for rapid development
-- **Accessibility First**: WCAG 2.1 AA compliance built into every component
-- **User-Centered Design**: Based on extensive user research with Australian citizens
-
-### GOLD Components Implemented
-- **Government Header**: Official Australian Government branding with GOLD logo
-- **Responsive Navigation**: Mobile-first navigation with accessibility features
-- **Breadcrumb Navigation**: Clear navigation paths following government standards
-- **Hero Section**: Prominent messaging for government services and information
-- **Service Cards**: Information display for government digital services and programs
-- **Government Forms**: Comprehensive form components with validation and accessibility
-- **Team Directory**: Government department staff directory with official email formats
-- **Performance Dashboard**: Metrics display for government service delivery and adoption
-- **Page Alert System**: Government-standard notifications for success, information, warnings, and errors
-- **Modal Dialogs**: Accessible confirmation and information dialogs for government actions
-
-### Design Specifications
-- **Color Palette**: Official GOLD Design System colors with primary (#06262d) and secondary (#00498f) government blues
-- **Typography**: Source Sans Pro font family for optimal government communication
-- **Grid System**: 12-column responsive grid system for consistent layouts
-- **Component Library**: Comprehensive set of pre-built, tested components
-- **Accessibility**: Full WCAG 2.1 AA compliance with screen reader support
-
-### GOLD Standards
-- **Open Source**: Community-driven development with MIT licensing
-- **Government Focus**: Specialized components for government services and citizen interaction
-- **Documentation**: Comprehensive guidelines and implementation examples
-- **Support**: Active community support and government design system expertise
-
-## 🇳🇿 New Zealand Government Design System
-
-The New Zealand Government Design System is designed for building accessible, consistent government websites that put citizens first:
-
-### Key Features
-- **Kiwi Innovation**: Combines international best practices with cutting-edge New Zealand innovations
-- **Citizen-Centered Design**: Built to help all New Zealanders access government services easily
-- **Accessibility First**: Comprehensive accessibility testing ensures inclusive design for all users
-- **Evidence-Based**: Based on user research and testing with real New Zealand citizens
-
-### New Zealand Components Implemented
-- **Government Header**: New Zealand Government branding with official identity
-- **Responsive Navigation**: Mobile-first navigation designed for New Zealand users
-- **Breadcrumb Navigation**: Clear navigation paths following government web standards
-- **Hero Section**: Prominent messaging with friendly "Kia ora!" greeting
-- **Digital Service Cards**: Information display for government digital services and programs
-- **Government Forms**: Comprehensive form components with New Zealand-specific validation
-- **Team Directory**: Government department staff directory with official .govt.nz email addresses
-- **Performance Dashboard**: Metrics display for government service delivery and citizen satisfaction
-- **Page Alert System**: Four alert types (Success, Note, Warning, Error) with distinctive New Zealand styling
-- **Modal Dialogs**: Accessible confirmation dialogs for government service interactions
-
-### Design Specifications
-- **Color Palette**: Official New Zealand Government colors with primary (#003d6b) and secondary (#0066a6) blues
-- **Typography**: Noto Sans font family for clear government communication
-- **Component Library**: 12+ released components with more coming soon (File upload, Inset text)
-- **Framework Support**: Available in React, Vue, Mustache, HTML, and Twig implementations
-- **Accessibility**: WCAG compliance built into every component
-
-### New Zealand Standards
-- **Government Web Standards**: Meets New Zealand Government web usability standards
-- **Community Driven**: Open to community contribution via email, Slack, and GitHub
-- **Multi-Framework**: Supports various development environments and CMSs
-- **Alpha Phase**: Continuously improving based on user feedback and government needs
-
-## 🇮🇹 Bootstrap Italia (Italian Government Design System)
-
-Bootstrap Italia is the official design system for websites and digital applications of the Italian Public Administration, based on Bootstrap 5:
-
-### Key Features
-- **Government Standards**: Official Italian government digital identity and visual standards
-- **Bootstrap 5 Foundation**: Built on the solid foundation of Bootstrap 5 with government customizations
-- **Accessibility Compliance**: WCAG 2.1 AA standards ensuring digital accessibility for all citizens
-- **Mobile-First Design**: Responsive design optimized for all devices and screen sizes
-
-### Bootstrap Italia Components Implemented
-- **Government Header**: Official Italian Republic branding with government identity
-- **Navigation System**: Main navigation and breadcrumb system following Italian government standards
-- **Interactive Tabs**: Tabbed navigation for organizing government information and services
-- **Service Cards**: Information display for government digital services and administrative functions
-- **Government Forms**: Comprehensive form components with Italian labels and government validation patterns
-- **Team Directory**: Government staff directory with official Italian government email formats (.gov.it)
-- **Performance Dashboard**: Metrics display for government service adoption and citizen satisfaction
-- **Alert System**: Government-standard notifications for system status and citizen communications
-- **Modal Dialogs**: Accessible confirmation and information dialogs for government interactions
-
-### Design Specifications
-- **Color Palette**: Official Bootstrap Italia colors with primary (#0066cc) and secondary (#5a6772) government colors
-- **Typography**: Titillium Web font family, the official font for Italian government digital communications
-- **Grid System**: Bootstrap 5 responsive grid system adapted for government layouts
-- **Component Library**: Government-specific components following Italian digital administration guidelines
-- **Accessibility**: Full WCAG 2.1 AA compliance with Italian accessibility law compliance
-
-### Italian Government Standards
-- **Designers Italia**: Follows the design guidelines from the Italian Digital Transformation Team
-- **AGID Compliance**: Adheres to Italian Agency for Digital Italy (AGID) technical specifications
-- **Documentation**: Comprehensive Italian language documentation and implementation guides
-- **Community Support**: Active community of Italian government developers and designers
-
-## 🏢 Fluent UI 2 (Microsoft Design System)
-
-Fluent UI 2 is Microsoft's modern design system for building cohesive, delightful, and accessible experiences across platforms:
-
-### Key Features
-- **Cross-Platform Consistency**: Unified design language across Windows, web, mobile, and Office applications
-- **Microsoft Design Language**: Modern visual design reflecting Microsoft's latest design principles
-- **Accessibility-First**: Built with accessibility as a core principle, ensuring inclusive experiences
-- **Enterprise-Ready**: Designed for large-scale enterprise applications with robust component library
-
-### Fluent UI 2 Components Implemented
-- **Modern Header**: Clean Microsoft-styled header with Fluent UI 2 branding
-- **Navigation System**: Segoe UI-based navigation with Microsoft's modern interaction patterns
-- **Interactive Tabs**: Fluent UI 2 tabbed navigation for organizing application content
-- **Service Cards**: Information display cards with Microsoft's card design patterns
-- **Enterprise Forms**: Comprehensive form components with Microsoft design language
-- **Team Directory**: Staff directory with Microsoft-style user representations
-- **Performance Dashboard**: Metrics display with modern Microsoft data visualization patterns
-- **Alert System**: Fluent UI 2 notification system with Microsoft's feedback patterns
-- **Modal Dialogs**: Modern confirmation and information dialogs following Microsoft UX guidelines
-
-### Design Specifications
-- **Color Palette**: Microsoft Fluent UI 2 colors with primary (#0078d4) and secondary (#605e5c) enterprise colors
-- **Typography**: Segoe UI font family, Microsoft's signature font for consistency across platforms
-- **Component Library**: Modern enterprise components following Microsoft's design system
-- **Accessibility**: Full WCAG 2.1 AA compliance with Microsoft's accessibility standards
-- **Cross-Platform**: Consistent design patterns across web, desktop, and mobile applications
-
-### Microsoft Design Standards
-- **Fluent Design System**: Follows Microsoft's latest design principles and patterns
-- **Office Integration**: Seamless integration with Microsoft Office and productivity applications
-- **Documentation**: Comprehensive documentation from Microsoft with implementation guides
-- **Community Support**: Active Microsoft developer community and official support channels
-
-## 📊 Semiotic (React Data Visualization Framework)
-
-Semiotic is a powerful data visualization framework that combines React and D3 for creating flexible, reusable visualization components:
-
-### Key Features
-- **React & D3 Integration**: Seamlessly combines the declarative approach of React with the power of D3
-- **Three Core Frame Types**: Specialized components for different visualization needs
-- **Flexible Data Handling**: Supports various data formats and structures
-- **Interactive Visualizations**: Built-in support for hover effects, annotations, and user interactions
-
-### Semiotic Frame Components Implemented
-- **XYFrame**: Coordinate-based visualizations including line charts, scatter plots, and area charts
-- **OrdinalFrame**: Categorical data visualizations such as bar charts, violin plots, and parallel coordinates
-- **NetworkFrame**: Network and hierarchical visualizations including flow diagrams and network graphs
-- **Interactive Features**: Hover annotations, brushing capabilities, and responsive design
-- **Custom Styling**: Flexible theming and styling options for all visualization types
-
-### Design Specifications
-- **Color Palette**: Modern purple and blue gradient scheme with primary (#ac58e5) and secondary (#00a2ce) colors
-- **Typography**: Inter font family for clean, readable text across all components
-- **Responsive Design**: Mobile-first approach with adaptive layouts for all screen sizes
-- **Component Library**: Comprehensive visualization components with consistent API patterns
-- **Animation Support**: Smooth transitions and interactive animations for enhanced user experience
-
-### Technical Implementation
-- **Framework**: Built on React 16.8+ with hooks support
-- **D3 Integration**: Leverages D3's powerful data manipulation and SVG rendering capabilities
-- **Data Formats**: Supports JSON, CSV, and various other data formats
-- **Performance**: Optimized for large datasets with efficient rendering strategies
-- **Accessibility**: ARIA labels and keyboard navigation support for inclusive design
-
-### Semiotic Standards
-- **nteract Ecosystem**: Part of the nteract project for interactive computing
-- **Open Source**: MIT licensed with active community development
-- **Documentation**: Comprehensive API documentation with interactive examples
-- **Community**: Active GitHub community with regular updates and feature additions
-
-## 📊 Visualization with visx
-
-visx brings advanced data visualization capabilities:
-
-### visx Advantages
-- **Modular**: Reusable and composable components
-- **Performance**: Optimized for large datasets
-- **Flexibility**: Full control over appearance and behavior
-- **React-friendly**: Native React integration
-- **TypeScript**: Complete TypeScript support
-
-### Implemented Charts
-- **Bar charts**: Bar charts with gradients
-- **Line charts**: Line charts with curves
-- **Grids**: Customizable background grids
-- **Axes**: Configurable X and Y axes
-- **Interactions**: Hover effects and animations
+```
+src/
+├── setupTests.ts          # Test configuration
+└── components/
+    └── shared/
+        └── __tests__/     # Component tests
+```
+
+### Running Tests
+```bash
+npm test                   # Run all tests
+npm test -- --coverage    # Run with coverage report
+```
+
+---
 
 ## 🚀 Deployment
 
+### Automatic Deployment
 This project is automatically deployed to GitHub Pages using GitHub Actions.
 
-### Live Demo
-- **Production**: [https://kevinbdx35.github.io/ComponentShowcase](https://kevinbdx35.github.io/ComponentShowcase)
-- **Automatic Deployment**: Every push to `main` branch triggers a new deployment
+- **Live Demo**: [https://kevinbdx35.github.io/ComponentShowcase](https://kevinbdx35.github.io/ComponentShowcase)
+- **Auto-deploy**: Every push to `main` triggers deployment
+- **Optimized Build**: Production builds are optimized for performance
 
-### GitHub Actions Workflow
-- **Build**: Automatically builds the React application
-- **Test**: Runs all unit tests before deployment
-- **Deploy**: Deploys to GitHub Pages on successful build
-- **Optimized**: Uses npm cache and legacy peer deps for faster builds
+### Manual Deployment
+```bash
+npm run build
+# Deploy build/ folder to your hosting platform
+```
 
-### Development vs Production
-- **Development**: `npm start` - Local development server
-- **Production**: `npm run build` - Optimized build for deployment
-- **Testing**: `npm test` - Run test suite
+---
+
+## 🛠️ Technical Stack
+
+### Core Technologies
+- **React 19** - UI framework
+- **TypeScript** - Type safety
+- **React Router** - Navigation
+- **React Context** - State management
+
+### Design Systems
+- **@mui/material** - Material UI components
+- **antd** - Ant Design components
+- **evergreen-ui** - Evergreen UI components
+- **@uswds/uswds** - U.S. Web Design System
+- **govuk-frontend** - GOV.UK Design System
+
+### Development Tools
+- **React Scripts** - Build tooling
+- **Jest** - Testing framework
+- **React Testing Library** - Component testing
+- **GitHub Actions** - CI/CD
+
+### Additional Features
+- **Three.js** - 3D visualizations
+- **Visx** - Data visualization
+- **Semiotic** - Advanced charts
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit issues and pull requests.
+
+### Development Guidelines
+1. Follow the existing architecture patterns
+2. Maintain TypeScript type safety
+3. Ensure accessibility compliance
+4. Write tests for new features
+5. Update documentation
+
+### Adding New Design Systems
+1. Create a new theme file in `src/themes/`
+2. Implement the `DesignSystemTheme` interface
+3. Add the theme to `ThemeShowcase.tsx`
+4. Update this README
 
 ---
 
 # 🇫🇷 Version Française
 
-# Comparaison des Design Systems UI
+# Comparaison des Systèmes de Design UI
 
-Une plateforme de comparaison complète pour les design systems UI populaires, implémentant les mêmes composants à travers différents systèmes pour faciliter les décisions de design éclairées.
+Une plateforme complète de comparaison pour les systèmes de design UI populaires, implémentant les mêmes composants à travers différents systèmes pour faciliter les décisions de design éclairées.
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W61I0YBJ)
 
@@ -644,60 +280,75 @@ Une plateforme de comparaison complète pour les design systems UI populaires, i
 
 ## 📋 Table des Matières
 
-- [🎯 Objectif](#-objectif)
-- [🏗️ Structure du projet](#️-structure-du-projet)
-- [🧩 Composants testés](#-composants-testés)
-- [🚀 Démarrage](#-démarrage)
-- [📊 Critères de comparaison](#-critères-de-comparaison)
-- [🔧 Design systems implémentés](#-design-systems-implémentés)
-- [📝 Usage](#-usage)
-- [🛠️ Technologies](#️-technologies)
-- [📦 Design Systems & Dépendances](#-design-systems--dépendances)
-- [🎨 Fonctionnalités implémentées](#-fonctionnalités-implémentées)
+- [🎯 Aperçu du Projet](#-aperçu-du-projet)
+- [🏗️ Architecture](#️-architecture-1)
+- [🚀 Démarrage Rapide](#-démarrage-rapide)
+- [🔧 Systèmes de Design Implémentés](#-systèmes-de-design-implémentés)
+- [📊 Comparaison des Fonctionnalités](#-comparaison-des-fonctionnalités)
 - [🧪 Tests](#-tests)
-- [🔍 Comparaison des Design Systems](#-comparaison-des-design-systems)
-- [🏛️ Focus USWDS](#️-focus-uswds-us-web-design-system)
-- [🇬🇧 GOV.UK Design System](#-govuk-design-system)
-- [📊 Visualisation avec visx](#-visualisation-avec-visx)
-- [🚀 Déploiement](#-déploiement)
+- [🚀 Déploiement](#-déploiement-1)
+- [🛠️ Stack Technique](#️-stack-technique)
+- [🤝 Contribution](#-contribution)
 
 ---
 
-## 🎯 Objectif
+## 🎯 Aperçu du Projet
 
-Tester et comparer plusieurs design systems (Material UI, Ant Design, Chakra UI, Mantine, etc.) pour faciliter le choix du système le plus adapté à un projet.
+Ce projet fournit une plateforme unifiée pour comparer et évaluer différents systèmes de design UI côte à côte. Il démontre comment les mêmes composants et fonctionnalités peuvent être implémentés à travers divers systèmes de design, aidant les développeurs et designers à prendre des décisions éclairées pour leurs projets.
 
-## 🏗️ Structure du projet
+### Fonctionnalités Clés
+- **Architecture Unifiée**: Un système de composants générique qui fonctionne avec tous les systèmes de design
+- **Comparaison en Temps Réel**: Basculez entre les systèmes de design instantanément
+- **Couverture Complète**: Systèmes de design gouvernementaux, d'entreprise et open-source
+- **Focus Accessibilité**: Toutes les implémentations maintiennent la conformité WCAG 2.1 AA
+- **Démo Live**: Vitrine interactive avec des composants et données réels
+
+---
+
+## 🏗️ Architecture
+
+Le projet utilise une architecture moderne et scalable :
 
 ```
 src/
 ├── components/
-│   ├── ReferenceComponents.tsx    # Composants de référence (CSS vanilla)
-│   ├── AntDesignComponents.tsx    # Implémentation Ant Design
-│   ├── MaterialUIComponents.tsx   # Implémentation Material UI
-│   ├── ChakraUIComponents.tsx     # Implémentation Chakra UI
-│   ├── MantineComponents.tsx      # Implémentation Mantine
-│   ├── ThreeChart.tsx             # Graphiques 3D avec Three.js
-│   └── __tests__/                 # Tests unitaires
-└── App.tsx                        # Navigation entre les systèmes
+│   └── shared/             # Composants génériques utilisés dans tous les thèmes
+├── themes/                 # Implémentations des systèmes de design
+│   ├── VanillaTheme.tsx   # Implémentation de référence CSS uniquement
+│   ├── MaterialUITheme.tsx # Implémentation Material Design 3
+│   ├── AntDesignTheme.tsx  # Implémentation Ant Design
+│   ├── EvergreenTheme.tsx  # Implémentation Evergreen UI
+│   ├── FluentUITheme.tsx   # Implémentation Microsoft Fluent UI 2
+│   ├── USWDSTheme.tsx      # Système de Design Web U.S.
+│   ├── GOVUKTheme.tsx      # Système de Design du Gouvernement UK
+│   ├── DSFRTheme.tsx       # Système de Design du Gouvernement Français
+│   └── BootstrapItaliaTheme.tsx # Système de Design du Gouvernement Italien
+├── context/
+│   └── ThemeContext.tsx    # Logique de basculement des thèmes
+├── types/
+│   ├── theme.ts           # Interfaces des thèmes
+│   └── shared.ts          # Définitions de types partagés
+└── pages/
+    └── ThemeShowcase.tsx   # Page principale de démonstration
 ```
 
-## 🧩 Composants testés
+### Principes de Design
+- **Composants Agnostiques aux Thèmes**: Composants génériques qui fonctionnent avec n'importe quel système de design
+- **Sécurité des Types**: Support TypeScript complet avec interfaces exhaustives
+- **Accessibilité d'Abord**: Conformité WCAG 2.1 AA intégrée dans chaque thème
+- **Optimisé pour les Performances**: Rendu efficace et division des bundles
 
-- **Typography** : Titres, paragraphes, liens
-- **Boutons** : Primary, secondary, disabled, différentes tailles
-- **Formulaires** : Inputs, select, textarea, checkbox, radio, sliders, rating
-- **Affichage** : Cards, tables, badges, avatars, images
-- **Feedback** : Alerts, modals, toasts, progress bars
-- **Navigation** : Tabs, breadcrumbs, navigation principale
-- **Graphiques** : Graphiques 3D interactifs avec Three.js
-- **Données** : Tableaux d'employés, statistiques, métriques
-- **Layout** : Grilles, conteneurs, espacement
+---
 
-## 🚀 Démarrage
+## 🚀 Démarrage Rapide
+
+### Prérequis
+- Node.js 16+ et npm
 
 ### Installation
 ```bash
+git clone https://github.com/kevinbdx35/ComponentShowcase.git
+cd ComponentShowcase
 npm install
 ```
 
@@ -705,322 +356,195 @@ npm install
 ```bash
 npm start
 ```
-Ouvre [http://localhost:3000](http://localhost:3000) pour voir l'application.
-
-### Tests
-```bash
-npm test
-```
+Ouvre [http://localhost:3000](http://localhost:3000) dans votre navigateur.
 
 ### Build
 ```bash
 npm run build
 ```
 
-## 📊 Critères de comparaison
+### Tests
+```bash
+npm test
+```
 
-- **Performance** : Bundle size, temps de rendu
-- **DX** : Facilité d'implémentation, documentation
-- **Customisation** : Thématisation, flexibilité
-- **Accessibilité** : Conformité WCAG
-- **Esthétique** : Cohérence visuelle, modernité
+---
 
-## 🔧 Design systems implémentés
+## 🔧 Systèmes de Design Implémentés
 
-- [x] **Vanilla CSS** (référence) - Implémentation CSS pure
-- [x] **Material UI** - Material Design 3 avec thème personnalisé
-- [x] **Ant Design** - Design Enterprise avec configuration complète
-- [x] **USWDS** - U.S. Web Design System pour applications gouvernementales
-- [x] **GOV.UK** - Système de design du gouvernement britannique pour services publics
-- [x] **visx** - Bibliothèque de visualisation de données modulaire
-- [🚧] **Chakra UI** - Design system modulaire avec thème étendu (v3 en cours)
-- [🚧] **Mantine** - Design system moderne avec AppShell et hooks (v7 en cours)
+### 🎨 **Bibliothèques et Frameworks UI**
 
-## 📝 Usage
+#### 1. **Vanilla CSS (Référence)**
+- Implémentation CSS pure servant de base
+- CSS Grid et Flexbox modernes
+- Propriétés personnalisées pour le thème
+- Aucune dépendance externe
 
-1. Naviguez entre les différents design systems via la barre de navigation
-2. Comparez visuellement les mêmes composants implémentés avec chaque système
-3. Testez les interactions et animations
-4. Évaluez la cohérence et l'ergonomie
-5. Observez les différences de performance et d'accessibilité
+#### 2. **Material UI (Material Design 3)**
+- Material Design 3 de Google (Material You)
+- Système de thème complet
+- Bibliothèque de composants étendue
+- Excellent support d'accessibilité
 
-## 🛠️ Technologies
+#### 3. **Ant Design**
+- Langage de design axé sur l'entreprise
+- Écosystème de composants riche
+- Excellent support TypeScript
+- Visualisation de données complète
 
-- **React 18** - Framework principal
-- **TypeScript** - Typage statique
-- **React Router** - Navigation SPA
-- **Three.js** - Graphiques 3D (@react-three/fiber, @react-three/drei)
-- **Unsplash API** - Images haute qualité
-- **Jest & React Testing Library** - Tests unitaires
+#### 4. **Evergreen UI**
+- Système de design de Segment
+- Patterns React modernes
+- Focus sur l'expérience développeur
+- Architecture modulaire
 
-## 📦 Design Systems & Dépendances
+#### 5. **Fluent UI 2 (Microsoft)**
+- Système de design moderne de Microsoft
+- Cohérence cross-platform
+- Composants prêts pour l'entreprise
+- Patterns d'intégration Office
 
-### Material UI
-- `@mui/material` - Composants Material Design
-- `@emotion/react` & `@emotion/styled` - CSS-in-JS
-- `@mui/icons-material` - Icônes Material
+### 🏛️ **Systèmes de Design Gouvernementaux**
 
-### Ant Design
-- `antd` - Composants Enterprise
-- `@ant-design/icons` - Icônes Ant Design
+#### 1. **U.S. Web Design System (USWDS)**
+- Système de design officiel du gouvernement fédéral américain
+- Conformité Section 508 et WCAG 2.1 AA
+- Conçu pour les services gouvernementaux
+- Implémentation axée sur la sécurité
 
-### Chakra UI
-- `@chakra-ui/react` - Composants modulaires
-- `@chakra-ui/icons` - Icônes Chakra
-- `@emotion/react` & `@emotion/styled` - Styling
+#### 2. **GOV.UK Design System**
+- Système de design officiel du gouvernement britannique
+- Approche de design centrée sur le citoyen
+- Recherche utilisateur extensive
+- Principes d'amélioration progressive
 
-### USWDS (U.S. Web Design System)
-- `@uswds/uswds` - Système de design gouvernemental américain
-- Composants accessibles et conformes aux standards fédéraux
-- Thème officiel du gouvernement américain
+#### 3. **DSFR (Gouvernement Français)**
+- Système de Design de l'État Français
+- Identité officielle du gouvernement français
+- Conformité accessibilité RGAA
+- Système typographique Marianne
 
-### GOV.UK Design System
-- `govuk-frontend` - Système de design du gouvernement britannique
-- Composants accessibles pour les services publics
-- Styles et patterns officiels du gouvernement britannique
+#### 4. **Bootstrap Italia**
+- Système de design du gouvernement italien
+- Construit sur la fondation Bootstrap 5
+- Typographie Titillium Web
+- Standards de conformité AGID
 
-### visx (Visualisation de données)
-- `@visx/visx` - Package complet de visualisation de données
-- Composants modulaires basés sur D3.js et React
-- Graphiques personnalisables et performants
+---
 
-### Mantine (En cours)
-- `@mantine/core` - Composants principaux
-- `@mantine/hooks` - Hooks utilitaires
-- `@mantine/notifications` - Système de notifications
-- `@tabler/icons-react` - Icônes Tabler
+## 📊 Comparaison des Fonctionnalités
 
-## 🎨 Fonctionnalités implémentées
+| Fonctionnalité | Vanilla | Material UI | Ant Design | Fluent UI 2 | USWDS | GOV.UK | DSFR | Bootstrap Italia | Evergreen |
+|----------------|---------|-------------|------------|-------------|--------|--------|------|------------------|-----------|
+| **Taille Bundle** | Minimale | Moyenne | Grande | Moyenne | Petite | Petite | Petite | Moyenne | Moyenne |
+| **Personnalisation** | Complète | Élevée | Moyenne | Moyenne | Limitée | Limitée | Limitée | Moyenne | Élevée |
+| **Accessibilité** | Custom | Excellente | Bonne | Excellente | Excellente | Excellente | Excellente | Excellente | Excellente |
+| **Documentation** | - | Excellente | Très Bonne | Excellente | Excellente | Excellente | Bonne | Bonne | Bonne |
+| **Enterprise** | - | Oui | Oui | Oui | Oui | Oui | Oui | Oui | Oui |
+| **Usage Gov** | - | Non | Non | Non | Oui | Oui | Oui | Oui | Non |
 
-### ✨ **Dernières Nouveautés**
-- **🇬🇧 GOV.UK Design System** - Système de design du gouvernement britannique
-- **🇫🇷 DSFR** - Système de Design de l'État Français (design system officiel français)
-- **🇨🇦 Canada.ca** - Système de design du gouvernement canadien avec support bilingue
-- **🚀 Déploiement GitHub Pages** - Déploiement automatique avec GitHub Actions
-- **🔧 Tests Complets** - 77.6% de couverture de tests avec dépendances mockées
-- **📱 Responsivité Améliorée** - Expérience mobile améliorée sur tous les systèmes
-
-### Page de référence (TechCorp Solutions)
-- **Hero Section** avec Call-to-Action
-- **Navigation** avec tabs et breadcrumbs
-- **Services** avec cards et icônes
-- **Formulaire de contact** complet avec validation
-- **Tableaux d'employés** avec avatars et badges
-- **Galerie d'images** intégration Unsplash
-- **Dashboard** avec métriques et graphiques 3D
-- **Alerts** multi-types (success, warning, error, info)
-- **Modals** et interactions
-- **Footer** avec liens et informations
-
-### Systèmes de Design Gouvernementaux
-- **🇺🇸 USWDS** - Système de design web américain avec conformité fédérale
-- **🇬🇧 GOV.UK** - Système de design du gouvernement britannique axé sur l'accessibilité
-- **Composants Officiels** - Bannières de phase, en-têtes gouvernementaux, logos couronne
-- **Accessibilité Prioritaire** - Conformité WCAG 2.1 AA intégrée
-
-### Responsive Design
-- Adaptations mobile/desktop pour tous les design systems
-- Navigation drawer pour mobile
-- Grilles responsives
-- Breakpoints optimisés
-- Interfaces tactiles optimisées
+---
 
 ## 🧪 Tests
 
-### Couverture de Tests : 77.6% (38/49 tests réussis)
+Le projet inclut des tests complets :
 
-Tests unitaires couvrant :
-- **Rendu des Composants** - Tous les composants de design systems
-- **Navigation** - Routeur et fonctionnalité SPA
-- **Interactions Utilisateur** - Formulaires, boutons, modaux
-- **Accessibilité** - Labels ARIA et navigation clavier
-- **Dépendances Externes** - Mocks Three.js, API Unsplash
-- **Systèmes Gouvernementaux** - Composants spécifiques USWDS et GOV.UK
+- **Tests de Composants**: Chaque composant de thème est testé
+- **Tests d'Intégration**: Fonctionnalité cross-thème
+- **Tests d'Accessibilité**: Vérification de conformité WCAG
+- **Tests de Performance**: Taille de bundle et performance de rendu
 
 ### Structure des Tests
-- **setupTests.ts** - Mocking complet pour toutes les bibliothèques UI
-- **Tests de Composants** - Fonctionnalité des composants individuels
-- **Tests d'Intégration** - Navigation et interactions cross-system
-- **Tests de Performance** - Temps de rendu et vérifications d'optimisation
+```
+src/
+├── setupTests.ts          # Configuration des tests
+└── components/
+    └── shared/
+        └── __tests__/     # Tests de composants
+```
 
-## 🔍 Comparaison des Design Systems
+### Exécution des Tests
+```bash
+npm test                   # Exécuter tous les tests
+npm test -- --coverage    # Exécuter avec rapport de couverture
+```
 
-| Aspect | Material UI | Ant Design | USWDS | GOV.UK | visx |
-|--------|-------------|------------|-------|---------|------|
-| **Bundle Size** | Moyen | Gros | Moyen | Moyen | Petit |
-| **Customisation** | Élevée | Moyenne | Faible | Faible | Très élevée |
-| **Performance** | Bonne | Bonne | Excellente | Excellente | Excellente |
-| **Documentation** | Excellente | Très bonne | Excellente | Excellente | Très bonne |
-| **Accessibilité** | Excellente | Bonne | Excellente | Excellente | Moyenne |
-| **Écosystème** | Très riche | Riche | Spécialisé | Spécialisé | Spécialisé |
-| **Cas d'usage** | Polyvalent | Enterprise | Gouvernement US | Gouvernement UK | Visualisation |
-
-## 🏛️ Focus USWDS (U.S. Web Design System)
-
-Le USWDS est un système de design spécialement conçu pour les applications gouvernementales américaines :
-
-### Caractéristiques principales
-- **Conformité fédérale** : Respecte les standards Section 508 et WCAG 2.1 AA
-- **Sécurité** : Conçu pour les environnements haute sécurité
-- **Accessibilité** : Priorité absolue sur l'accessibilité
-- **Cohérence** : Expérience utilisateur unifiée sur tous les sites gouvernementaux
-
-### Composants USWDS implémentés
-- **Banner** : Bannière officielle du gouvernement
-- **Header** : Navigation gouvernementale standardisée
-- **Hero** : Section d'accueil avec call-to-action
-- **Cards** : Cartes d'information structurées
-- **Forms** : Formulaires avec validation et labels requis
-- **Tables** : Tableaux de données avec tri et filtrage
-- **Alerts** : Notifications système critiques
-- **Progress bars** : Indicateurs de progression
-- **Footer** : Pied de page gouvernemental standard
-
-### Avantages USWDS
-- ✅ **Compliance** : Conformité automatique aux standards fédéraux
-- ✅ **Accessibilité** : Tests d'accessibilité intégrés
-- ✅ **Performance** : Optimisé pour les connexions lentes
-- ✅ **Responsive** : Compatible mobile-first
-- ✅ **Sécurité** : Conçu pour les environnements sécurisés
-
-## 🇬🇧 GOV.UK Design System
-
-Le GOV.UK Design System est spécialement conçu pour les services numériques du gouvernement britannique :
-
-### Caractéristiques principales
-- **Focus Services Publics** : Conçu pour les services gouvernementaux destinés aux citoyens
-- **Accessibilité Prioritaire** : Accessibilité comme principe fondamental
-- **Recherche Utilisateur** : Basé sur des recherches utilisateurs approfondies
-- **Expérience Cohérente** : Langage de design unifié pour tous les services gouvernementaux britanniques
-
-### Composants GOV.UK implémentés
-- **En-tête GOV.UK** : En-tête officiel du gouvernement avec couronne
-- **Bannière de Phase** : Indicateurs de statut de service (alpha, beta, live)
-- **Fil d'Ariane** : Navigation pour les services complexes
-- **Bannières de Notification** : Notifications de succès, avertissement et erreur
-- **Cartes Résumé** : Cartes d'affichage d'informations
-- **Éléments de Formulaire** : Composants de formulaire accessibles avec labels appropriés
-- **Tableaux** : Tableaux de données avec style gouvernemental
-- **Boutons** : Boutons de démarrage et actions standards
-- **Pied de Page** : Pied de page gouvernemental standard avec liens de support
-
-### Avantages GOV.UK
-- ✅ **Accessibilité** : Conformité WCAG 2.1 AA intégrée
-- ✅ **Tests Utilisateurs** : Composants testés avec de vrais utilisateurs
-- ✅ **Amélioration Progressive** : Fonctionne sans JavaScript
-- ✅ **Mobile First** : Design responsive pour tous les appareils
-- ✅ **Open Source** : Disponible gratuitement et piloté par la communauté
-
-## 🇫🇷 DSFR (Système de Design de l'État Français)
-
-Le Système de Design de l'État Français (DSFR) est le système de design officiel pour les services numériques du gouvernement français :
-
-### Caractéristiques principales
-- **Identité République Française** : Logo Marianne officiel et identité du gouvernement français
-- **Conformité Accessibilité** : Conformité RGAA (Référentiel Général d'Amélioration de l'Accessibilité)
-- **Focus Service Public** : Conçu pour les services citoyens et l'administration française
-- **Identité Cohérente** : Expérience unifiée sur toutes les plateformes gouvernementales françaises
-
-### Composants DSFR implémentés
-- **En-tête Officiel** : Logo Marianne avec l'identité "République Française"
-- **Bannière de Phase** : Notifications de statut de service Beta/Alpha
-- **Navigation** : Navigation des services gouvernementaux avec fil d'Ariane
-- **Cartes de Services** : Cartes d'affichage d'informations pour les services gouvernementaux
-- **Éléments de Formulaire** : Composants de formulaire accessibles du gouvernement français
-- **Annuaire d'Équipe** : Annuaire du personnel avec style gouvernemental
-- **Tableau de Bord Statistiques** : Affichage des métriques de performance
-- **Alertes** : Notifications de succès, information, avertissement et erreur
-- **Boîtes de Dialogue Modales** : Dialogues de confirmation et d'information
-- **Pied de Page Officiel** : Pied de page standard du gouvernement français avec liens légaux
-
-### Avantages DSFR
-- ✅ **Identité Gouvernementale** : Identité visuelle officielle de l'État français
-- ✅ **Conformité RGAA** : Conformité aux standards d'accessibilité français
-- ✅ **Centré Citoyen** : Conçu pour les utilisateurs des services publics français
-- ✅ **Design Responsive** : Approche mobile-first pour tous les appareils
-- ✅ **Typographie** : Famille de polices Marianne officielle
-- ✅ **Palette de Couleurs** : Couleurs officielles de l'État et variantes approuvées
-
-### Standards du Gouvernement Français
-- **Typographie Marianne** : Police officielle du gouvernement
-- **Couleur Bleu France** : Bleu gouvernemental principal (#000091)
-- **Couleurs Sémantiques** : Couleurs standardisées pour les alertes et états
-- **Méthodologie BEM** : Convention de nommage CSS structurée
-- **Amélioration Progressive** : Fonctionne sans JavaScript
-
-## 🇨🇦 Système de Design Canada.ca
-
-Le Système de Design Canada.ca est le cadre de conception officiel pour les services numériques du gouvernement canadien :
-
-### Caractéristiques principales
-- **Image de marque du Gouvernement du Canada** : Signature officielle du gouvernement du Canada et identité visuelle
-- **Bilingue par conception** : Support complet anglais et français avec commutation dynamique
-- **Accessibilité prioritaire** : Conformité WCAG 2.1 AA et principes de conception inclusive
-- **Centré sur l'utilisateur** : Basé sur des recherches approfondies avec les citoyens canadiens
-
-### Composants Canada.ca implémentés
-- **En-tête Officiel** : Signature du gouvernement du Canada avec drapeau à feuille d'érable
-- **Commutateur de Langue** : Basculement transparent anglais/français
-- **Navigation Fil d'Ariane** : Pistes de navigation conformes à Canada.ca
-- **Bouton Super Tâche** : Appel à l'action principal pour les services gouvernementaux
-- **Formulaires Bilingues** : Composants de formulaire complets avec support des langues officielles
-- **Cartes de Services** : Cartes d'affichage d'informations pour les programmes gouvernementaux
-- **Annuaire d'Équipe** : Annuaire du personnel gouvernemental avec formats de courriels officiels
-- **Tableau de Bord Performance** : Affichage des métriques de prestation de services
-- **Système d'Alertes** : Notifications de succès, information, avertissement et danger
-- **Boîtes de Dialogue Modales** : Dialogues de confirmation et d'information accessibles
-- **Pied de Page Officiel** : Pied de page standard du gouvernement du Canada avec liens requis
-
-### Avantages Canada.ca
-- ✅ **Excellence Bilingue** : Support natif anglais/français partout
-- ✅ **Standards Fédéraux** : Respecte les exigences du Secrétariat du Conseil du Trésor
-- ✅ **Centré Citoyen** : Conçu pour les utilisateurs des services gouvernementaux canadiens
-- ✅ **Conformité Accessibilité** : Conformité WCAG 2.1 AA intégrée
-- ✅ **Design Responsive** : Approche mobile-first pour tous les appareils
-- ✅ **Gouvernement Ouvert** : Intégration de la transparence et des données ouvertes
-- ✅ **Identité Fédérale** : Standards visuels officiels du gouvernement du Canada
-
-### Standards du Gouvernement Canadien
-- **Signature Officielle** : Mot-symbole et drapeau du gouvernement du Canada
-- **Palette de Couleurs** : Couleurs corporatives fédérales et variantes approuvées
-- **Typographie** : Famille de polices Noto Sans pour une lisibilité optimale
-- **Contenu Bilingue** : Traitement égal des langues anglaise et française
-- **Accessibilité** : Conformité aux standards d'accessibilité fédéraux
-- **Expérience Utilisateur** : Conception basée sur la recherche citoyenne
-
-## 📊 Visualisation avec visx
-
-visx apporte une dimension de visualisation de données avancée :
-
-### Avantages visx
-- **Modulaire** : Composants réutilisables et composables
-- **Performance** : Optimisé pour de grandes quantités de données
-- **Flexibilité** : Contrôle total sur l'apparence et le comportement
-- **React-friendly** : Intégration native avec React
-- **TypeScript** : Support TypeScript complet
-
-### Graphiques implémentés
-- **Bar charts** : Graphiques en barres avec gradients
-- **Line charts** : Graphiques linéaires avec courbes
-- **Grids** : Grilles de fond personnalisables
-- **Axes** : Axes X et Y configurables
-- **Interactions** : Hover effects et animations
+---
 
 ## 🚀 Déploiement
 
+### Déploiement Automatique
 Ce projet est automatiquement déployé sur GitHub Pages en utilisant GitHub Actions.
 
-### Démo en Direct
-- **Production** : [https://kevinbdx35.github.io/ComponentShowcase](https://kevinbdx35.github.io/ComponentShowcase)
-- **Déploiement Automatique** : Chaque push vers la branche `main` déclenche un nouveau déploiement
+- **Démo Live**: [https://kevinbdx35.github.io/ComponentShowcase](https://kevinbdx35.github.io/ComponentShowcase)
+- **Auto-déploiement**: Chaque push vers `main` déclenche le déploiement
+- **Build Optimisé**: Les builds de production sont optimisés pour les performances
 
-### Workflow GitHub Actions
-- **Build** : Construit automatiquement l'application React
-- **Test** : Exécute tous les tests unitaires avant le déploiement
-- **Deploy** : Déploie sur GitHub Pages après un build réussi
-- **Optimisé** : Utilise le cache npm et legacy peer deps pour des builds plus rapides
+### Déploiement Manuel
+```bash
+npm run build
+# Déployer le dossier build/ sur votre plateforme d'hébergement
+```
 
-### Développement vs Production
-- **Développement** : `npm start` - Serveur de développement local
-- **Production** : `npm run build` - Build optimisé pour déploiement
-- **Tests** : `npm test` - Exécution de la suite de tests
+---
+
+## 🛠️ Stack Technique
+
+### Technologies Principales
+- **React 19** - Framework UI
+- **TypeScript** - Sécurité des types
+- **React Router** - Navigation
+- **React Context** - Gestion d'état
+
+### Systèmes de Design
+- **@mui/material** - Composants Material UI
+- **antd** - Composants Ant Design
+- **evergreen-ui** - Composants Evergreen UI
+- **@uswds/uswds** - Système de Design Web U.S.
+- **govuk-frontend** - Système de Design GOV.UK
+
+### Outils de Développement
+- **React Scripts** - Outillage de build
+- **Jest** - Framework de test
+- **React Testing Library** - Tests de composants
+- **GitHub Actions** - CI/CD
+
+### Fonctionnalités Additionnelles
+- **Three.js** - Visualisations 3D
+- **Visx** - Visualisation de données
+- **Semiotic** - Graphiques avancés
+
+---
+
+## 🤝 Contribution
+
+Les contributions sont les bienvenues ! N'hésitez pas à soumettre des issues et pull requests.
+
+### Directives de Développement
+1. Suivez les patterns d'architecture existants
+2. Maintenez la sécurité des types TypeScript
+3. Assurez la conformité d'accessibilité
+4. Écrivez des tests pour les nouvelles fonctionnalités
+5. Mettez à jour la documentation
+
+### Ajout de Nouveaux Systèmes de Design
+1. Créez un nouveau fichier de thème dans `src/themes/`
+2. Implémentez l'interface `DesignSystemTheme`
+3. Ajoutez le thème à `ThemeShowcase.tsx`
+4. Mettez à jour ce README
+
+---
+
+## 📄 License
+
+Ce projet est sous licence MIT - voir le fichier [LICENSE](LICENSE) pour plus de détails.
+
+## 🙏 Remerciements
+
+- Tous les mainteneurs des systèmes de design implémentés
+- La communauté open-source pour les outils et bibliothèques
+- Les équipes gouvernementales pour leurs systèmes de design accessibles
+
+---
+
+**Développé avec ❤️ pour la communauté des développeurs et designers**

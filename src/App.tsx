@@ -28,7 +28,7 @@ function Home() {
 
       <div className="home-stats">
         <div className="home-stat-card">
-          <div className="home-stat-number">8</div>
+          <div className="home-stat-number">9</div>
           <div className="home-stat-label">Design Systems</div>
         </div>
         <div className="home-stat-card">
@@ -67,6 +67,7 @@ function Home() {
             <li><span className="status-indicator active"></span><span className="home-category-link">Material UI (Material Design 3)</span></li>
             <li><span className="status-indicator active"></span><span className="home-category-link">Ant Design</span></li>
             <li><span className="status-indicator active"></span><span className="home-category-link">Evergreen UI</span></li>
+            <li><span className="status-indicator active"></span><span className="home-category-link">Fluent UI 2 (Microsoft)</span></li>
           </ul>
         </div>
       </div>
