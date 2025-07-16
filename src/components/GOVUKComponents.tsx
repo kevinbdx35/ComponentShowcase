@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { ThreeChart } from './ThreeChart';
+import { VanillaVisxChart } from './VisxChartVariants';
 import '../styles/govuk-custom.css';
 
 export const GOVUKComponents: React.FC = () => {
@@ -115,12 +117,87 @@ export const GOVUKComponents: React.FC = () => {
               <p className="govuk-body-l">
                 Innovating the future with cutting-edge technology solutions for modern businesses
               </p>
-              <a href="#services" role="button" draggable="false" className="govuk-button govuk-button--start">
-                Get Started
-                <svg className="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
-                  <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
-                </svg>
-              </a>
+              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                <a href="#services" role="button" draggable="false" className="govuk-button govuk-button--start">
+                  Get Started
+                  <svg className="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
+                    <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+                  </svg>
+                </a>
+                <button className="govuk-button govuk-button--secondary">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Navigation Tabs */}
+          <div className="govuk-grid-row" style={{ marginTop: '3rem', marginBottom: '3rem' }}>
+            <div className="govuk-grid-column-full">
+              <div className="govuk-tabs" data-module="govuk-tabs">
+                <h2 className="govuk-tabs__title">
+                  Contents
+                </h2>
+                <ul className="govuk-tabs__list">
+                  {tabs.map((tab, index) => (
+                    <li key={index} className="govuk-tabs__list-item">
+                      <a 
+                        className={`govuk-tabs__tab ${activeTab === index ? 'govuk-tabs__tab--selected' : ''}`}
+                        href={`#tab-${index}`}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setActiveTab(index);
+                        }}
+                      >
+                        {tab}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+                <div className="govuk-tabs__panel" id={`tab-${activeTab}`}>
+                  {activeTab === 0 && (
+                    <div>
+                      <h3 className="govuk-heading-m">About TechCorp Solutions</h3>
+                      <p className="govuk-body">
+                        Founded in 2015, TechCorp Solutions has been at the forefront of digital transformation, 
+                        helping businesses leverage technology to achieve their goals. Our expertise spans cloud computing, 
+                        AI/ML, and custom software development.
+                      </p>
+                    </div>
+                  )}
+                  {activeTab === 1 && (
+                    <div>
+                      <h3 className="govuk-heading-m">Our Services</h3>
+                      <ul className="govuk-list govuk-list--bullet">
+                        <li>Cloud Infrastructure & Migration</li>
+                        <li>AI & Machine Learning Solutions</li>
+                        <li>Custom Software Development</li>
+                        <li>Digital Transformation Consulting</li>
+                        <li>DevOps & Automation Services</li>
+                      </ul>
+                    </div>
+                  )}
+                  {activeTab === 2 && (
+                    <div>
+                      <h3 className="govuk-heading-m">Our Team</h3>
+                      <p className="govuk-body">
+                        Our diverse team of experts brings together years of experience in technology, 
+                        design, and business strategy. We're passionate about delivering innovative 
+                        solutions that drive real business value.
+                      </p>
+                    </div>
+                  )}
+                  {activeTab === 3 && (
+                    <div>
+                      <h3 className="govuk-heading-m">Contact Information</h3>
+                      <p className="govuk-body">
+                        Ready to transform your business with technology? Get in touch with our team 
+                        to discuss your specific needs and discover how we can help you achieve your goals.
+                      </p>
+                    </div>
+                  )}
+                </div>
+              </div>
             </div>
           </div>
 
@@ -153,6 +230,15 @@ export const GOVUKComponents: React.FC = () => {
                     <div className="govuk-panel__body">
                       <strong className="govuk-tag govuk-tag--yellow">Premium</strong>
                       <p className="govuk-body">Bespoke software development and consulting</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="govuk-grid-column-one-third">
+                  <div className="govuk-panel govuk-panel--confirmation">
+                    <h3 className="govuk-panel__title">DevOps Solutions</h3>
+                    <div className="govuk-panel__body">
+                      <strong className="govuk-tag govuk-tag--green">Automation</strong>
+                      <p className="govuk-body">CI/CD pipelines and infrastructure automation</p>
                     </div>
                   </div>
                 </div>
@@ -235,6 +321,9 @@ export const GOVUKComponents: React.FC = () => {
                     <label className="govuk-label" htmlFor="message">
                       Message
                     </label>
+                    <div className="govuk-hint">
+                      Please provide details about your inquiry or how we can help
+                    </div>
                     <textarea
                       className="govuk-textarea"
                       id="message"
@@ -244,6 +333,32 @@ export const GOVUKComponents: React.FC = () => {
                       onChange={handleInputChange}
                     />
                   </div>
+
+                  <fieldset className="govuk-fieldset">
+                    <legend className="govuk-fieldset__legend">
+                      How would you prefer to be contacted?
+                    </legend>
+                    <div className="govuk-radios govuk-radios--small">
+                      <div className="govuk-radios__item">
+                        <input className="govuk-radios__input" id="contact-email" name="contact" type="radio" value="email" />
+                        <label className="govuk-label govuk-radios__label" htmlFor="contact-email">
+                          Email
+                        </label>
+                      </div>
+                      <div className="govuk-radios__item">
+                        <input className="govuk-radios__input" id="contact-phone" name="contact" type="radio" value="phone" />
+                        <label className="govuk-label govuk-radios__label" htmlFor="contact-phone">
+                          Phone
+                        </label>
+                      </div>
+                      <div className="govuk-radios__item">
+                        <input className="govuk-radios__input" id="contact-text" name="contact" type="radio" value="text" />
+                        <label className="govuk-label govuk-radios__label" htmlFor="contact-text">
+                          Text message
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
 
                   <div className="govuk-checkboxes">
                     <div className="govuk-checkboxes__item">
@@ -259,6 +374,19 @@ export const GOVUKComponents: React.FC = () => {
                         Subscribe to our newsletter
                       </label>
                     </div>
+                    <div className="govuk-checkboxes__item">
+                      <input
+                        className="govuk-checkboxes__input"
+                        id="agree"
+                        name="agree"
+                        type="checkbox"
+                        checked={formData.agree}
+                        onChange={handleInputChange}
+                      />
+                      <label className="govuk-label govuk-checkboxes__label" htmlFor="agree">
+                        I agree to the terms and conditions
+                      </label>
+                    </div>
                   </div>
 
                   <button type="submit" className="govuk-button" data-module="govuk-button">
@@ -266,6 +394,37 @@ export const GOVUKComponents: React.FC = () => {
                   </button>
                 </fieldset>
               </form>
+            </div>
+          </div>
+
+          {/* Basic Cards */}
+          <div className="govuk-grid-row">
+            <div className="govuk-grid-column-full">
+              <h2 className="govuk-heading-l">Product Features</h2>
+              <div className="govuk-grid-row">
+                <div className="govuk-grid-column-one-half">
+                  <div className="govuk-summary-card">
+                    <div className="govuk-summary-card__title-wrapper">
+                      <h3 className="govuk-summary-card__title">Enterprise Security</h3>
+                    </div>
+                    <div className="govuk-summary-card__content">
+                      <p className="govuk-body">Advanced security measures and compliance standards for enterprise-grade applications.</p>
+                      <button className="govuk-button govuk-button--secondary">Learn More</button>
+                    </div>
+                  </div>
+                </div>
+                <div className="govuk-grid-column-one-half">
+                  <div className="govuk-summary-card">
+                    <div className="govuk-summary-card__title-wrapper">
+                      <h3 className="govuk-summary-card__title">24/7 Support</h3>
+                    </div>
+                    <div className="govuk-summary-card__content">
+                      <p className="govuk-body">Round-the-clock technical support and monitoring for critical business operations.</p>
+                      <button className="govuk-button govuk-button--secondary">Contact Support</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -304,10 +463,226 @@ export const GOVUKComponents: React.FC = () => {
             </div>
           </div>
 
-          {/* Statistics */}
+          {/* Alerts Section */}
           <div className="govuk-grid-row">
             <div className="govuk-grid-column-full">
-              <h2 className="govuk-heading-l">Performance Statistics</h2>
+              <h2 className="govuk-heading-l">System Status</h2>
+              
+              <div className="govuk-notification-banner govuk-notification-banner--success" role="alert">
+                <div className="govuk-notification-banner__header">
+                  <h2 className="govuk-notification-banner__title">Success</h2>
+                </div>
+                <div className="govuk-notification-banner__content">
+                  <p className="govuk-notification-banner__heading">Operation completed successfully!</p>
+                </div>
+              </div>
+
+              <div className="govuk-inset-text">
+                <strong>Information:</strong> New features have been deployed and are now available.
+              </div>
+
+              <div className="govuk-warning-text">
+                <span className="govuk-warning-text__icon" aria-hidden="true">!</span>
+                <strong className="govuk-warning-text__text">
+                  <span className="govuk-warning-text__assistive">Warning</span>
+                  Scheduled maintenance will occur this weekend.
+                </strong>
+              </div>
+
+              <div className="govuk-error-summary" role="alert">
+                <h2 className="govuk-error-summary__title">There is a problem</h2>
+                <div className="govuk-error-summary__body">
+                  <p>Some services may be temporarily unavailable. Our team is working to resolve this issue.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Badges and Avatars */}
+          <div className="govuk-grid-row">
+            <div className="govuk-grid-column-full">
+              <h2 className="govuk-heading-l">Team Roles & Status</h2>
+              <div className="govuk-grid-row">
+                <div className="govuk-grid-column-one-quarter">
+                  <div style={{ textAlign: 'center', padding: '1rem', border: '1px solid #b1b4b6', borderRadius: '4px' }}>
+                    <div style={{ 
+                      width: '60px', 
+                      height: '60px', 
+                      borderRadius: '50%', 
+                      backgroundColor: '#1d70b8', 
+                      color: 'white', 
+                      display: 'flex', 
+                      alignItems: 'center', 
+                      justifyContent: 'center', 
+                      fontSize: '1.5rem', 
+                      fontWeight: 'bold',
+                      margin: '0 auto 1rem'
+                    }}>
+                      SC
+                    </div>
+                    <h3 className="govuk-heading-s">Sarah Chen</h3>
+                    <strong className="govuk-tag govuk-tag--blue">Lead Engineer</strong>
+                  </div>
+                </div>
+                <div className="govuk-grid-column-one-quarter">
+                  <div style={{ textAlign: 'center', padding: '1rem', border: '1px solid #b1b4b6', borderRadius: '4px' }}>
+                    <div style={{ 
+                      width: '60px', 
+                      height: '60px', 
+                      borderRadius: '50%', 
+                      backgroundColor: '#00703c', 
+                      color: 'white', 
+                      display: 'flex', 
+                      alignItems: 'center', 
+                      justifyContent: 'center', 
+                      fontSize: '1.5rem', 
+                      fontWeight: 'bold',
+                      margin: '0 auto 1rem'
+                    }}>
+                      MJ
+                    </div>
+                    <h3 className="govuk-heading-s">Marcus Johnson</h3>
+                    <strong className="govuk-tag govuk-tag--green">Designer</strong>
+                  </div>
+                </div>
+                <div className="govuk-grid-column-one-quarter">
+                  <div style={{ textAlign: 'center', padding: '1rem', border: '1px solid #b1b4b6', borderRadius: '4px' }}>
+                    <div style={{ 
+                      width: '60px', 
+                      height: '60px', 
+                      borderRadius: '50%', 
+                      backgroundColor: '#f47738', 
+                      color: 'white', 
+                      display: 'flex', 
+                      alignItems: 'center', 
+                      justifyContent: 'center', 
+                      fontSize: '1.5rem', 
+                      fontWeight: 'bold',
+                      margin: '0 auto 1rem'
+                    }}>
+                      ER
+                    </div>
+                    <h3 className="govuk-heading-s">Elena Rodriguez</h3>
+                    <strong className="govuk-tag govuk-tag--orange">Marketing</strong>
+                  </div>
+                </div>
+                <div className="govuk-grid-column-one-quarter">
+                  <div style={{ textAlign: 'center', padding: '1rem', border: '1px solid #b1b4b6', borderRadius: '4px' }}>
+                    <div style={{ 
+                      width: '60px', 
+                      height: '60px', 
+                      borderRadius: '50%', 
+                      backgroundColor: '#6f72af', 
+                      color: 'white', 
+                      display: 'flex', 
+                      alignItems: 'center', 
+                      justifyContent: 'center', 
+                      fontSize: '1.5rem', 
+                      fontWeight: 'bold',
+                      margin: '0 auto 1rem'
+                    }}>
+                      DK
+                    </div>
+                    <h3 className="govuk-heading-s">David Kim</h3>
+                    <strong className="govuk-tag govuk-tag--purple">Sales</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Progress Bar */}
+          <div className="govuk-grid-row">
+            <div className="govuk-grid-column-full">
+              <h2 className="govuk-heading-l">Project Progress</h2>
+              <div className="govuk-grid-row">
+                <div className="govuk-grid-column-one-half">
+                  <h3 className="govuk-heading-m">Cloud Migration</h3>
+                  <div style={{ backgroundColor: '#f3f2f1', height: '20px', borderRadius: '10px', overflow: 'hidden', marginBottom: '1rem' }}>
+                    <div style={{ backgroundColor: '#00703c', height: '100%', width: '75%', borderRadius: '10px' }}></div>
+                  </div>
+                  <p className="govuk-body">75% Complete - On track for Q4 delivery</p>
+                </div>
+                <div className="govuk-grid-column-one-half">
+                  <h3 className="govuk-heading-m">AI Implementation</h3>
+                  <div style={{ backgroundColor: '#f3f2f1', height: '20px', borderRadius: '10px', overflow: 'hidden', marginBottom: '1rem' }}>
+                    <div style={{ backgroundColor: '#1d70b8', height: '100%', width: '45%', borderRadius: '10px' }}></div>
+                  </div>
+                  <p className="govuk-body">45% Complete - Ahead of schedule</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Static Tabs */}
+          <div className="govuk-grid-row">
+            <div className="govuk-grid-column-full">
+              <h2 className="govuk-heading-l">Technology Stack</h2>
+              <div className="govuk-tabs" data-module="govuk-tabs">
+                <ul className="govuk-tabs__list">
+                  <li className="govuk-tabs__list-item">
+                    <a className="govuk-tabs__tab govuk-tabs__tab--selected" href="#frontend">
+                      Frontend
+                    </a>
+                  </li>
+                  <li className="govuk-tabs__list-item">
+                    <a className="govuk-tabs__tab" href="#backend">
+                      Backend
+                    </a>
+                  </li>
+                  <li className="govuk-tabs__list-item">
+                    <a className="govuk-tabs__tab" href="#database">
+                      Database
+                    </a>
+                  </li>
+                </ul>
+                <div className="govuk-tabs__panel" id="frontend">
+                  <h3 className="govuk-heading-m">Frontend Technologies</h3>
+                  <ul className="govuk-list govuk-list--bullet">
+                    <li>React 18 with TypeScript</li>
+                    <li>Next.js for SSR and routing</li>
+                    <li>Tailwind CSS for styling</li>
+                    <li>Framer Motion for animations</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Company Gallery */}
+          <div className="govuk-grid-row">
+            <div className="govuk-grid-column-full">
+              <h2 className="govuk-heading-l">Company Gallery</h2>
+              <div className="govuk-grid-row">
+                <div className="govuk-grid-column-one-third">
+                  <div style={{ backgroundColor: '#f3f2f1', height: '200px', borderRadius: '4px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1rem' }}>
+                    <span style={{ color: '#626a6e', fontSize: '1.125rem' }}>Office Space</span>
+                  </div>
+                  <h3 className="govuk-heading-s">Modern Workspace</h3>
+                  <p className="govuk-body">Our collaborative open-plan office designed for innovation and creativity.</p>
+                </div>
+                <div className="govuk-grid-column-one-third">
+                  <div style={{ backgroundColor: '#f3f2f1', height: '200px', borderRadius: '4px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1rem' }}>
+                    <span style={{ color: '#626a6e', fontSize: '1.125rem' }}>Team Meeting</span>
+                  </div>
+                  <h3 className="govuk-heading-s">Collaboration</h3>
+                  <p className="govuk-body">Daily standups and sprint planning sessions that drive our agile development process.</p>
+                </div>
+                <div className="govuk-grid-column-one-third">
+                  <div style={{ backgroundColor: '#f3f2f1', height: '200px', borderRadius: '4px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1rem' }}>
+                    <span style={{ color: '#626a6e', fontSize: '1.125rem' }}>Tech Setup</span>
+                  </div>
+                  <h3 className="govuk-heading-s">Technology</h3>
+                  <p className="govuk-body">State-of-the-art development environment with the latest tools and technologies.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Performance Dashboard */}
+          <div className="govuk-grid-row">
+            <div className="govuk-grid-column-full">
+              <h2 className="govuk-heading-l">Performance Dashboard</h2>
               <div className="govuk-grid-row">
                 <div className="govuk-grid-column-one-quarter">
                   <div className="govuk-summary-card">
@@ -350,37 +725,20 @@ export const GOVUKComponents: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-
-          {/* Different Alert Types */}
-          <div className="govuk-grid-row">
-            <div className="govuk-grid-column-full">
-              <h2 className="govuk-heading-l">System Status</h2>
               
-              <div className="govuk-notification-banner govuk-notification-banner--success" role="alert">
-                <div className="govuk-notification-banner__header">
-                  <h2 className="govuk-notification-banner__title">Success</h2>
+              <div className="govuk-grid-row" style={{ marginTop: '2rem' }}>
+                <div className="govuk-grid-column-one-half">
+                  <h3 className="govuk-heading-m">Performance Analytics</h3>
+                  <div style={{ height: '300px', backgroundColor: '#f3f2f1', borderRadius: '4px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <ThreeChart />
+                  </div>
                 </div>
-                <div className="govuk-notification-banner__content">
-                  <p className="govuk-notification-banner__heading">Operation completed successfully!</p>
+                <div className="govuk-grid-column-one-half">
+                  <h3 className="govuk-heading-m">Revenue Trends</h3>
+                  <div style={{ height: '300px', backgroundColor: '#f3f2f1', borderRadius: '4px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <VanillaVisxChart />
+                  </div>
                 </div>
-              </div>
-
-              <div className="govuk-warning-text">
-                <span className="govuk-warning-text__icon" aria-hidden="true">!</span>
-                <strong className="govuk-warning-text__text">
-                  <span className="govuk-warning-text__assistive">Warning</span>
-                  Please check your input data.
-                </strong>
-              </div>
-
-              <div className="govuk-error-summary" role="alert">
-                <h2 className="govuk-error-summary__title">Something went wrong. Please try again.</h2>
-              </div>
-
-              <div className="govuk-inset-text">
-                Here's some helpful information.
               </div>
             </div>
           </div>
@@ -404,26 +762,36 @@ export const GOVUKComponents: React.FC = () => {
                 maxWidth: '500px', 
                 margin: '20px' 
               }}>
-                <h3 className="govuk-panel__title">Modal Title</h3>
+                <h3 className="govuk-panel__title">Confirm Action</h3>
                 <div className="govuk-panel__body">
-                  <p className="govuk-body">This is a modal dialog example using GOV.UK Design System styling.</p>
-                  <button 
-                    className="govuk-button govuk-button--secondary"
-                    onClick={() => setShowModal(false)}
-                  >
-                    Close
-                  </button>
+                  <p className="govuk-body">Are you sure you want to proceed with this action? This will update your account settings and preferences.</p>
+                  <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', marginTop: '1rem' }}>
+                    <button 
+                      className="govuk-button"
+                      onClick={() => setShowModal(false)}
+                    >
+                      Confirm
+                    </button>
+                    <button 
+                      className="govuk-button govuk-button--secondary"
+                      onClick={() => setShowModal(false)}
+                    >
+                      Cancel
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           )}
 
-          <button 
-            className="govuk-button govuk-button--secondary" 
-            onClick={() => setShowModal(true)}
-          >
-            Open Modal
-          </button>
+          <div style={{ textAlign: 'center', margin: '2rem 0' }}>
+            <button 
+              className="govuk-button govuk-button--secondary" 
+              onClick={() => setShowModal(true)}
+            >
+              Open Modal
+            </button>
+          </div>
         </main>
 
         {/* Footer */}
