@@ -8,7 +8,7 @@ describe('AntDesignComponents', () => {
     
     expect(screen.getByText('TechCorp')).toBeInTheDocument();
     expect(screen.getByText('Home')).toBeInTheDocument();
-    expect(screen.getByText('Solutions')).toBeInTheDocument();
+    expect(screen.getAllByText('Solutions')).toHaveLength(2); // Navigation + Breadcrumb
     expect(screen.getByText('About')).toBeInTheDocument();
     expect(screen.getByText('Contact')).toBeInTheDocument();
   });
@@ -23,7 +23,7 @@ describe('AntDesignComponents', () => {
   test('renders breadcrumb navigation', () => {
     render(<AntDesignComponents />);
     
-    expect(screen.getByText('Solutions')).toBeInTheDocument();
+    expect(screen.getAllByText('Solutions')).toHaveLength(2); // Navigation + Breadcrumb
     expect(screen.getByText('Overview')).toBeInTheDocument();
   });
 

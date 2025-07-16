@@ -13,6 +13,7 @@ import { GOLDComponents } from './components/GOLDComponents';
 import { NZGovtComponents } from './components/NZGovtComponents';
 import { BootstrapItaliaComponents } from './components/BootstrapItaliaComponents';
 import { SemioticComponents } from './components/SemioticComponents';
+import { EvergreenComponents } from './components/EvergreenComponents';
 // import { MantineComponents } from './components/MantineComponents';
 // import { ChakraUIComponents } from './components/ChakraUIComponents';
 import './App.css';
@@ -34,6 +35,7 @@ function App() {
           <Route path="/gold" element={<GOLDPage />} />
           <Route path="/nz-govt" element={<NZGovtPage />} />
           <Route path="/bootstrap-italia" element={<BootstrapItaliaPage />} />
+          <Route path="/evergreen" element={<EvergreenPage />} />
           <Route path="/semiotic" element={<SemioticPage />} />
           {/* <Route path="/chakra-ui" element={<ChakraUIPage />} /> */}
           {/* <Route path="/mantine" element={<MantinePage />} /> */}
@@ -53,7 +55,7 @@ function Home() {
 
       <div className="home-stats">
         <div className="home-stat-card">
-          <div className="home-stat-number">11</div>
+          <div className="home-stat-number">12</div>
           <div className="home-stat-label">Design Systems</div>
         </div>
         <div className="home-stat-card">
@@ -94,6 +96,7 @@ function Home() {
           <ul className="home-category-list">
             <li><span className="status-indicator active"></span><a href="/reference" className="home-category-link">Reference Implementation</a></li>
             <li><span className="status-indicator active"></span><a href="/ant-design" className="home-category-link">Ant Design</a></li>
+            <li><span className="status-indicator active"></span><a href="/evergreen" className="home-category-link">Evergreen (Segment)</a></li>
             <li><span className="status-indicator active"></span><a href="/semiotic" className="home-category-link">Semiotic (Data Visualization)</a></li>
           </ul>
         </div>
@@ -144,6 +147,10 @@ function NZGovtPage() {
 
 function BootstrapItaliaPage() {
   return <BootstrapItaliaComponents />;
+}
+
+function EvergreenPage() {
+  return <EvergreenComponents />;
 }
 
 function SemioticPage() {

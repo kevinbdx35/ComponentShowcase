@@ -37,6 +37,7 @@
     "@uswds/uswds": "^3.13.0",
     "@visx/visx": "^3.12.0",
     "antd": "^5.26.5",
+    "evergreen-ui": "^7.1.9",
     "framer-motion": "^12.23.5",
     "govuk-frontend": "^5.11.0",
     "jest-environment-jsdom": "^30.0.4",
@@ -60,6 +61,11 @@
     "extends": [
       "react-app",
       "react-app/jest"
+    ]
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/(?!(d3-.*|semiotic|@visx|internmap)/)"
     ]
   },
   "browserslist": {

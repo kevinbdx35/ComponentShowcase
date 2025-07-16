@@ -20,6 +20,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
     { path: '/gold', name: 'GOLD', status: 'active', category: 'Government' },
     { path: '/nz-govt', name: 'New Zealand', status: 'active', category: 'Government' },
     { path: '/bootstrap-italia', name: 'Bootstrap Italia', status: 'active', category: 'Government' },
+    { path: '/evergreen', name: 'Evergreen', status: 'active', category: 'Enterprise' },
     { path: '/semiotic', name: 'Semiotic', status: 'active', category: 'Data Visualization' },
   ];
 
