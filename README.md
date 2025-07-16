@@ -30,6 +30,7 @@ A comprehensive comparison platform for popular UI design systems, implementing 
 - [🏛️ GOLD Design System](#️-gold-design-system)
 - [🇳🇿 New Zealand Government Design System](#-new-zealand-government-design-system)
 - [🇮🇹 Bootstrap Italia (Italian Government Design System)](#-bootstrap-italia-italian-government-design-system)
+- [📊 Semiotic (React Data Visualization Framework)](#-semiotic-react-data-visualization-framework)
 - [📊 Visualization with visx](#-visualization-with-visx)
 - [🚀 Deployment](#-deployment)
 - [🇫🇷 Version Française](#-version-française)
@@ -56,6 +57,7 @@ src/
 │   ├── GOLDComponents.tsx         # GOLD Design System
 │   ├── NZGovtComponents.tsx       # New Zealand Government Design System
 │   ├── BootstrapItaliaComponents.tsx # Bootstrap Italia (Italian Government)
+│   ├── SemioticComponents.tsx    # Semiotic Data Visualization Framework
 │   ├── ChakraUIComponents.tsx     # Chakra UI implementation
 │   ├── MantineComponents.tsx      # Mantine implementation
 │   ├── ThreeChart.tsx             # 3D charts with Three.js
@@ -500,6 +502,43 @@ Bootstrap Italia is the official design system for websites and digital applicat
 - **AGID Compliance**: Adheres to Italian Agency for Digital Italy (AGID) technical specifications
 - **Documentation**: Comprehensive Italian language documentation and implementation guides
 - **Community Support**: Active community of Italian government developers and designers
+
+## 📊 Semiotic (React Data Visualization Framework)
+
+Semiotic is a powerful data visualization framework that combines React and D3 for creating flexible, reusable visualization components:
+
+### Key Features
+- **React & D3 Integration**: Seamlessly combines the declarative approach of React with the power of D3
+- **Three Core Frame Types**: Specialized components for different visualization needs
+- **Flexible Data Handling**: Supports various data formats and structures
+- **Interactive Visualizations**: Built-in support for hover effects, annotations, and user interactions
+
+### Semiotic Frame Components Implemented
+- **XYFrame**: Coordinate-based visualizations including line charts, scatter plots, and area charts
+- **OrdinalFrame**: Categorical data visualizations such as bar charts, violin plots, and parallel coordinates
+- **NetworkFrame**: Network and hierarchical visualizations including flow diagrams and network graphs
+- **Interactive Features**: Hover annotations, brushing capabilities, and responsive design
+- **Custom Styling**: Flexible theming and styling options for all visualization types
+
+### Design Specifications
+- **Color Palette**: Modern purple and blue gradient scheme with primary (#ac58e5) and secondary (#00a2ce) colors
+- **Typography**: Inter font family for clean, readable text across all components
+- **Responsive Design**: Mobile-first approach with adaptive layouts for all screen sizes
+- **Component Library**: Comprehensive visualization components with consistent API patterns
+- **Animation Support**: Smooth transitions and interactive animations for enhanced user experience
+
+### Technical Implementation
+- **Framework**: Built on React 16.8+ with hooks support
+- **D3 Integration**: Leverages D3's powerful data manipulation and SVG rendering capabilities
+- **Data Formats**: Supports JSON, CSV, and various other data formats
+- **Performance**: Optimized for large datasets with efficient rendering strategies
+- **Accessibility**: ARIA labels and keyboard navigation support for inclusive design
+
+### Semiotic Standards
+- **nteract Ecosystem**: Part of the nteract project for interactive computing
+- **Open Source**: MIT licensed with active community development
+- **Documentation**: Comprehensive API documentation with interactive examples
+- **Community**: Active GitHub community with regular updates and feature additions
 
 ## 📊 Visualization with visx
 

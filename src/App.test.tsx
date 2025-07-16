@@ -74,6 +74,13 @@ jest.mock('./components/BootstrapItaliaComponents', () => ({
   }
 }));
 
+jest.mock('./components/SemioticComponents', () => ({
+  SemioticComponents: () => {
+    const React = require('react');
+    return React.createElement('div', { 'data-testid': 'semiotic-components' }, 'Semiotic Components');
+  }
+}));
+
 import App from './App';
 
 test('renders navigation links', () => {
@@ -90,4 +97,5 @@ test('renders navigation links', () => {
   expect(screen.getByText('GOLD')).toBeInTheDocument();
   expect(screen.getByText('New Zealand')).toBeInTheDocument();
   expect(screen.getByText('Bootstrap Italia')).toBeInTheDocument();
+  expect(screen.getByText('Semiotic')).toBeInTheDocument();
 });
