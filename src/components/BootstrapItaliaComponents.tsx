@@ -75,13 +75,13 @@ export const BootstrapItaliaComponents: React.FC = () => {
       {/* Hero Section */}
       <section className="it-hero">
         <div className="it-hero-content">
-          <h1 className="it-hero-title">Benvenuti!</h1>
+          <h1 className="it-hero-title">Servizi Digitali per i Cittadini</h1>
           <p className="it-hero-description">
-            Bootstrap Italia è il modo più semplice e sicuro per costruire applicazioni web moderne per la Pubblica Amministrazione italiana.
+            Accedi ai servizi online della Pubblica Amministrazione italiana. Semplice, sicuro e sempre disponibile per tutti i cittadini.
           </p>
           <div className="it-hero-actions">
-            <button className="it-btn it-btn--primary it-btn--large">Inizia ora</button>
-            <button className="it-btn it-btn--outline it-btn--large">Documenti</button>
+            <button className="it-btn it-btn--primary it-btn--large">Accedi con SPID</button>
+            <button className="it-btn it-btn--outline it-btn--large">Servizi senza autenticazione</button>
           </div>
         </div>
       </section>

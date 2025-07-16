@@ -18,15 +18,15 @@ export const GOVUKComponents: React.FC = () => {
   const [showAlert, setShowAlert] = useState(false);
   const [activeTab, setActiveTab] = useState(0);
 
-  const employeeData = [
-    { id: 1, name: 'Sarah Chen', email: 'sarah.chen@techcorp.com', status: 'Active', department: 'Engineering' },
-    { id: 2, name: 'Marcus Johnson', email: 'marcus.j@techcorp.com', status: 'Active', department: 'Design' },
-    { id: 3, name: 'Elena Rodriguez', email: 'elena.r@techcorp.com', status: 'On Leave', department: 'Marketing' },
-    { id: 4, name: 'David Kim', email: 'david.kim@techcorp.com', status: 'Active', department: 'Sales' },
-    { id: 5, name: 'Lisa Thompson', email: 'lisa.t@techcorp.com', status: 'Inactive', department: 'HR' }
+  const departmentData = [
+    { id: 1, name: 'Sarah Williams', email: 'sarah.williams@digital.cabinet-office.gov.uk', status: 'Active', department: 'Digital Service' },
+    { id: 2, name: 'James Thompson', email: 'james.thompson@hmrc.gov.uk', status: 'Active', department: 'HMRC' },
+    { id: 3, name: 'Emma Davies', email: 'emma.davies@dwp.gov.uk', status: 'On Leave', department: 'DWP' },
+    { id: 4, name: 'Michael Brown', email: 'michael.brown@homeoffice.gov.uk', status: 'Active', department: 'Home Office' },
+    { id: 5, name: 'Rachel Johnson', email: 'rachel.johnson@nhs.uk', status: 'Active', department: 'NHS Digital' }
   ];
 
-  const tabs = ['Company Overview', 'Our Services', 'Team', 'Contact'];
+  const tabs = ['About this service', 'Eligibility', 'How to apply', 'Contact us'];
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value, type } = e.target;
@@ -113,20 +113,28 @@ export const GOVUKComponents: React.FC = () => {
           {/* Hero Section */}
           <div className="govuk-grid-row">
             <div className="govuk-grid-column-two-thirds">
-              <h1 className="govuk-heading-xl">TechCorp Solutions</h1>
+              <h1 className="govuk-heading-xl">Apply for a provisional driving licence</h1>
               <p className="govuk-body-l">
-                Innovating the future with cutting-edge technology solutions for modern businesses
+                You need a provisional driving licence to take lessons or practice.
               </p>
-              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-                <a href="#services" role="button" draggable="false" className="govuk-button govuk-button--start">
-                  Get Started
-                  <svg className="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
-                    <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
-                  </svg>
-                </a>
-                <button className="govuk-button govuk-button--secondary">
-                  Learn More
-                </button>
+              <div className="govuk-inset-text">
+                Most people can start learning to drive when they're 17.
+              </div>
+              <a href="#start" role="button" draggable="false" className="govuk-button govuk-button--start">
+                Start now
+                <svg className="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
+                  <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+                </svg>
+              </a>
+            </div>
+            <div className="govuk-grid-column-one-third">
+              <div className="govuk-panel govuk-panel--related">
+                <h2 className="govuk-heading-m">Related content</h2>
+                <ul className="govuk-list">
+                  <li><a className="govuk-link" href="#">Driving lessons and learning to drive</a></li>
+                  <li><a className="govuk-link" href="#">Book your theory test</a></li>
+                  <li><a className="govuk-link" href="#">Book your driving test</a></li>
+                </ul>
               </div>
             </div>
           </div>
@@ -157,43 +165,56 @@ export const GOVUKComponents: React.FC = () => {
                 <div className="govuk-tabs__panel" id={`tab-${activeTab}`}>
                   {activeTab === 0 && (
                     <div>
-                      <h3 className="govuk-heading-m">About TechCorp Solutions</h3>
+                      <h3 className="govuk-heading-m">About this service</h3>
                       <p className="govuk-body">
-                        Founded in 2015, TechCorp Solutions has been at the forefront of digital transformation, 
-                        helping businesses leverage technology to achieve their goals. Our expertise spans cloud computing, 
-                        AI/ML, and custom software development.
+                        This service allows you to apply for your first provisional driving licence online. 
+                        You'll need to provide personal details, address information, and pay the application fee.
+                      </p>
+                      <p className="govuk-body">
+                        The service is available 24 hours a day, 7 days a week.
                       </p>
                     </div>
                   )}
                   {activeTab === 1 && (
                     <div>
-                      <h3 className="govuk-heading-m">Our Services</h3>
+                      <h3 className="govuk-heading-m">Eligibility</h3>
+                      <p className="govuk-body">You can apply for a provisional driving licence if you:</p>
                       <ul className="govuk-list govuk-list--bullet">
-                        <li>Cloud Infrastructure & Migration</li>
-                        <li>AI & Machine Learning Solutions</li>
-                        <li>Custom Software Development</li>
-                        <li>Digital Transformation Consulting</li>
-                        <li>DevOps & Automation Services</li>
+                        <li>are a resident of Great Britain</li>
+                        <li>meet the minimum age requirement</li>
+                        <li>meet the minimum eyesight requirement</li>
+                        <li>are not prevented from driving for medical or other reasons</li>
+                        <li>have lived in the UK for at least 185 days in the last 12 months before your application</li>
                       </ul>
                     </div>
                   )}
                   {activeTab === 2 && (
                     <div>
-                      <h3 className="govuk-heading-m">Our Team</h3>
+                      <h3 className="govuk-heading-m">How to apply</h3>
                       <p className="govuk-body">
-                        Our diverse team of experts brings together years of experience in technology, 
-                        design, and business strategy. We're passionate about delivering innovative 
-                        solutions that drive real business value.
+                        You can apply online or by post. Online applications are usually processed within 1 week.
                       </p>
+                      <p className="govuk-body">You'll need:</p>
+                      <ul className="govuk-list govuk-list--bullet">
+                        <li>identity documents (for example your passport)</li>
+                        <li>addresses where you've lived for the last 3 years</li>
+                        <li>your National Insurance number</li>
+                        <li>to pay £34 by debit or credit card</li>
+                      </ul>
                     </div>
                   )}
                   {activeTab === 3 && (
                     <div>
-                      <h3 className="govuk-heading-m">Contact Information</h3>
+                      <h3 className="govuk-heading-m">Contact us</h3>
                       <p className="govuk-body">
-                        Ready to transform your business with technology? Get in touch with our team 
-                        to discuss your specific needs and discover how we can help you achieve your goals.
+                        If you need help with your application, you can contact DVLA.
                       </p>
+                      <div className="govuk-contact">
+                        <p className="govuk-contact__title">DVLA</p>
+                        <p className="govuk-contact__detail">Telephone: 0300 790 6801</p>
+                        <p className="govuk-contact__detail">Monday to Friday, 8am to 7pm</p>
+                        <p className="govuk-contact__detail">Saturday, 8am to 2pm</p>
+                      </div>
                     </div>
                   )}
                 </div>
@@ -204,41 +225,69 @@ export const GOVUKComponents: React.FC = () => {
           {/* Services Section */}
           <div className="govuk-grid-row" id="services">
             <div className="govuk-grid-column-full">
-              <h2 className="govuk-heading-l">Our Services</h2>
+              <h2 className="govuk-heading-l">Popular services</h2>
               <div className="govuk-grid-row">
                 <div className="govuk-grid-column-one-third">
-                  <div className="govuk-panel govuk-panel--confirmation">
-                    <h3 className="govuk-panel__title">Cloud Solutions</h3>
-                    <div className="govuk-panel__body">
-                      <strong className="govuk-tag govuk-tag--blue">Popular</strong>
-                      <p className="govuk-body">Scalable cloud infrastructure and migration services</p>
+                  <div className="govuk-summary-card">
+                    <div className="govuk-summary-card__title-wrapper">
+                      <h3 className="govuk-summary-card__title">Driving licence</h3>
+                      <ul className="govuk-summary-card__actions">
+                        <li className="govuk-summary-card__action">
+                          <a className="govuk-link" href="#">Apply<span className="govuk-visually-hidden"> for driving licence</span></a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="govuk-summary-card__content">
+                      <p className="govuk-body">Apply for your first provisional driving licence</p>
+                      <strong className="govuk-tag govuk-tag--blue">Most popular</strong>
                     </div>
                   </div>
                 </div>
                 <div className="govuk-grid-column-one-third">
-                  <div className="govuk-panel govuk-panel--confirmation">
-                    <h3 className="govuk-panel__title">AI & Analytics</h3>
-                    <div className="govuk-panel__body">
-                      <strong className="govuk-tag govuk-tag--purple">Advanced</strong>
-                      <p className="govuk-body">Machine learning and data analytics solutions</p>
+                  <div className="govuk-summary-card">
+                    <div className="govuk-summary-card__title-wrapper">
+                      <h3 className="govuk-summary-card__title">Passport</h3>
+                      <ul className="govuk-summary-card__actions">
+                        <li className="govuk-summary-card__action">
+                          <a className="govuk-link" href="#">Apply<span className="govuk-visually-hidden"> for passport</span></a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="govuk-summary-card__content">
+                      <p className="govuk-body">Apply for or renew your British passport</p>
+                      <strong className="govuk-tag govuk-tag--green">Available</strong>
                     </div>
                   </div>
                 </div>
                 <div className="govuk-grid-column-one-third">
-                  <div className="govuk-panel govuk-panel--confirmation">
-                    <h3 className="govuk-panel__title">Custom Development</h3>
-                    <div className="govuk-panel__body">
-                      <strong className="govuk-tag govuk-tag--yellow">Premium</strong>
-                      <p className="govuk-body">Bespoke software development and consulting</p>
+                  <div className="govuk-summary-card">
+                    <div className="govuk-summary-card__title-wrapper">
+                      <h3 className="govuk-summary-card__title">Universal Credit</h3>
+                      <ul className="govuk-summary-card__actions">
+                        <li className="govuk-summary-card__action">
+                          <a className="govuk-link" href="#">Apply<span className="govuk-visually-hidden"> for Universal Credit</span></a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="govuk-summary-card__content">
+                      <p className="govuk-body">Apply for Universal Credit to help with living costs</p>
+                      <strong className="govuk-tag govuk-tag--purple">Benefits</strong>
                     </div>
                   </div>
                 </div>
                 <div className="govuk-grid-column-one-third">
-                  <div className="govuk-panel govuk-panel--confirmation">
-                    <h3 className="govuk-panel__title">DevOps Solutions</h3>
-                    <div className="govuk-panel__body">
-                      <strong className="govuk-tag govuk-tag--green">Automation</strong>
-                      <p className="govuk-body">CI/CD pipelines and infrastructure automation</p>
+                  <div className="govuk-summary-card">
+                    <div className="govuk-summary-card__title-wrapper">
+                      <h3 className="govuk-summary-card__title">Vehicle tax</h3>
+                      <ul className="govuk-summary-card__actions">
+                        <li className="govuk-summary-card__action">
+                          <a className="govuk-link" href="#">Pay<span className="govuk-visually-hidden"> vehicle tax</span></a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="govuk-summary-card__content">
+                      <p className="govuk-body">Tax your vehicle and get a tax disc</p>
+                      <strong className="govuk-tag govuk-tag--yellow">DVLA</strong>
                     </div>
                   </div>
                 </div>
@@ -268,7 +317,7 @@ export const GOVUKComponents: React.FC = () => {
               <form onSubmit={handleSubmit} className="govuk-form">
                 <fieldset className="govuk-fieldset">
                   <legend className="govuk-fieldset__legend govuk-fieldset__legend--l">
-                    <h2 className="govuk-fieldset__heading">Contact Our Team</h2>
+                    <h2 className="govuk-fieldset__heading">Contact DVLA</h2>
                   </legend>
 
                   <div className="govuk-form-group">
@@ -301,7 +350,7 @@ export const GOVUKComponents: React.FC = () => {
 
                   <div className="govuk-form-group">
                     <label className="govuk-label" htmlFor="category">
-                      Category
+                      What do you need help with?
                     </label>
                     <select
                       className="govuk-select"
@@ -310,19 +359,19 @@ export const GOVUKComponents: React.FC = () => {
                       value={formData.category}
                       onChange={handleInputChange}
                     >
-                      <option value="general">General Inquiry</option>
-                      <option value="support">Technical Support</option>
-                      <option value="sales">Sales</option>
-                      <option value="partnership">Partnership</option>
+                      <option value="general">General enquiry</option>
+                      <option value="licence">Driving licence</option>
+                      <option value="vehicle">Vehicle registration</option>
+                      <option value="medical">Medical enquiry</option>
                     </select>
                   </div>
 
                   <div className="govuk-form-group">
                     <label className="govuk-label" htmlFor="message">
-                      Message
+                      Tell us more about your enquiry
                     </label>
                     <div className="govuk-hint">
-                      Please provide details about your inquiry or how we can help
+                      Do not include personal information like your driving licence number or National Insurance number
                     </div>
                     <textarea
                       className="govuk-textarea"
@@ -336,7 +385,7 @@ export const GOVUKComponents: React.FC = () => {
 
                   <fieldset className="govuk-fieldset">
                     <legend className="govuk-fieldset__legend">
-                      How would you prefer to be contacted?
+                      How would you prefer us to reply?
                     </legend>
                     <div className="govuk-radios govuk-radios--small">
                       <div className="govuk-radios__item">
@@ -352,9 +401,9 @@ export const GOVUKComponents: React.FC = () => {
                         </label>
                       </div>
                       <div className="govuk-radios__item">
-                        <input className="govuk-radios__input" id="contact-text" name="contact" type="radio" value="text" />
-                        <label className="govuk-label govuk-radios__label" htmlFor="contact-text">
-                          Text message
+                        <input className="govuk-radios__input" id="contact-post" name="contact" type="radio" value="post" />
+                        <label className="govuk-label govuk-radios__label" htmlFor="contact-post">
+                          Post
                         </label>
                       </div>
                     </div>
@@ -371,7 +420,7 @@ export const GOVUKComponents: React.FC = () => {
                         onChange={handleInputChange}
                       />
                       <label className="govuk-label govuk-checkboxes__label" htmlFor="newsletter">
-                        Subscribe to our newsletter
+                        Send me emails about DVLA services
                       </label>
                     </div>
                     <div className="govuk-checkboxes__item">
@@ -384,13 +433,13 @@ export const GOVUKComponents: React.FC = () => {
                         onChange={handleInputChange}
                       />
                       <label className="govuk-label govuk-checkboxes__label" htmlFor="agree">
-                        I agree to the terms and conditions
+                        I agree to the <a className="govuk-link" href="#">terms and conditions</a>
                       </label>
                     </div>
                   </div>
 
                   <button type="submit" className="govuk-button" data-module="govuk-button">
-                    Send message
+                    Send enquiry
                   </button>
                 </fieldset>
               </form>
@@ -400,27 +449,27 @@ export const GOVUKComponents: React.FC = () => {
           {/* Basic Cards */}
           <div className="govuk-grid-row">
             <div className="govuk-grid-column-full">
-              <h2 className="govuk-heading-l">Product Features</h2>
+              <h2 className="govuk-heading-l">Before you start</h2>
               <div className="govuk-grid-row">
                 <div className="govuk-grid-column-one-half">
                   <div className="govuk-summary-card">
                     <div className="govuk-summary-card__title-wrapper">
-                      <h3 className="govuk-summary-card__title">Enterprise Security</h3>
+                      <h3 className="govuk-summary-card__title">What you need</h3>
                     </div>
                     <div className="govuk-summary-card__content">
-                      <p className="govuk-body">Advanced security measures and compliance standards for enterprise-grade applications.</p>
-                      <button className="govuk-button govuk-button--secondary">Learn More</button>
+                      <p className="govuk-body">Identity documents, addresses for the last 3 years, and your National Insurance number.</p>
+                      <a className="govuk-link" href="#">Check what documents you need</a>
                     </div>
                   </div>
                 </div>
                 <div className="govuk-grid-column-one-half">
                   <div className="govuk-summary-card">
                     <div className="govuk-summary-card__title-wrapper">
-                      <h3 className="govuk-summary-card__title">24/7 Support</h3>
+                      <h3 className="govuk-summary-card__title">Fees</h3>
                     </div>
                     <div className="govuk-summary-card__content">
-                      <p className="govuk-body">Round-the-clock technical support and monitoring for critical business operations.</p>
-                      <button className="govuk-button govuk-button--secondary">Contact Support</button>
+                      <p className="govuk-body">£34 for online applications. £43 if you apply by post.</p>
+                      <a className="govuk-link" href="#">Check other ways to pay</a>
                     </div>
                   </div>
                 </div>
@@ -431,29 +480,30 @@ export const GOVUKComponents: React.FC = () => {
           {/* Team Table */}
           <div className="govuk-grid-row">
             <div className="govuk-grid-column-full">
-              <h2 className="govuk-heading-l">Our Team Directory</h2>
+              <h2 className="govuk-heading-l">Government departments</h2>
+              <p className="govuk-body">Contact details for departments that use this design system.</p>
               <table className="govuk-table">
                 <thead className="govuk-table__head">
                   <tr className="govuk-table__row">
-                    <th scope="col" className="govuk-table__header">Name</th>
+                    <th scope="col" className="govuk-table__header">Contact</th>
                     <th scope="col" className="govuk-table__header">Email</th>
                     <th scope="col" className="govuk-table__header">Department</th>
                     <th scope="col" className="govuk-table__header">Status</th>
                   </tr>
                 </thead>
                 <tbody className="govuk-table__body">
-                  {employeeData.map((employee) => (
-                    <tr key={employee.id} className="govuk-table__row">
-                      <td className="govuk-table__cell">{employee.name}</td>
-                      <td className="govuk-table__cell">{employee.email}</td>
-                      <td className="govuk-table__cell">{employee.department}</td>
+                  {departmentData.map((department) => (
+                    <tr key={department.id} className="govuk-table__row">
+                      <td className="govuk-table__cell">{department.name}</td>
+                      <td className="govuk-table__cell">{department.email}</td>
+                      <td className="govuk-table__cell">{department.department}</td>
                       <td className="govuk-table__cell">
                         <strong className={`govuk-tag ${
-                          employee.status === 'Active' ? 'govuk-tag--green' : 
-                          employee.status === 'On Leave' ? 'govuk-tag--yellow' : 
+                          department.status === 'Active' ? 'govuk-tag--green' : 
+                          department.status === 'On Leave' ? 'govuk-tag--yellow' : 
                           'govuk-tag--red'
                         }`}>
-                          {employee.status}
+                          {department.status}
                         </strong>
                       </td>
                     </tr>
@@ -466,33 +516,34 @@ export const GOVUKComponents: React.FC = () => {
           {/* Alerts Section */}
           <div className="govuk-grid-row">
             <div className="govuk-grid-column-full">
-              <h2 className="govuk-heading-l">System Status</h2>
+              <h2 className="govuk-heading-l">Service updates</h2>
               
               <div className="govuk-notification-banner govuk-notification-banner--success" role="alert">
                 <div className="govuk-notification-banner__header">
                   <h2 className="govuk-notification-banner__title">Success</h2>
                 </div>
                 <div className="govuk-notification-banner__content">
-                  <p className="govuk-notification-banner__heading">Operation completed successfully!</p>
+                  <p className="govuk-notification-banner__heading">Your application has been submitted</p>
+                  <p className="govuk-body">We've sent you a confirmation email.</p>
                 </div>
               </div>
 
               <div className="govuk-inset-text">
-                <strong>Information:</strong> New features have been deployed and are now available.
+                You can track your application progress using your reference number.
               </div>
 
               <div className="govuk-warning-text">
                 <span className="govuk-warning-text__icon" aria-hidden="true">!</span>
                 <strong className="govuk-warning-text__text">
                   <span className="govuk-warning-text__assistive">Warning</span>
-                  Scheduled maintenance will occur this weekend.
+                  The service will be unavailable from 6pm on Friday to 6am on Monday for maintenance.
                 </strong>
               </div>
 
               <div className="govuk-error-summary" role="alert">
                 <h2 className="govuk-error-summary__title">There is a problem</h2>
                 <div className="govuk-error-summary__body">
-                  <p>Some services may be temporarily unavailable. Our team is working to resolve this issue.</p>
+                  <p>Some online services are currently unavailable. You can still apply by post.</p>
                 </div>
               </div>
             </div>

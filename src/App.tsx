@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Layout } from './components/Layout';
 import { ReferenceComponents } from './components/ReferenceComponents';
 import { AntDesignComponents } from './components/AntDesignComponents';
 // import { MaterialUIComponents } from './components/MaterialUIComponents';
@@ -19,30 +20,7 @@ import './App.css';
 function App() {
   return (
     <Router>
-      <div className="App">
-        <nav style={{ 
-          padding: '1rem', 
-          borderBottom: '1px solid #ccc',
-          display: 'flex',
-          gap: '1rem'
-        }}>
-          <Link to="/">Home</Link>
-          <Link to="/vanilla">Vanilla CSS</Link>
-          {/* <Link to="/material-ui">Material UI</Link> */}
-          <Link to="/ant-design">Ant Design</Link>
-          <Link to="/uswds">USWDS</Link>
-          <Link to="/govuk">GOV.UK</Link>
-          <Link to="/dsfr">DSFR</Link>
-          <Link to="/canada">Canada.ca</Link>
-          <Link to="/australian-health">Australian Health</Link>
-          <Link to="/gold">GOLD</Link>
-          <Link to="/nz-govt">New Zealand</Link>
-          <Link to="/bootstrap-italia">Bootstrap Italia</Link>
-          <Link to="/semiotic">Semiotic</Link>
-          {/* <Link to="/chakra-ui">Chakra UI</Link> */}
-          {/* <Link to="/mantine">Mantine</Link> */}
-        </nav>
-        
+      <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/vanilla" element={<VanillaPage />} />
@@ -60,32 +38,65 @@ function App() {
           {/* <Route path="/chakra-ui" element={<ChakraUIPage />} /> */}
           {/* <Route path="/mantine" element={<MantinePage />} /> */}
         </Routes>
-      </div>
+      </Layout>
     </Router>
   );
 }
 
 function Home() {
   return (
-    <div style={{ padding: '2rem', textAlign: 'center' }}>
-      <h1>UI Design System Comparison</h1>
-      <p>Naviguez entre les différents design systems pour comparer leurs composants.</p>
-      <div style={{ marginTop: '2rem', padding: '1rem', backgroundColor: '#fff3cd', borderRadius: '8px' }}>
-        <h3>🚧 Statut des Design Systems</h3>
-        <p>✅ Vanilla CSS - Fonctionnel</p>
-        <p>🚧 Material UI - Mise à jour en cours (v7)</p>
-        <p>✅ Ant Design - Fonctionnel</p>
-        <p>✅ USWDS - Fonctionnel (U.S. Government Design System)</p>
-        <p>✅ GOV.UK - Fonctionnel (UK Government Design System)</p>
-        <p>✅ DSFR - Fonctionnel (French Government Design System)</p>
-        <p>✅ Canada.ca - Fonctionnel (Canadian Government Design System)</p>
-        <p>✅ Australian Health - Fonctionnel (Australian Government Health Design System)</p>
-        <p>✅ GOLD - Fonctionnel (Australian Government Design System)</p>
-        <p>✅ New Zealand - Fonctionnel (New Zealand Government Design System)</p>
-        <p>✅ Bootstrap Italia - Fonctionnel (Italian Government Design System)</p>
-        <p>✅ Semiotic - Fonctionnel (React Data Visualization Framework)</p>
-        <p>🚧 Chakra UI v3 - En cours de développement</p>
-        <p>🚧 Mantine v7 - En cours de développement</p>
+    <div className="home-container">
+      <div className="home-hero">
+        <h1>UI Design System Comparison</h1>
+        <p>Explore and compare different design systems and their component implementations</p>
+      </div>
+
+      <div className="home-stats">
+        <div className="home-stat-card">
+          <div className="home-stat-number">11</div>
+          <div className="home-stat-label">Design Systems</div>
+        </div>
+        <div className="home-stat-card">
+          <div className="home-stat-number">8</div>
+          <div className="home-stat-label">Government Systems</div>
+        </div>
+        <div className="home-stat-card">
+          <div className="home-stat-number">100%</div>
+          <div className="home-stat-label">Accessible</div>
+        </div>
+        <div className="home-stat-card">
+          <div className="home-stat-number">React</div>
+          <div className="home-stat-label">Framework</div>
+        </div>
+      </div>
+
+      <div className="home-categories">
+        <div className="home-category-card">
+          <h2 className="home-category-title">
+            🏛️ Government Design Systems
+          </h2>
+          <ul className="home-category-list">
+            <li><span className="status-indicator active"></span><a href="/uswds" className="home-category-link">U.S. Web Design System</a></li>
+            <li><span className="status-indicator active"></span><a href="/govuk" className="home-category-link">GOV.UK Design System</a></li>
+            <li><span className="status-indicator active"></span><a href="/dsfr" className="home-category-link">French Government (DSFR)</a></li>
+            <li><span className="status-indicator active"></span><a href="/canada" className="home-category-link">Canada.ca Design System</a></li>
+            <li><span className="status-indicator active"></span><a href="/australian-health" className="home-category-link">Australian Health Design System</a></li>
+            <li><span className="status-indicator active"></span><a href="/gold" className="home-category-link">Australian Government (GOLD)</a></li>
+            <li><span className="status-indicator active"></span><a href="/nz-govt" className="home-category-link">New Zealand Government</a></li>
+            <li><span className="status-indicator active"></span><a href="/bootstrap-italia" className="home-category-link">Bootstrap Italia</a></li>
+          </ul>
+        </div>
+
+        <div className="home-category-card">
+          <h2 className="home-category-title">
+            🎨 UI Libraries & Frameworks
+          </h2>
+          <ul className="home-category-list">
+            <li><span className="status-indicator active"></span><a href="/vanilla" className="home-category-link">Vanilla CSS</a></li>
+            <li><span className="status-indicator active"></span><a href="/ant-design" className="home-category-link">Ant Design</a></li>
+            <li><span className="status-indicator active"></span><a href="/semiotic" className="home-category-link">Semiotic (Data Visualization)</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   );

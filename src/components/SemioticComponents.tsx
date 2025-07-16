@@ -95,9 +95,9 @@ export const SemioticComponents: React.FC = () => {
       {/* Hero Section */}
       <section className="semiotic-hero">
         <div className="semiotic-hero-content">
-          <h1 className="semiotic-hero-title">TechCorp Solutions</h1>
+          <h1 className="semiotic-hero-title">Advanced Data Visualization Platform</h1>
           <p className="semiotic-hero-description">
-            Innovating the future with cutting-edge technology solutions for modern businesses. 
+            Powered by Semiotic - Create stunning, interactive data visualizations with React and D3. 
             Featuring advanced data visualization powered by the Semiotic framework.
           </p>
           <div className="semiotic-hero-actions">

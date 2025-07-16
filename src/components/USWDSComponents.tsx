@@ -29,43 +29,69 @@ export const USWDSComponents: React.FC = () => {
 
   return (
     <div className="usa-layout-grid" style={{ backgroundColor: '#f8f9fa', minHeight: '100vh' }}>
+      {/* Official U.S. Government Header */}
+      <header className="usa-header usa-header--basic" role="banner">
+        <div className="usa-nav-container">
+          <div className="usa-navbar">
+            <div className="usa-logo" id="header-logo">
+              <em className="usa-logo__text">
+                <a href="#" title="Home" aria-label="Home">
+                  Department of Digital Services
+                </a>
+              </em>
+            </div>
+          </div>
+          <nav className="usa-nav" role="navigation">
+            <div className="usa-nav__inner">
+              <button className="usa-nav__close">
+                <img src="/close.svg" alt="close" />
+              </button>
+              <ul className="usa-nav__primary usa-accordion">
+                <li className="usa-nav__primary-item">
+                  <a className="usa-nav__link" href="#"><span>Services</span></a>
+                </li>
+                <li className="usa-nav__primary-item">
+                  <a className="usa-nav__link" href="#"><span>About</span></a>
+                </li>
+                <li className="usa-nav__primary-item">
+                  <a className="usa-nav__link" href="#"><span>Contact</span></a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+
       {/* Hero Section */}
-      <header className="usa-hero" style={{ 
-        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+      <section className="usa-hero" style={{ 
+        background: 'linear-gradient(135deg, #162e51 0%, #1a4480 100%)',
         color: 'white',
         padding: '4rem 2rem',
         textAlign: 'center'
       }}>
         <div className="grid-container">
-          <h1 className="usa-hero__heading" style={{ fontSize: '3rem', marginBottom: '1rem', fontWeight: 'bold' }}>TechCorp Solutions</h1>
+          <h1 className="usa-hero__heading" style={{ fontSize: '3rem', marginBottom: '1rem', fontWeight: 'bold' }}>
+            Digital Services for Americans
+          </h1>
           <p className="usa-hero__lead" style={{ fontSize: '1.25rem', marginBottom: '2rem', opacity: 0.9 }}>
-            Innovating the future with cutting-edge technology solutions for modern businesses
+            Access government services online. Simple, secure, and accessible for all Americans.
           </p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
             <button className="usa-button usa-button--primary" style={{ 
               padding: '1rem 2rem', 
-              fontSize: '1.1rem', 
-              backgroundColor: 'white', 
-              color: '#667eea', 
-              border: 'none', 
-              borderRadius: '8px',
-              fontWeight: 'bold'
+              fontSize: '1.1rem'
             }}>
-              Get Started
+              Find Services
             </button>
-            <button className="usa-button usa-button--outline" style={{ 
+            <button className="usa-button usa-button--outline usa-button--inverse" style={{ 
               padding: '1rem 2rem', 
-              fontSize: '1.1rem', 
-              backgroundColor: 'transparent', 
-              color: 'white', 
-              border: '2px solid white', 
-              borderRadius: '8px'
+              fontSize: '1.1rem'
             }}>
               Learn More
             </button>
           </div>
         </div>
-      </header>
+      </section>
 
       <div className="grid-container" style={{ padding: '0 2rem', maxWidth: '1200px', margin: '0 auto' }}>
         
